@@ -1,3 +1,6 @@
+" Pathogen plugin to handle bundles.
+call pathogen#infect()
+
 set nocompatible    " no compatible
 if has("syntax")
   syntax on
@@ -108,7 +111,7 @@ autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 
 
 filetype on
-filetype plugin on
+filetype plugin indent on
 " Repair wired terminal/vim settings
 set backspace=indent,start,eol
 
