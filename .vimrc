@@ -202,9 +202,6 @@ vnoremap <C-C> :call PhpDocRange()<CR>
 "ZenCoding
 let g:user_zen_expandabbr_key = '<c-e>'
 
-" MRU
-" let MRU_File = "/home/pawka/.vim/swap/mru" "Must be full path!
-
 "FuzzyFinder
 let g:fuf_file_exclude = '\v\~$|\.(o|exe|dll|bak|orig|swp)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])'
 let g:fuf_modesDisable = []
