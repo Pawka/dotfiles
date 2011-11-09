@@ -57,25 +57,18 @@ else
     colors zen
 endif
 
-" Copy to clipboard
-"vmap <INSERT> o!xclip -f -sel clip<CR>
-" Paste to clipboard
-"nmap <INSERT> or!xclip -o -sel clip<CR>
 
-"PHP
+" Status line
+set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" PHP
+"
 " The completion dictionary is provided by Rasmus:
 " http://lerdorf.com/funclist.txt
 " set dictionary-=~/.vim/dictionaries/phpfunclist dictionary+=~/.vim/dictionaries/phpfunclist
 " Use the dictionary completion. Use CTRL+N or CTRL+P while in INSERT mode to call completion.
 " set complete-=k complete+=k
-
-"
-" PHP
-"
-"Map <CTRL>-B to run PHP parser check
-" map <C-B> :w !php -l<CR>
-":autocmd FileType php noremap <C-L> :!/usr/bin/php -l %<CR>
-":autocmd FileType php noremap <C-M> :w!<CR>:!/usr/bin/php %<CR>
 
 " highlights interpolated variables in sql strings and does sql-syntax highlighting. yay
 autocmd FileType php let php_sql_query=1
@@ -115,11 +108,6 @@ filetype plugin indent on
 " Repair wired terminal/vim settings
 set backspace=indent,start,eol
 
-"Mappings
-cmap w!! %!gksudo tee > /dev/null %
-map <F5> <Esc>:EnableFastPHPFolds<Cr> 
-map <F6> <Esc>:EnablePHPFolds<Cr> 
-map <F7> <Esc>:DisablePHPFolds<Cr>
 "
 " Autocomplete
 "
