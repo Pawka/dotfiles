@@ -61,9 +61,16 @@ endif
 " Status line
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Key mapping
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+noremap <A+F6> :make test FILE=%:p<CR>
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PHP
-"
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 " The completion dictionary is provided by Rasmus:
 " http://lerdorf.com/funclist.txt
 " set dictionary-=~/.vim/dictionaries/phpfunclist dictionary+=~/.vim/dictionaries/phpfunclist
@@ -86,9 +93,10 @@ autocmd FileType php hi MatchParen ctermbg=blue guibg=lightblue
 " Twid uses same templates style as Django
 autocmd BufRead,BufNewFile *.twig set filetype=htmldjango.html
 
-"
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " DJANGO + PYTHON
-"
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd FileType python set ft=python.django " For SnipMate
 autocmd FileType html set ft=htmldjango.html " For SnipMate
 autocmd FileType htm set ft=htmldjango.html " For SnipMate
@@ -167,12 +175,12 @@ if !exists("*QuoteDelim")
 endif
 
 
-
-"
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PLUGINS
-"
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-"Taglist plugin
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Taglist plugin
 let Tlist_Ctags_Cmd = "/usr/bin/ctags-exuberant"
 let Tlist_Inc_Winwidth = 1
 let Tlist_Use_Right_Window = 1
@@ -184,24 +192,24 @@ let Tlist_php_settings = 'php;c:class;d:constant;f:function'
 let Tlist_Sort_Type = "name"
 nnoremap <silent> <F8> :TlistToggle<CR>
 
-"PHP Documentor
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" PHP Documentor
 source ~/.vim/ftplugin/php-doc.vim 
 inoremap <C-C> <ESC>:call PhpDocSingle()<CR>i 
 nnoremap <C-C> :call PhpDocSingle()<CR> 
 vnoremap <C-C> :call PhpDocRange()<CR>
 
-"ZenCoding
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" ZenCoding
 let g:user_zen_expandabbr_key = '<c-e>'
 
-"FuzzyFinder
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" FuzzyFinder
 let g:fuf_file_exclude = '\v\~$|\.(o|exe|dll|bak|orig|swp)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])'
 let g:fuf_modesDisable = []
 let g:fuf_mrufile_maxItem = 100
 let g:fuf_mrucmd_maxItem = 100
-" FuzzyFinder - files from current buffer dir.
-noremap ~ :FufFileWithCurrentBufferDir<CR>
-" FuzzyFinder - most recent files.
-noremap <C-A-m> :FufMruFile<CR>
-" FuzzyFinder - files from root dir.
-noremap <C-A-o> :FufFile<CR>
 
+noremap ~ :FufFileWithCurrentBufferDir<CR>
+noremap <C-A-m> :FufMruFile<CR>
+noremap <C-A-o> :FufFile<CR>
