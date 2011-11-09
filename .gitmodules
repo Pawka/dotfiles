@@ -10,3 +10,6 @@
 [submodule ".vim/bundle/The-NERD-tree"]
 	path = .vim/bundle/The-NERD-tree
 	url = git://github.com/vim-scripts/The-NERD-tree.git
+[submodule ".vim/bundle/taglist"]
+	path = .vim/bundle/taglist
+	url = git://github.com/vim-scripts/taglist.vim.git
