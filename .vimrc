@@ -7,7 +7,7 @@ set novisualbell
 "Backup files
 set backup
 set backupdir=~/.vim/backup
-set directory=~/.vim/swap
+set directory=/tmp
 
 "TAB simbolių kiekis
 set autoindent
