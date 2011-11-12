@@ -1,4 +1,5 @@
 " Pathogen plugin to handle bundles.
+runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
 set nocompatible    " no compatible
