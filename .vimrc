@@ -27,6 +27,11 @@ set textwidth=0
 set encoding=utf-8
 set fileencodings=utf-8,ucs-bom,latin1
 
+"GUI {
+    "Always display status line
+    set laststatus=2
+"}
+
 "Search
 set hlsearch
 set incsearch
