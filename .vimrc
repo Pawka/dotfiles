@@ -122,6 +122,10 @@ filetype plugin indent on
 " Repair wired terminal/vim settings
 set backspace=indent,start,eol
 
+" Syntax {
+autocmd! BufNewFile,BufRead *.pde setlocal ft=arduino "Arduino syntax highlighting.
+" }
+
 "
 " Autocomplete
 "
