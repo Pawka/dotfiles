@@ -21,4 +21,4 @@ plugins=(git symfony2)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=~/bin/:$PATH
+export PATH=~/.bin/:$PATH
