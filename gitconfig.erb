@@ -1,20 +1,15 @@
 [user]
-	name = <%= print("Your Name: "); STDOUT.flush; STDIN.gets.chomp %>
-	email = <%= print("Your Email: "); STDOUT.flush; STDIN.gets.chomp %>
+    name = Povilas Balzaravicius Pawka
+    email = pavvka@gmail.com
 [alias]
-	co = checkout
+    st = status --ignore-submodules
+    ci = commit
+    co = checkout
+    lg = log --oneline --decorate --color
 [color]
-	diff = auto
-	status = auto
-	branch = auto
+    ui = true
 [core]
-	excludesfile = <%= ENV['HOME'] %>/.gitignore
-	editor = mate -w
-	autocrlf = input
-[apply]
-	whitespace = nowarn
-[format]
-	pretty = %C(yellow)%h%Creset %s %C(red)(%an, %cr)%Creset
+    editor = vim
 [github]
-	user = <%= print("GitHub Username: "); STDOUT.flush; STDIN.gets.chomp %>
-	token = <%= print("GitHub API Token: "); STDOUT.flush; STDIN.gets.chomp %>
+    user = <%= print("GitHub Username: "); STDOUT.flush; STDIN.gets.chomp %>
+    token = <%= print("GitHub API Token: "); STDOUT.flush; STDIN.gets.chomp %>

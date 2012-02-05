@@ -1,0 +1,10 @@
+[ui]
+username = Povilas Balzaravičius <pavvka@gmail.com>
+editor = vim
+merge = meld
+
+[web]
+cacerts=
+
+[extdiff]
+cmd.vdiff = meld
