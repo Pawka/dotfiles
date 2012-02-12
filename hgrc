@@ -8,3 +8,5 @@ cacerts=
 
 [extdiff]
 cmd.vdiff = meld
+
+[extensions]
