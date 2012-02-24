@@ -223,3 +223,8 @@ let g:fuf_mrucmd_maxItem = 100
 noremap ~ :FufFileWithCurrentBufferDir<CR>
 noremap <C-A-m> :FufMruFile<CR>
 noremap <C-A-o> :FufFile<CR>
+
+" Tabular {
+    " Allgin php method comments parameters.
+    AddTabularPattern phpComment /\$\w*
+" }
