@@ -226,5 +226,8 @@ noremap <C-A-o> :FufFile<CR>
 
 " Tabular {
     " Allgin php method comments parameters.
-    AddTabularPattern phpComment /\$\w*
+    if exists(':Tabularize')
+        AddTabularPattern! phpComment /\$\w*
+    endif
 " }
+
