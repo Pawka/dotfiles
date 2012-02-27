@@ -203,13 +203,13 @@ let Tlist_Sort_Type = "name"
 nnoremap <silent> <F8> :TlistToggle<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" PHP Documentor
-source ~/.vim/ftplugin/php-doc.vim 
-inoremap <C-C> <ESC>:call PhpDocSingle()<CR>i 
-nnoremap <C-C> :call PhpDocSingle()<CR> 
-vnoremap <C-C> :call PhpDocRange()<CR>
+" PHP Documentor {
+    source ~/.vim/ftplugin/php-doc.vim 
+    inoremap <C-A-c> <ESC>:call PhpDocSingle()<CR>i 
+    nnoremap <C-A-c> :call PhpDocSingle()<CR> 
+    vnoremap <C-A-c> :call PhpDocRange()<CR>
+" }
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ZenCoding
 let g:user_zen_expandabbr_key = '<c-e>'
 
