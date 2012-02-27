@@ -224,10 +224,20 @@ noremap ~ :FufFileWithCurrentBufferDir<CR>
 noremap <C-A-m> :FufMruFile<CR>
 noremap <C-A-o> :FufFile<CR>
 
+
 " Tabular {
     " Allgin php method comments parameters.
     if exists(':Tabularize')
         AddTabularPattern! phpComment /\$\w*
+    endif
+" }
+
+" Syntastic {
+    " Disable automatic check for some types.
+    if exists(':SyntasticCheck')
+        let g:syntastic_mode_map = { 'mode': 'active',
+                                   \ 'active_filetypes': ['python'],
+                                   \ 'passive_filetypes': ['php'] }
     endif
 " }
 
