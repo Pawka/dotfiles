@@ -233,11 +233,11 @@ noremap <C-A-o> :FufFile<CR>
 " }
 
 " Syntastic {
-    " Disable automatic check for some types.
-    if exists(':SyntasticCheck')
-        let g:syntastic_mode_map = { 'mode': 'active',
-                                   \ 'active_filetypes': ['python'],
-                                   \ 'passive_filetypes': ['php'] }
-    endif
+    "Disable automatic check for some types.
+    let g:syntastic_mode_map = { 'mode': 'passive' ,
+                               \ 'active_filetypes': ['python'],
+                               \ 'passive_filetypes': ['puppet'] }
+    "Do not move cursor to first error after check.
+    let g:syntastic_auto_jump = 0
 " }
 
