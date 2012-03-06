@@ -199,9 +199,9 @@ nnoremap <silent> <F8> :TlistToggle<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PHP Documentor {
     source ~/.vim/ftplugin/php-doc.vim 
-    inoremap <C-A-c> <ESC>:call PhpDocSingle()<CR>i 
-    nnoremap <C-A-c> :call PhpDocSingle()<CR> 
-    vnoremap <C-A-c> :call PhpDocRange()<CR>
+    inoremap <A-c> <ESC>:call PhpDocSingle()<CR>i 
+    nnoremap <A-c> :call PhpDocSingle()<CR> 
+    vnoremap <A-c> :call PhpDocRange()<CR>
 " }
 
 " ZenCoding
