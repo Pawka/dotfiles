@@ -218,14 +218,6 @@ noremap ~ :FufFileWithCurrentBufferDir<CR>
 noremap <C-A-m> :FufMruFile<CR>
 noremap <C-A-o> :FufFile<CR>
 
-
-" Tabular {
-    " Allgin php method comments parameters.
-    if exists(':Tabularize')
-        AddTabularPattern! phpComment /\$\w*
-    endif
-" }
-
 " Syntastic {
     "Disable automatic check for some types.
     let g:syntastic_mode_map = { 'mode': 'passive' ,
