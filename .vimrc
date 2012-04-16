@@ -90,7 +90,7 @@ autocmd FileType php let php_folding=0
 autocmd FileType php DoMatchParen
 autocmd FileType php hi MatchParen ctermbg=blue guibg=lightblue
 
-" Twid uses same templates style as Django
+" Twig uses same templates style as Django
 autocmd BufRead,BufNewFile *.twig set filetype=htmldjango.html
 
 
@@ -117,7 +117,8 @@ filetype plugin indent on
 set backspace=indent,start,eol
 
 " Syntax {
-autocmd! BufNewFile,BufRead *.pde setlocal ft=arduino "Arduino syntax highlighting.
+    autocmd! BufNewFile,BufRead *.pde setlocal ft=arduino "Arduino syntax highlighting.
+    autocmd! BufNewFile,BufRead *.json set ft=json "JSON highlighting.
 " }
 
 "
