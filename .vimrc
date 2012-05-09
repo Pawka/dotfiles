@@ -184,20 +184,22 @@ endif
 " PLUGINS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Taglist plugin
-let Tlist_Ctags_Cmd = "/usr/bin/ctags-exuberant"
-let Tlist_Inc_Winwidth = 1
-let Tlist_Use_Right_Window = 1
-let Tlist_Exit_OnlyWindow = 1
-let Tlist_File_Fold_Auto_Close = 1
-let Tlist_Process_File_Always = 1
-let Tlist_Enable_Fold_Column = 0
-let Tlist_php_settings = 'php;c:class;d:constant;f:function'
-let Tlist_Sort_Type = "name"
-nnoremap <silent> <F8> :TlistToggle<CR>
+" Taglist plugin {
+    let Tlist_Ctags_Cmd = "/usr/bin/ctags-exuberant"
+    let Tlist_Inc_Winwidth = 1
+    let Tlist_Use_Right_Window = 1
+    let Tlist_Exit_OnlyWindow = 1
+    let Tlist_File_Fold_Auto_Close = 1
+    let Tlist_Process_File_Always = 1
+    let Tlist_Enable_Fold_Column = 0
+    let Tlist_Sort_Type = "name"
+    let Tlist_File_Fold_Auto_Close = 1
+    let Tlist_Inc_Winwidth = 1
+    "Display only classes and functions for php.
+    let g:tlist_php_settings = 'php;c:class;f:function'
+    nnoremap <silent> <F8> :TlistToggle<CR>
+" }
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PHP Documentor {
     source ~/.vim/ftplugin/php-doc.vim 
     inoremap <A-c> <ESC>:call PhpDocSingle()<CR>i 
@@ -205,19 +207,20 @@ nnoremap <silent> <F8> :TlistToggle<CR>
     vnoremap <A-c> :call PhpDocRange()<CR>
 " }
 
-" ZenCoding
-let g:user_zen_expandabbr_key = '<c-e>'
+" ZenCoding {
+    let g:user_zen_expandabbr_key = '<c-e>'
+" }
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" FuzzyFinder
-let g:fuf_file_exclude = '\v\~$|\.(o|exe|dll|bak|orig|swp)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])'
-let g:fuf_modesDisable = []
-let g:fuf_mrufile_maxItem = 100
-let g:fuf_mrucmd_maxItem = 100
+" FuzzyFinder {
+    let g:fuf_file_exclude = '\v\~$|\.(o|exe|dll|bak|orig|swp)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])'
+    let g:fuf_modesDisable = []
+    let g:fuf_mrufile_maxItem = 100
+    let g:fuf_mrucmd_maxItem = 100
 
-noremap ~ :FufFileWithCurrentBufferDir<CR>
-noremap <C-A-m> :FufMruFile<CR>
-noremap <C-A-o> :FufFile<CR>
+    noremap ~ :FufFileWithCurrentBufferDir<CR>
+    noremap <C-A-m> :FufMruFile<CR>
+    noremap <C-A-o> :FufFile<CR>
+" }
 
 " Syntastic {
     "Disable automatic check for some types.
