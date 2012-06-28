@@ -46,3 +46,6 @@
 [submodule ".vim/bundle/syntastic"]
 	path = .vim/bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
+[submodule ".vim/bundle/vim-php-cs-fixer"]
+	path = .vim/bundle/vim-php-cs-fixer
+	url = https://github.com/stephpy/vim-php-cs-fixer

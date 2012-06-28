@@ -98,17 +98,15 @@ autocmd BufRead,BufNewFile *.twig set filetype=htmldjango.html
 " DJANGO + PYTHON
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd FileType python set ft=python.django " For SnipMate
-autocmd FileType html set ft=htmldjango.html " For SnipMate
-autocmd FileType htm set ft=htmldjango.html " For SnipMate
 
-
-" autocomplete funcs and identifiers for languages
-autocmd FileType python set omnifunc=pythoncomplete#Complete
-autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
-autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+" Autocomplete funcs and identifiers for languages {
+    autocmd FileType python set omnifunc=pythoncomplete#Complete
+    autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+    autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+    autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+    autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
+    autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+" }
 
 
 filetype on
@@ -119,6 +117,9 @@ set backspace=indent,start,eol
 " Syntax {
     autocmd! BufNewFile,BufRead *.pde setlocal ft=arduino "Arduino syntax highlighting.
     autocmd! BufNewFile,BufRead *.json set ft=json "JSON highlighting.
+    autocmd! BufNewFile,BufRead *.php set ft=php
+    autocmd! BufNewFile,BufRead *.html set ft=phtml
+    autocmd! BufNewFile,BufRead *.html.php set ft=phtml
 " }
 
 "
