@@ -7,6 +7,9 @@ if has("syntax")
   syntax on
 endif
 
+" Change <leader> key to ","
+let mapleader=","
+
 set novisualbell
 "Backup files
 set backup
@@ -22,6 +25,8 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set textwidth=0
+" Max tabs
+set tabpagemax=100
 
 "Encoding
 set encoding=utf-8
@@ -232,3 +237,13 @@ endif
     let g:syntastic_auto_jump = 0
 " }
 
+" PHP cs fixer {
+    "Use global path
+    let g:php_cs_fixer_path = "php-cs-fixer"
+" }
+
+" Gundo {
+    "Display preview window at bottom.
+    let g:gundo_preview_bottom = 1
+    nnoremap <F7> :GundoToggle<CR>
+" }

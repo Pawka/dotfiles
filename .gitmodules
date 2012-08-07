@@ -49,3 +49,6 @@
 [submodule ".vim/bundle/vim-php-cs-fixer"]
 	path = .vim/bundle/vim-php-cs-fixer
 	url = https://github.com/stephpy/vim-php-cs-fixer
+[submodule ".vim/bundle/gundo"]
+	path = .vim/bundle/gundo
+	url = https://github.com/sjl/gundo.vim
