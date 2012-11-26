@@ -10,3 +10,4 @@ cacerts=
 cmd.vdiff = meld
 
 [extensions]
+mq = 

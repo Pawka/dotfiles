@@ -16,9 +16,15 @@ export ZSH_THEME="fishy"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git symfony2)
+plugins=(git mercurial composer symfony2)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH=~/.bin/:$PATH
+
+# Optimized version
+function git_prompt_info() {
+  ref=$(git symbolic-ref HEAD 2> /dev/null) || return
+  echo "$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}$ZSH_THEME_GIT_PROMPT_SUFFIX"
+}
