@@ -1,15 +1,45 @@
 [user]
     name = Povilas Balzaravicius Pawka
     email = pavvka@gmail.com
+
 [alias]
     st = status --ignore-submodules
     ci = commit
     co = checkout
+    br = branch
+    dc = diff --cached
+
+    #Reset commands
+    r = reset
+    r1 = reset HEAD^
+    r2 = reset HEAD^^
+    rh = reset --hard
+    rh1 = reset HEAD^ --hard
+    rh2 = reset HEAD^^ --hard
+
+    #Logging
     lg = log --oneline --decorate --color
+    ls = log --pretty=format:"%C(yellow)%h%Cred%d %Creset%s%Cblue [%cn]" --decorate
+    ll = log --pretty=format:"%C(yellow)%h%Cred%d %Creset%s%Cblue [%cn]" --decorate --numstat
+
+    #List aliases
+    la = "!git config -l | grep alias | cut -c 7-"
+
+    #Assume
+    assume = update-index --assume-unchanged
+    unassume = update-index --no-assume-unchanged
+    assumed = "!git ls-files -v | grep ^h | cut -c 3-"
+    unassumeall = "!git assumed | xargs git update-index --no-assume-unchanged"
+    assumeall = "!git st -s | awk {'print $2'} | xargs git assume"
+
+    lasttag = describe --tags --abbrev=0
+
 [color]
     ui = true
+
 [core]
     editor = vim
+
 [github]
     user = <%= print("GitHub Username: "); STDOUT.flush; STDIN.gets.chomp %>
     token = <%= print("GitHub API Token: "); STDOUT.flush; STDIN.gets.chomp %>
