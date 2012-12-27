@@ -25,6 +25,10 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set textwidth=0
+
+"List characters
+set listchars=tab:→\ ,eol:¶
+
 " Max tabs
 set tabpagemax=100
 
@@ -232,12 +236,12 @@ endif
 " Syntastic {
     "Disable automatic check for some types.
     let g:syntastic_mode_map = { 'mode': 'passive' ,
-                               \ 'active_filetypes': ['python'],
+                               \ 'active_filetypes': ['python', 'js'],
                                \ 'passive_filetypes': ['puppet'] }
-    "Do not move cursor to first error after check.
-    let g:syntastic_auto_jump = 1
+    "Do not move cursor to first error after open/save.
+    let g:syntastic_auto_jump = 0
     "Map key to run check.
-    nnoremap <silent> <F4> :SyntasticCheck<CR>
+    nnoremap <silent> <F4> :w<CR> :SyntasticCheck<CR> :Errors<CR>
 " }
 
 " PHP cs fixer {
