@@ -125,6 +125,7 @@ set backspace=indent,start,eol
     autocmd! BufNewFile,BufRead *.php set ft=php
     autocmd! BufNewFile,BufRead *.html set ft=phtml
     autocmd! BufNewFile,BufRead *.html.php set ft=phtml
+    autocmd! BufNewFile,BufRead *.text set ft=tex
 " }
 
 "
@@ -234,7 +235,9 @@ endif
                                \ 'active_filetypes': ['python'],
                                \ 'passive_filetypes': ['puppet'] }
     "Do not move cursor to first error after check.
-    let g:syntastic_auto_jump = 0
+    let g:syntastic_auto_jump = 1
+    "Map key to run check.
+    nnoremap <silent> <F4> :SyntasticCheck<CR>
 " }
 
 " PHP cs fixer {
