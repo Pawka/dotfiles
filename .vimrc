@@ -73,7 +73,7 @@ set numberwidth=8
 
 "Colors
 if has("gui_running")
-    colors wombat 
+    colorscheme wombat 
     set guioptions-=T
     set guifont=Monospace\ 9
 else
@@ -104,9 +104,6 @@ autocmd FileType php let php_folding=0
 autocmd FileType php DoMatchParen
 autocmd FileType php hi MatchParen ctermbg=blue guibg=lightblue
 
-" Twig uses same templates style as Django
-autocmd BufRead,BufNewFile *.twig set filetype=htmldjango.html
-
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " DJANGO + PYTHON
@@ -129,12 +126,13 @@ filetype plugin indent on
 set backspace=indent,start,eol
 
 " Syntax {
-    autocmd! BufNewFile,BufRead *.pde setlocal ft=arduino "Arduino syntax highlighting.
-    autocmd! BufNewFile,BufRead *.json set ft=json "JSON highlighting.
+    autocmd! BufNewFile,BufRead *.pde setlocal ft=arduino       " Arduino syntax highlighting.
+    autocmd! BufNewFile,BufRead *.json set ft=json              " JSON highlighting.
     autocmd! BufNewFile,BufRead *.php set ft=php
     autocmd! BufNewFile,BufRead *.html set ft=phtml
     autocmd! BufNewFile,BufRead *.html.php set ft=phtml
     autocmd! BufNewFile,BufRead *.text set ft=tex
+    autocmd! BufNewFile,BufRead *.twig set ft=htmldjango.html   " Twig/Django - same shit.
 " }
 
 "
