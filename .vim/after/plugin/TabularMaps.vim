@@ -3,3 +3,6 @@ if !exists(':Tabularize')
 endif
 
 AddTabularPattern! phpComment /\$\w*
+
+map <leader>ta :Tab /=><cr>
+map <leader>tc :Tab phpComment<cr>
