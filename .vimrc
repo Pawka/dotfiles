@@ -1,8 +1,24 @@
-" Pathogen plugin to handle bundles.
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect()
+set nocompatible " Must be first line
 
-set nocompatible    " no compatible
+" Bundles {
+
+    " Setup {
+        filetype on
+        filetype off
+        set rtp+=~/.vim/bundle/vundle
+        call vundle#rc()
+    " }
+
+    " Use bundles config {
+        if filereadable(expand("~/.vimrc.bundles"))
+            source ~/.vimrc.bundles
+        endif
+    " }
+
+" }
+
+filetype plugin indent on     " required!
+
 if has("syntax")
   syntax on
 endif

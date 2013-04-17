@@ -4,8 +4,9 @@ CWD = `pwd`
 default: update
 
 install: source
-	ln -s $(INSTALL_PATH)/.vim ~/.vim.x
-	ln -s $(INSTALL_PATH)/.vimrc ~/.vimrc.x
+	ln -s $(INSTALL_PATH)/.vim ~/.vim
+	ln -s $(INSTALL_PATH)/.vimrc ~/.vimrc
+	ln -s $(INSTALL_PATH)/.vimrc.bundles ~/.vimrc.bundles
 	@cd $(INSTALL_PATH)
 	@git submodule init
 	@git submodule update
@@ -18,3 +19,6 @@ source:
 update:
 	@echo Updating bundles...
 	git submodule foreach git pull origin master
+
+bundles:
+	vim -u ~/.vimrc.bundles +BundleInstall +q

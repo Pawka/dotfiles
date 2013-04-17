@@ -1,0 +1,52 @@
+" Modeline and Notes {
+" vim: set foldmarker={,} foldlevel=0 foldmethod=marker spell:
+" }
+
+" Environment {
+    " Basics {
+        set nocompatible        " must be first line
+    " }
+    "
+    " Setup Bundle Support {
+    " The next three lines ensure that the ~/.vim/bundle/ system works
+        filetype off
+        set rtp+=~/.vim/bundle/vundle
+        call vundle#rc()
+    " }
+
+" }
+
+" Bundles {
+    " Deps {
+        Bundle 'gmarik/vundle'
+        Bundle 'MarcWeber/vim-addon-mw-utils'
+        Bundle 'tomtom/tlib_vim'
+    " }
+
+    " General
+        Bundle 'tComment'
+        Bundle 'tlib'
+        "Bundle 'Tabular'
+        Bundle 'godlygeek/tabular'
+        Bundle 'vim-addon-mw-utils'
+        Bundle 'L9'
+        Bundle 'FuzzyFinder'
+
+        Bundle 'tpope/vim-surround'
+        Bundle 'tpope/vim-fugitive'
+        Bundle 'garbas/vim-snipmate'
+        Bundle 'honza/vim-snippets'
+        Bundle 'vim-scripts/taglist.vim'
+        Bundle 'jcf/vim-latex'
+
+        Bundle 'vim-scripts/sessionman.vim'
+        Bundle 'tpope/vim-markdown'
+        Bundle 'beyondwords/vim-twig'
+    " }
+" }
+
+" General {
+    " set autowrite                  " automatically write a file when leaving a modified buffer
+    set shortmess+=filmnrxoOtT      " abbrev. of messages (avoids 'hit enter')
+" }
+
