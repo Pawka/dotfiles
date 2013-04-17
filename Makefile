@@ -16,9 +16,10 @@ source:
 	git clone git://github.com/Pawka/VIM.git $(INSTALL_PATH)
 	touch $(INSTALL_PATH)
 
-update:
+update: bundles
 	@echo Updating bundles...
 	git submodule foreach git pull origin master
+	vim +BundleUpdate +qa
 
 bundles:
-	vim -u ~/.vimrc.bundles +BundleInstall +q
+	vim -u .vimrc.bundles +BundleInstall +qa
