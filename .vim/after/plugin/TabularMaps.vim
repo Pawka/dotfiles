@@ -4,5 +4,6 @@ endif
 
 AddTabularPattern! phpComment /\$\w*
 
+map <leader>tt :Tab<cr>
 map <leader>ta :Tab /=><cr>
 map <leader>tc :Tab phpComment<cr>
