@@ -1,7 +1,8 @@
 " Vim syntax file
-" Language: PHP 5.3 & up
+" Language: PHP 5.4 & up
 " Maintainer: Paul Garvin <paul@paulgarvin.net>
-" Last Change:  April 2, 2010
+" Generater: Xinchen Hui <laruence@php.net>
+" Last Change:  Aug 5, 2012
 " URL: 
 "
 " Former Maintainer:  Peter Hodge <toomuchphp-vim@yahoo.com>
@@ -228,6 +229,12 @@ syn keyword phpConstants CREATE EXCL CHECKCONS OVERWRITE FL_NOCASE FL_NODIR FL_C
 " zlib
 syn keyword phpConstants FORCE_GZIP FORCE_DEFLATE contained
 
+" yaf
+syn keyword phpConstants YAF_VERSION YAF_ENVIRON YAF_ERR_STARTUP_FAILED YAF_ERR_ROUTE_FAILED YAF_ERR_DISPATCH_FAILED YAF_ERR_AUTOLOAD_FAILED YAF_ERR_NOTFOUND_MODULE YAF_ERR_NOTFOUND_CONTROLLER YAF_ERR_NOTFOUND_ACTION YAF_ERR_NOTFOUND_VIEW YAF_ERR_CALL_FAILED YAF_ERR_TYPE_ERROR SCHEME_HTTP SCHEME_HTTPS contained
+
+" yar
+syn keyword phpConstants YAR_VERSION YAR_CLIENT_PROTOCOL_HTTP YAR_CLIENT_OPT_PACKAGER YAR_CLIENT_OPT_TIMEOUT YAR_CLIENT_OPT_CONNECT_TIMEOUT YAR_PACKAGER_PHP YAR_PACKAGER_JSON YAR_ERR_OKEY YAR_ERR_OUTPUT YAR_ERR_TRANSPORT YAR_ERR_REQUEST YAR_ERR_PROTOCOL YAR_ERR_PACKAGER YAR_ERR_EXCEPTION contained
+
 syn case ignore
 
 " Core
@@ -418,22 +425,28 @@ syn keyword phpClasses ZipArchive contained
 " zlib
 syn keyword phpFunctions readgzfile gzrewind gzclose gzeof gzgetc gzgets gzgetss gzread gzopen gzpassthru gzseek gztell gzwrite gzputs gzfile gzcompress gzuncompress gzdeflate gzinflate gzencode ob_gzhandler zlib_get_coding_type contained
 
+" yaf
+syn keyword phpClasses Yaf_Application Yaf_Bootstrap_Abstract Yaf_Dispatcher Yaf_Loader Yaf_Request_Abstract Yaf_Request_Http Yaf_Request_Simple Yaf_Response_Abstract Yaf_Response_Http Yaf_Response_Cli Yaf_Controller_Abstract Yaf_Action_Abstract Yaf_Config_Abstract Yaf_Config_Ini Yaf_Config_Simple Yaf_View_Interface Yaf_View_Simple Yaf_Router Yaf_Route_Interface Yaf_Route_Static Yaf_Route_Simple Yaf_Route_Supervar Yaf_Route_Rewrite Yaf_Route_Regex Yaf_Route_Map Yaf_Plugin_Abstract Yaf_Registry Yaf_Session Yaf_Exception Yaf_Exception_StartupError Yaf_Exception_RouterFailed Yaf_Exception_DispatchFailed Yaf_Exception_LoadFailed Yaf_Exception_LoadFailed_Module Yaf_Exception_LoadFailed_Controller Yaf_Exception_LoadFailed_Action Yaf_Exception_LoadFailed_View Yaf_Exception_TypeError contained
+
+" yar
+syn keyword phpClasses Yar_Server Yar_Client Yar_Concurrent_Client Yar_Server_Exception Yar_Server_Request_Exception Yar_Server_Protocol_Exception Yar_Server_Packager_Exception Yar_Server_Output_Exception Yar_Client_Exception Yar_Client_Transport_Exception Yar_Client_Packager_Exception Yar_Client_Protocol_Exception contained
+
 " === END BUILTIN FUNCTIONS, CLASSES, AND CONSTANTS =====================================
 
 " The following is needed afterall it seems.
 syntax keyword phpClasses containedin=ALLBUT,phpComment,phpStringDouble,phpStringSingle,phpIdentifier,phpMethodsVar
 
 " Control Structures
-syn keyword phpStatement if else elseif while do for foreach break switch case default continue return goto as endif endwhile endfor endforeach endswitch declare endeclare contained
+syn keyword phpStatement if else elseif while do for foreach break switch case default continue return goto as endif endwhile endfor endforeach endswitch declare endeclare yield contained
 
 " Class Keywords
-syn keyword phpType class abstract extends interface implements static final var public private protected const contained
+syn keyword phpType class abstract extends interface implements static final var public private protected trait const contained
 
 " Magic Methods
 syn keyword phpStatement __construct __destruct __call __callStatic __get __set __isset __unset __sleep __wakeup __toString __invoke __set_state __clone contained
 
 " Exception Keywords
-syn keyword phpStatement try catch throw contained
+syn keyword phpStatement try catch throw finally contained
 
 " Language Constructs
 syn keyword phpStatement die exit eval empty isset unset list instanceof contained
