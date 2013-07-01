@@ -20,7 +20,7 @@ set nocompatible " Must be first line
 filetype plugin indent on     " required!
 
 if has("syntax")
-  syntax on
+  syntax enable
 endif
 
 " Change <leader> key to ","
@@ -87,15 +87,16 @@ set exrc
 set number
 set numberwidth=8
 
-"Colors
-if has("gui_running")
-    colorscheme wombat 
-    set guioptions-=T
-    set guifont=Monospace\ 9
-else
-    set t_Co=256
-    colors zen
-endif
+" Colors {
+    set background=dark
+    if has("gui_running")
+        set guioptions-=T           " Hide toolbar
+        set guifont=Monospace\ 10
+    else
+        let g:solarized_termcolors=256
+    endif
+    colorscheme solarized
+" }
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PHP
@@ -142,7 +143,8 @@ filetype plugin indent on
 set backspace=indent,start,eol
 
 " Syntax {
-    autocmd! BufNewFile,BufRead *.pde setlocal ft=arduino       " Arduino syntax highlighting.
+    autocmd! BufNewFile,BufRead *.pde set ft=arduino            " Arduino syntax highlighting.
+    autocmd! BufNewFile,BufRead *.ino set ft=arduino
     autocmd! BufNewFile,BufRead *.json set ft=json              " JSON highlighting.
     autocmd! BufNewFile,BufRead *.php set ft=php
     autocmd! BufNewFile,BufRead *.html set ft=phtml

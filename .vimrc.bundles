@@ -22,11 +22,15 @@
         Bundle 'MarcWeber/vim-addon-mw-utils'
         Bundle 'tomtom/tlib_vim'
     " }
+    
+    " Appearance {
+        Bundle 'altercation/vim-colors-solarized'
+    " }
 
-    " General
+    " General {
         Bundle 'tComment'
         Bundle 'tlib'
-        "Bundle 'Tabular'
+        Bundle 'Rename'
         Bundle 'godlygeek/tabular'
         Bundle 'vim-addon-mw-utils'
         Bundle 'L9'
@@ -42,6 +46,10 @@
         Bundle 'vim-scripts/sessionman.vim'
         Bundle 'tpope/vim-markdown'
         Bundle 'beyondwords/vim-twig'
+    " }
+    
+    " Programming {
+        Bundle 'tclem/vim-arduino'
     " }
 " }
 
