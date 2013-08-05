@@ -31,25 +31,25 @@
         Bundle 'tComment'
         Bundle 'tlib'
         Bundle 'Rename'
-        Bundle 'godlygeek/tabular'
+        Bundle 'sessionman.vim'
         Bundle 'vim-addon-mw-utils'
         Bundle 'L9'
         Bundle 'FuzzyFinder'
 
+    " Editing {
+        Bundle 'godlygeek/tabular'
         Bundle 'tpope/vim-surround'
         Bundle 'tpope/vim-fugitive'
         Bundle 'garbas/vim-snipmate'
         Bundle 'honza/vim-snippets'
         Bundle 'vim-scripts/taglist.vim'
-        Bundle 'jcf/vim-latex'
-
-        Bundle 'vim-scripts/sessionman.vim'
-        Bundle 'tpope/vim-markdown'
-        Bundle 'beyondwords/vim-twig'
     " }
     
-    " Programming {
+    " Languages {
         Bundle 'tclem/vim-arduino'
+        Bundle 'jcf/vim-latex'
+        Bundle 'tpope/vim-markdown'
+        Bundle 'beyondwords/vim-twig'
     " }
 " }
 

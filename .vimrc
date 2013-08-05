@@ -88,15 +88,17 @@ set number
 set numberwidth=8
 
 " Colors {
-    set background=dark
     if has("gui_running")
         set guioptions-=T           " Hide toolbar
         set guifont=Monospace\ 10
     else
         let g:solarized_termcolors=256
     endif
+
     colorscheme solarized
+    set background=dark
 " }
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PHP
@@ -210,7 +212,6 @@ if !exists("*QuoteDelim")
       endif
     endf
 endif
-
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PLUGINS
