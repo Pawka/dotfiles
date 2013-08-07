@@ -23,9 +23,6 @@ if has("syntax")
   syntax enable
 endif
 
-" Change <leader> key to ","
-let mapleader=","
-
 set novisualbell
 "Backup files
 set backup
