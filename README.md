@@ -1,19 +1,18 @@
 # Personal VIM configs by Pawka
 
-## Install
+Install:
 
 ``` sh
 make install
 ```
 
-## Update
+Update:
 
 ``` sh
 make update
 ```
 
-## Additional info
+## Info
 
-Statusbar is managed by [https://github.com/Lokaltog/powerline](Powerline)
-plugin. Check documentation on plugin page if occur any problems with
-installation.
+Statusbar is managed by [Powerline](https://github.com/Lokaltog/powerline)
+plugin. Check documentation on plugin page if occur any problems.
