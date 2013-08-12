@@ -1,16 +1,11 @@
 # Personal VIM configs by Pawka
 
-Install:
+## Install & update
 
-``` sh
-make install
-```
+Clone repository and run ``make install``. It will fetch all required plugins
+and create symlinks to home directory.
 
-Update:
-
-``` sh
-make update
-```
+Do not forget run ``make update`` periodically.
 
 ## Info
 

@@ -74,7 +74,20 @@ set fileencodings=utf-8,ucs-bom,latin1
 
     " Use 256 colours (Use this setting only if your terminal supports 256 colours)
     set t_Co=256
-"}
+" }
+
+" Command-Line mode {
+    " Enable wildmenu on command mode autocomplete.
+    set wildmenu
+    set wildmode=full
+
+    " CL default is 20.
+    set history=200
+
+    " Map <C-p> and <C-n> filter command history.
+    cnoremap <C-p> <Up>
+    cnoremap <C-n> <Down>
+" }
 
 " Search {
     set hlsearch
