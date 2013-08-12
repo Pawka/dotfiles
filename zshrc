@@ -25,6 +25,7 @@ unsetopt correct_all
 
 # Customize to your needs...
 export PATH=~/.bin/:$PATH
+export XDG_CONFIG_HOME="$HOME/.config"
 
 # Optimized version
 function git_prompt_info() {
