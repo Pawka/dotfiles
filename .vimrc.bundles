@@ -13,7 +13,6 @@
         set rtp+=~/.vim/bundle/vundle
         call vundle#rc()
     " }
-
 " }
 
 " Bundles {
@@ -25,6 +24,7 @@
     
     " Appearance {
         Bundle 'altercation/vim-colors-solarized'
+        Bundle 'Lokaltog/vim-powerline'
     " }
 
     " General {
@@ -35,6 +35,7 @@
         Bundle 'vim-addon-mw-utils'
         Bundle 'L9'
         Bundle 'FuzzyFinder'
+    " }
 
     " Editing {
         Bundle 'godlygeek/tabular'

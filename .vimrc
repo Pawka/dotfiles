@@ -24,12 +24,13 @@ if has("syntax")
 endif
 
 set novisualbell
-"Backup files
+
+" Backup files
 set backup
 set backupdir=~/.vim/backup
 set directory=/tmp
 
-"TAB simbolių kiekis
+" TAB simbolių kiekis
 set autoindent
 set smartindent
 set expandtab
@@ -39,19 +40,34 @@ set shiftwidth=4
 set softtabstop=4
 set textwidth=0
 
-"List characters
+" List characters
 set listchars=tab:→\ ,eol:¶
 
 " Max tabs
 set tabpagemax=100
 
-"Encoding
+" Encoding
 set encoding=utf-8
 set fileencodings=utf-8,ucs-bom,latin1
 
 "GUI {
-    " Powerline status line
-    set rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/
+
+    " Statusline {
+        " Configs below will be overrided by Powerline if it is enabled.
+        set statusline=\                              " 
+        set statusline+=%f\                           " file name
+        set statusline+=[                             " 
+        set statusline+=%{strlen(&ft)?&ft:'none'},    " filetype
+        set statusline+=%{&fileformat}]               " file format
+        set statusline+=\ %{fugitive#statusline()}    " git branch
+        set statusline+=%h%1*%m%r%w%0*                " flag
+        set statusline+=%=                            " right align
+        set statusline+=%-14.(%l,%c%V%)\ %<%P         " offs
+    " }
+
+    " Powerline config {
+        let g:Powerline_colorscheme = 'solarized256'
+    " }
 
     " Always show statusline
     set laststatus=2
@@ -60,11 +76,12 @@ set fileencodings=utf-8,ucs-bom,latin1
     set t_Co=256
 "}
 
-"Search
-set hlsearch
-set incsearch
-set ignorecase
-set cursorline
+" Search {
+    set hlsearch
+    set incsearch
+    set ignorecase
+    set cursorline
+" }
 
 "Etc
 set tags=./tags,./../tags,./../../tags,tags,$VIM/tags,$VIM/phptags
@@ -83,14 +100,15 @@ set numberwidth=8
 
 " Colors {
     if has("gui_running")
-        set guioptions-=T           " Hide toolbar
+        " Hide toolbar
+        set guioptions-=T
         set guifont=Monospace\ 10
     else
         let g:solarized_termcolors=256
     endif
 
-    colorscheme solarized
     set background=dark
+    colorscheme solarized
 " }
 
 
