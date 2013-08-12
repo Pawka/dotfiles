@@ -25,6 +25,7 @@
     
     " Appearance {
         Bundle 'altercation/vim-colors-solarized'
+        Bundle 'Lokaltog/vim-powerline'
     " }
 
     " General {
