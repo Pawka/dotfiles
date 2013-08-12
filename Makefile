@@ -17,7 +17,7 @@ update: submodules-update bundles
 # Fetch and install provided required bundles.
 # 
 bundles:
-	vim -u .vimrc.bundles +BundleInstall +qa
+	vim -u vimrc.bundles +BundleInstall +qa
 
 # 
 # Submodules
@@ -25,7 +25,7 @@ bundles:
 .PHONY: submodules submodules-update
 submodules:
 	git submodule init
-	git submodule update
+	git submodule update -f
 
 submodules-update:
 	git submodule foreach git pull origin master
