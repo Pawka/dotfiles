@@ -1,24 +1,16 @@
-INSTALL_PATH = ~/
-CWD = `pwd`
+.PHONY: update install source bundles symlinks
 
 default: update
 
-install: source powerline
-	ln -s $(INSTALL_PATH)/.vim ~/.vim
-	ln -s $(INSTALL_PATH)/.vimrc ~/.vimrc
-	ln -s $(INSTALL_PATH)/.vimrc.bundles ~/.vimrc.bundles
-	@cd $(INSTALL_PATH)
-	@git submodule init
-	@git submodule update
-	@cd $(CWD)
+install: submodules bundles symlinks
 
-source:
-	git clone git://github.com/Pawka/VIM.git $(INSTALL_PATH)
-	touch $(INSTALL_PATH)
+symlinks:
+	ln -s $(CURDIR)/vim $(HOME)/.vim
+	ln -s $(CURDIR)/vimrc $(HOME)/.vimrc
+	ln -s $(CURDIR)/vimrc.bundles $(HOME)/.vimrc.bundles
 
-update: bundles powerline-source
-	@echo Updating bundles...
-	git submodule foreach git pull origin master
+update: submodules-update bundles
+	@echo Updating plugins
 	vim +BundleUpdate +qa
 
 #
@@ -26,3 +18,15 @@ update: bundles powerline-source
 # 
 bundles:
 	vim -u .vimrc.bundles +BundleInstall +qa
+
+# 
+# Submodules
+#
+.PHONY: submodules submodules-update
+submodules:
+	git submodule init
+	git submodule update
+
+submodules-update:
+	git submodule foreach git pull origin master
+
