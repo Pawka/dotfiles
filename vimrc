@@ -66,7 +66,7 @@ set fileencodings=utf-8,ucs-bom,latin1
     " }
 
     " Powerline config {
-        let g:Powerline_colorscheme = 'solarized256'
+        set rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/
     " }
 
     " Always show statusline
