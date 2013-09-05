@@ -1,0 +1,20 @@
+# Create class. Detect namespace by file structure.
+snippet class
+	<?php
+
+	namespace ${1:`substitute(substitute(expand("%:h"), '\v^\w+\/(\u)', '\1', ''), '\/', '\\\', 'g')`};
+
+	class ${2:`Filename('', 'MyClass')`}
+	{
+		${3}
+	}
+# PHPUnit test case class.
+snippet test
+	<?php
+
+	namespace ${1:`substitute(substitute(expand("%:h"), '\v^\w+\/(\u)', '\1', ''), '\/', '\\\', 'g')`};
+
+	class ${2:`Filename('', 'MyClass')`}Test extends \PHPUnit_Framework_TestCase
+	{
+		${3}
+	}
