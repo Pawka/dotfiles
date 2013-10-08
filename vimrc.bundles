@@ -44,13 +44,19 @@
         Bundle 'garbas/vim-snipmate'
         Bundle 'honza/vim-snippets'
         Bundle 'vim-scripts/taglist.vim'
+        Bundle 'vim-scripts/AutoTag'
     " }
     
     " Languages {
         Bundle 'tclem/vim-arduino'
         Bundle 'jcf/vim-latex'
         Bundle 'tpope/vim-markdown'
-        Bundle 'beyondwords/vim-twig'
+
+        " PHP {
+            Bundle 'arnaud-lb/vim-php-namespace'
+            Bundle 'beyondwords/vim-twig'
+            Bundle 'docteurklein/vim-symfony'
+        " }
     " }
 " }
 

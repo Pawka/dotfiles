@@ -96,8 +96,8 @@ set fileencodings=utf-8,ucs-bom,latin1
     set cursorline
 " }
 
-"Etc
-set tags=./tags,./../tags,./../../tags,tags,$VIM/tags,$VIM/phptags
+" Tags
+" set tags=./tags*,./../tags*,./../../tags*,tags*,$VIM/tags,$VIM/phptags
 
 " Do not wrap lines automatically
 set nowrap
@@ -298,6 +298,37 @@ endif
 
 " Gundo {
     "Display preview window at bottom.
-    let g:gundo_preview_bottom = 1
-    nnoremap <F7> :GundoToggle<CR>
+    " let g:gundo_preview_bottom = 1
+    " nnoremap <F7> :GundoToggle<CR>
 " }
+
+" vim-php-namespace {
+    " Insert namespace
+    inoremap <Leader>u <C-O>:call PhpInsertUse()<CR>
+    noremap <Leader>u :call PhpInsertUse()<CR>
+    " Expand class name
+    inoremap <Leader>e <C-O>:call PhpExpandClass()<CR>
+    noremap <Leader>e :call PhpExpandClass()<CR>
+" }
+
+" first set path
+set path+=**
+
+" jump to a twig view in symfony
+function! s:SfJumpToView()
+    mark C
+    normal! ]M
+    let end = line(".")
+    normal! [m
+    try
+        call search('\v[^.:]+\.html\.twig', '', end)
+        normal! gf
+    catch
+        normal! g`C
+        echohl WarningMsg | echomsg "Template file not found" | echohl None
+    endtry
+endfunction
+com! SfJumpToView call s:SfJumpToView()
+
+" create a mapping only in a Controller file
+autocmd BufEnter *Controller.php nmap <buffer><leader>v :SfJumpToView<CR>
