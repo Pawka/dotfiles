@@ -51,11 +51,13 @@
         Bundle 'tclem/vim-arduino'
         Bundle 'jcf/vim-latex'
         Bundle 'tpope/vim-markdown'
+        Bundle 'evanmiller/nginx-vim-syntax'
 
         " PHP {
             Bundle 'arnaud-lb/vim-php-namespace'
             Bundle 'beyondwords/vim-twig'
             Bundle 'docteurklein/vim-symfony'
+            Bundle '2072/PHP-Indenting-for-VIm'
         " }
     " }
 " }

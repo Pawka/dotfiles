@@ -321,7 +321,7 @@ function! s:SfJumpToView()
     let end = line(".")
     normal! [m
     try
-        call search('\v[^.:]+\.html\.twig', '', end)
+        call search('\v[^.:]+\.html\.php', '', end)
         normal! gf
     catch
         normal! g`C
