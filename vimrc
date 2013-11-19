@@ -92,8 +92,14 @@ set fileencodings=utf-8,ucs-bom,latin1
 " Search {
     set hlsearch
     set incsearch
-    set ignorecase
+    set smartcase
     set cursorline
+" }
+
+" Global key bindings {
+    " Map leader key to ','.
+    let mapleader=',' 
+    noremap \ ,
 " }
 
 " Tags
@@ -275,9 +281,11 @@ endif
     let g:fuf_mrufile_maxItem = 100
     let g:fuf_mrucmd_maxItem = 100
 
-    noremap ~ :FufFileWithCurrentBufferDir<CR>
-    noremap <C-A-m> :FufMruFile<CR>
-    noremap <C-A-o> :FufFile<CR>
+    noremap <Leader>` :FufFileWithCurrentBufferDir<CR>
+    noremap <Leader>f :FufFileWithCurrentBufferDir<CR>
+    noremap <Leader>dd :FufBookmarkDir<CR>
+    noremap <Leader>dm :FufMruFile<CR>
+    noremap <Leader>db :FufBuffer<CR>
 " }
 
 " Syntastic {
@@ -304,8 +312,8 @@ endif
 
 " vim-php-namespace {
     " Insert namespace
-    inoremap <Leader>u <C-O>:call PhpInsertUse()<CR>
-    noremap <Leader>u :call PhpInsertUse()<CR>
+    inoremap <Leader>n <C-O>:call PhpInsertUse()<CR>
+    noremap <Leader>n :call PhpInsertUse()<CR>
     " Expand class name
     inoremap <Leader>e <C-O>:call PhpExpandClass()<CR>
     noremap <Leader>e :call PhpExpandClass()<CR>
@@ -321,7 +329,7 @@ function! s:SfJumpToView()
     let end = line(".")
     normal! [m
     try
-        call search('\v[^.:]+\.html\.php', '', end)
+        call search('\v[^.:]+\.html\.(twig|php)', '', end)
         normal! gf
     catch
         normal! g`C

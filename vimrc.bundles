@@ -45,6 +45,9 @@
         Bundle 'honza/vim-snippets'
         Bundle 'vim-scripts/taglist.vim'
         Bundle 'vim-scripts/AutoTag'
+        Bundle 'nelstrom/vim-qargs'
+
+        " Bundle 'ervandew/supertab'
     " }
     
     " Languages {
@@ -58,6 +61,7 @@
             Bundle 'beyondwords/vim-twig'
             Bundle 'docteurklein/vim-symfony'
             Bundle '2072/PHP-Indenting-for-VIm'
+            " Bundle 'shawncplus/phpcomplete.vim'
         " }
     " }
 " }
