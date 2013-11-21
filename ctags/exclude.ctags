@@ -1,0 +1,4 @@
+--exclude=.git
+--exclude=web
+--exclude=public
+--exclude=tests
