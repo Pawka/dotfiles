@@ -101,6 +101,7 @@ set fileencodings=utf-8,ucs-bom,latin1
     " Map leader key to ','.
     let mapleader=',' 
     noremap \ ,
+    nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 
     " Function keys {
         noremap <F5> :make<CR>
