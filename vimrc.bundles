@@ -58,10 +58,11 @@
 
         " PHP {
             Bundle 'arnaud-lb/vim-php-namespace'
-            Bundle 'beyondwords/vim-twig'
-            Bundle 'docteurklein/vim-symfony'
             Bundle '2072/PHP-Indenting-for-VIm'
+            Bundle 'joonty/vim-phpunitqf.git'
             " Bundle 'shawncplus/phpcomplete.vim'
+            " Bundle 'docteurklein/vim-symfony'
+            " Bundle 'beyondwords/vim-twig'
         " }
     " }
 " }
