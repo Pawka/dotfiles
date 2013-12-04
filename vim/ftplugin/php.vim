@@ -15,11 +15,11 @@
             let l:result = l:file
         else
             " If the current file is not a unit test.
-            let l:result = substitute(l:file, 'Bundle/\([^/]\+\)\(.\+\).php$', 'Bundle/\1/Tests\2Test.php', '')
+            let l:result = substitute(l:file, '\([^/]\+Bundle\)/\(.\+\).php$', '\1/Tests/\2Test.php', '')
         endif
 
         return l:result
-    endf.
+    endf
 
     " Open PHPUnit test file in vertical split.
     if !exists("*OpenPHPUnitTest")
@@ -56,7 +56,7 @@
                     let l:args = l:file
                 else
                     " Otherwise try and run the test for this file
-                    let l:args = substitute(l:file, 'Bundle/\([^/]\+\)\(.\+\).php$', 'Bundle/\1/Tests\2Test.php', '')
+                    let l:args = SymfonyGetTestFilename(l:file)
                 endif
             endif
             return l:args
