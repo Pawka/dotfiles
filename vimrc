@@ -132,7 +132,7 @@ set numberwidth=8
         let g:solarized_termcolors=256
     endif
 
-    set background=dark
+    set background=light
     colorscheme solarized
 " }
 
@@ -323,6 +323,12 @@ endif
     " Expand class name
     inoremap <Leader>e <C-O>:call PhpExpandClass()<CR>
     noremap <Leader>e :call PhpExpandClass()<CR>
+" }
+"
+" Command-T {
+    " Ignore dirs
+    let g:CommandTWildIgnore=&wildignore . ",**/cache/**,**/logs/**,**/build/**"
+    let g:CommandTMaxHeight=20
 " }
 
 " first set path

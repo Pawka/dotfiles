@@ -33,9 +33,15 @@
         Bundle 'sessionman.vim'
         Bundle 'vim-addon-mw-utils'
         Bundle 'L9'
-        Bundle 'FuzzyFinder'
     " }
 
+    " Navigation {
+        Bundle 'FuzzyFinder'
+        Bundle 'wincent/Command-T'
+        Bundle 'Lokaltog/vim-easymotion'
+        Bundle 'vim-scripts/taglist.vim'
+    " }
+ 
     " Editing {
         Bundle 'godlygeek/tabular'
         Bundle 'tpope/vim-surround'
@@ -43,10 +49,8 @@
         Bundle 'tpope/vim-unimpaired'
         Bundle 'garbas/vim-snipmate'
         Bundle 'honza/vim-snippets'
-        Bundle 'vim-scripts/taglist.vim'
         Bundle 'vim-scripts/AutoTag'
         Bundle 'nelstrom/vim-qargs'
-
         " Bundle 'ervandew/supertab'
     " }
     
