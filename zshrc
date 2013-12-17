@@ -36,6 +36,7 @@ function git_prompt_info() {
 #Aliases
 alias diff="colordiff"
 alias tmux="TERM=screen-256color-bce tmux"
+alias st="st -e tmux"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
