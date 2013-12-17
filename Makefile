@@ -12,6 +12,10 @@ requirements:
 rake:
 	rake install
 
+.PHONY: gem
+gem:
+	sudo gem install tmuxinator
+
 #
 # Create symlink for powerline configs
 #
