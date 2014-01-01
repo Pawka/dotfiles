@@ -11,6 +11,7 @@ root: ~/etc/code/boozt/webshop
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
 # pre_window: rbenv shell 2.0.0-p247
+pre_window: export SYMFONY_ENV=povilas_shopboozt
 
 # Pass command line options to tmux. Useful for specifying a different tmux.conf.
 # tmux_options: -f ~/.tmux.mac.conf
@@ -20,8 +21,9 @@ root: ~/etc/code/boozt/webshop
 
 windows:
   - editor: vim
-  - shell: ~
+  - shell: ~/etc/code/boozt/webshop
   - logs:
+      layout: main-vertical
       panes: 
         - tail -f /var/log/mysql/mysql.log
         - top

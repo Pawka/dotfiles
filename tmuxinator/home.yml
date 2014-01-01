@@ -24,4 +24,4 @@ windows:
       panes:
         - irssi
         - top
-        - shell ~
+        - ~
