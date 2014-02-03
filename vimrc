@@ -49,6 +49,7 @@ set tabpagemax=100
 " Encoding
 set encoding=utf-8
 set fileencodings=utf-8,ucs-bom,latin1
+set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICENSE,**/doc/**
 
 "GUI {
 
@@ -102,10 +103,20 @@ set fileencodings=utf-8,ucs-bom,latin1
     let mapleader=',' 
     noremap \ ,
     nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
+    nnoremap <Leader>m :make<CR>
 
     " Function keys {
         noremap <F5> :make<CR>
     " }
+" }
+"
+" Command mappings {
+
+    " Map wq commands to avoid case errors
+    :command! WQ wq
+    :command! Wq wq
+    :command! W w
+    :command! Q q
 " }
 
 " Tags
@@ -129,11 +140,16 @@ set numberwidth=8
         set guioptions-=T
         set guifont=Monospace\ 10
     else
-        let g:solarized_termcolors=256
+      let g:solarized_termcolors=256
     endif
 
-    set background=light
+    " set background=dark
     colorscheme solarized
+
+    " Autoload toggle-bacground plugin if it was not loaded.
+    if !exists(":ToggleBG")
+        call togglebg#map("")
+    endif
 " }
 
 
@@ -272,9 +288,9 @@ endif
 
 " PHP Documentor {
     source ~/.vim/ftplugin/php-doc.vim 
-    inoremap <A-c> <ESC>:call PhpDocSingle()<CR>i 
-    nnoremap <A-c> :call PhpDocSingle()<CR> 
-    vnoremap <A-c> :call PhpDocRange()<CR>
+    inoremap <Leader>c <ESC>:call PhpDocSingle()<CR>i 
+    nnoremap <Leader>c :call PhpDocSingle()<CR> 
+    vnoremap <Leader>c :call PhpDocRange()<CR>
 " }
 
 " ZenCoding {

@@ -78,3 +78,9 @@ else
 		    \%W%.%#Notice:\ %m\ in\ %f\ on\ line\ %l,
 		    \%-G%.%#
 endif
+
+" Key bindings {
+    map <buffer> <leader>po :TestOutput<CR>
+    map <buffer> <leader>pf :TestFile<CR>
+    map <buffer> <leader>pp :Test<CR>
+" }
