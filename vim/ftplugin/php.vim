@@ -1,3 +1,35 @@
+" PLUGINS {
+
+    " PHP Documentor {
+        source ~/.vim/ftplugin/php-doc.vim 
+        " inoremap <Leader>c <ESC>:call PhpDocSingle()<CR>i 
+        nnoremap <Leader>c :call PhpDocSingle()<CR> 
+        vnoremap <Leader>c :call PhpDocRange()<CR>
+    " }
+
+    " PHP cs fixer {
+        " Use global path
+        let g:php_cs_fixer_path = "php-cs-fixer"
+    " }
+
+    " vim-php-namespace {
+        " Insert namespace
+        inoremap <Leader>n <C-O>:call PhpInsertUse()<CR>
+        noremap <Leader>n :call PhpInsertUse()<CR>
+
+        " Expand class name
+        inoremap <Leader>e <C-O>:call PhpExpandClass()<CR>
+        noremap <Leader>e :call PhpExpandClass()<CR>
+    " }
+
+    " php-getter-setter {
+
+        " Disable default mappings by plugin
+        let no_php_maps = 1
+        map <buffer> <leader>g :InsertBothGetterSetter<CR>
+    " }
+" }
+
 
 " PHPunit support  {
 
@@ -78,6 +110,28 @@ else
 		    \%W%.%#Notice:\ %m\ in\ %f\ on\ line\ %l,
 		    \%-G%.%#
 endif
+
+" first set path
+" set path+=**
+"
+" " jump to a twig view in symfony
+" function! s:SfJumpToView()
+"     mark C
+"     normal! ]M
+"     let end = line(".")
+"     normal! [m
+"     try
+"         call search('\v[^.:]+\.html\.(twig|php)', '', end)
+"         normal! gf
+"     catch
+"         normal! g`C
+"         echohl WarningMsg | echomsg "Template file not found" | echohl None
+"     endtry
+" endfunction
+" com! SfJumpToView call s:SfJumpToView()
+
+" create a mapping only in a Controller file
+autocmd BufEnter *Controller.php nmap <buffer><leader>v :SfJumpToView<CR>
 
 " Key bindings {
     map <buffer> <leader>po :TestOutput<CR>

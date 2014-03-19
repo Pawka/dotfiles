@@ -286,13 +286,6 @@ endif
     nnoremap <silent> <F8> :TlistToggle<CR>
 " }
 
-" PHP Documentor {
-    source ~/.vim/ftplugin/php-doc.vim 
-    inoremap <Leader>c <ESC>:call PhpDocSingle()<CR>i 
-    nnoremap <Leader>c :call PhpDocSingle()<CR> 
-    vnoremap <Leader>c :call PhpDocRange()<CR>
-" }
-
 " ZenCoding {
     let g:user_zen_expandabbr_key = '<c-e>'
 " }
@@ -321,50 +314,41 @@ endif
     nnoremap <silent> <F4> :w<CR> :SyntasticCheck<CR> :Errors<CR>
 " }
 
-" PHP cs fixer {
-    "Use global path
-    let g:php_cs_fixer_path = "php-cs-fixer"
-" }
-
 " Gundo {
     "Display preview window at bottom.
     " let g:gundo_preview_bottom = 1
     " nnoremap <F7> :GundoToggle<CR>
 " }
 
-" vim-php-namespace {
-    " Insert namespace
-    inoremap <Leader>n <C-O>:call PhpInsertUse()<CR>
-    noremap <Leader>n :call PhpInsertUse()<CR>
-    " Expand class name
-    inoremap <Leader>e <C-O>:call PhpExpandClass()<CR>
-    noremap <Leader>e :call PhpExpandClass()<CR>
-" }
-"
 " Command-T {
     " Ignore dirs
     let g:CommandTWildIgnore=&wildignore . ",**/cache/**,**/logs/**,**/build/**"
     let g:CommandTMaxHeight=20
 " }
 
-" first set path
-set path+=**
+" php-getter-setter {
+    " Templates needs to be set before plugin load
+    let b:phpgetset_setterTemplate =
+    \ "    \n" .
+    \ "    /**\n" .
+    \ "     * Set %varname%\n" .
+    \ "     *\n" .
+    \ "     * @param mixed $%varname%\n" .
+    \ "     */\n" .
+    \ "    public function %funcname%($%varname%)\n" .
+    \ "    {\n" .
+    \ "        $this->%varname% = $%varname%;\n" .
+    \ "    }"
 
-" jump to a twig view in symfony
-function! s:SfJumpToView()
-    mark C
-    normal! ]M
-    let end = line(".")
-    normal! [m
-    try
-        call search('\v[^.:]+\.html\.(twig|php)', '', end)
-        normal! gf
-    catch
-        normal! g`C
-        echohl WarningMsg | echomsg "Template file not found" | echohl None
-    endtry
-endfunction
-com! SfJumpToView call s:SfJumpToView()
-
-" create a mapping only in a Controller file
-autocmd BufEnter *Controller.php nmap <buffer><leader>v :SfJumpToView<CR>
+   let b:phpgetset_getterTemplate =
+    \ "    \n" .
+    \ "    /**\n" .
+    \ "     * Get $%varname%\n" .
+    \ "     *\n" .
+    \ "     * @return\n" .
+    \ "     */\n" .
+    \ "    public function %funcname%()\n" .
+    \ "    {\n" .
+    \ "        return $this->%varname%;\n" .
+    \ "    }"
+" }

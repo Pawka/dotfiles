@@ -30,7 +30,7 @@
         Bundle 'tComment'
         Bundle 'tlib'
         Bundle 'Rename'
-        Bundle 'sessionman.vim'
+        " Bundle 'sessionman.vim'
         Bundle 'vim-addon-mw-utils'
         Bundle 'L9'
     " }
@@ -49,7 +49,7 @@
         Bundle 'tpope/vim-unimpaired'
         Bundle 'garbas/vim-snipmate'
         Bundle 'honza/vim-snippets'
-        Bundle 'vim-scripts/AutoTag'
+        " Bundle 'vim-scripts/AutoTag'
         Bundle 'nelstrom/vim-qargs'
         " Bundle 'ervandew/supertab'
     " }
@@ -67,6 +67,7 @@
             " Bundle 'shawncplus/phpcomplete.vim'
             " Bundle 'docteurklein/vim-symfony'
             " Bundle 'beyondwords/vim-twig'
+            Bundle "docteurklein/php-getter-setter.vim"
         " }
     " }
 " }
