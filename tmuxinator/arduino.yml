@@ -1,7 +1,7 @@
-# ~/.tmuxinator/home.yml
+# ~/.tmuxinator/arduino.yml
 
-name: home
-root: ~/
+name: arduino
+root: ~/etc/code/_arduino
 
 # Optional tmux socket
 # socket_name: foo
@@ -19,9 +19,5 @@ root: ~/
 # tmux_command: byobu
 
 windows:
-  - chat:
-      layout: main-vertical
-      panes:
-        - irssi
-        - top
-        - ~
+  - editor: ~/etc/code/_arduino
+  - shell: ~/etc/code/_arduino

@@ -38,6 +38,7 @@ function git_prompt_info() {
 alias diff="colordiff"
 alias tmux="TERM=screen-256color-bce tmux"
 alias st="st -e tmux"
+alias mproc="mysql -u root -p -e 'SHOW PROCESSLIST;'"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"

@@ -8,6 +8,7 @@ root: ~/etc/code/boozt/webshop
 
 # Runs before everything. Use it to start daemons etc.
 # pre: sudo /etc/rc.d/mysqld start
+pre: searchd -c ~/etc/code/boozt/configs/sphinx.conf
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
 # pre_window: rbenv shell 2.0.0-p247
@@ -22,8 +23,8 @@ pre_window: export SYMFONY_ENV=povilas_shopboozt
 windows:
   - editor: vim
   - shell: ~/etc/code/boozt/webshop
-  - logs:
-      layout: main-vertical
-      panes: 
-        - tail -f /var/log/mysql/mysql.log
-        - top
+  # - logs:
+  #     layout: main-vertical
+  #     panes: 
+  #       - tail -f /var/log/mysql/mysql.log
+  #       - top
