@@ -12,16 +12,6 @@
         let g:php_cs_fixer_path = "php-cs-fixer"
     " }
 
-    " vim-php-namespace {
-        " Insert namespace
-        inoremap <Leader>n <C-O>:call PhpInsertUse()<CR>
-        noremap <Leader>n :call PhpInsertUse()<CR>
-
-        " Expand class name
-        inoremap <Leader>e <C-O>:call PhpExpandClass()<CR>
-        noremap <Leader>e :call PhpExpandClass()<CR>
-    " }
-
     " php-getter-setter {
 
         " Disable default mappings by plugin
@@ -131,7 +121,7 @@ endif
 " com! SfJumpToView call s:SfJumpToView()
 
 " create a mapping only in a Controller file
-autocmd BufEnter *Controller.php nmap <buffer><leader>v :SfJumpToView<CR>
+" autocmd BufEnter *Controller.php nmap <buffer><leader>v :SfJumpToView<CR>
 
 " Key bindings {
     map <buffer> <leader>po :TestOutput<CR>

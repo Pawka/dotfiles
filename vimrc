@@ -1,5 +1,33 @@
 set nocompatible " Must be first line
 
+
+" php-getter-setter {
+    " Templates needs to be set before plugin load
+    let b:phpgetset_setterTemplate =
+    \ "    \n" .
+    \ "    /**\n" .
+    \ "     * Set XXX %varname%\n" .
+    \ "     *\n" .
+    \ "     * @param mixed $%varname%\n" .
+    \ "     */\n" .
+    \ "    public function %funcname%($%varname%)\n" .
+    \ "    {\n" .
+    \ "        $this->%varname% = $%varname%;\n" .
+    \ "    }"
+
+   let b:phpgetset_getterTemplate =
+    \ "    \n" .
+    \ "    /**\n" .
+    \ "     * Get %varname%\n" .
+    \ "     *\n" .
+    \ "     * @return\n" .
+    \ "     */\n" .
+    \ "    public function %funcname%()\n" .
+    \ "    {\n" .
+    \ "        return $this->%varname%;\n" .
+    \ "    }"
+" }
+
 " Bundles {
 
     " Setup {
@@ -20,7 +48,7 @@ set nocompatible " Must be first line
 filetype plugin indent on     " required!
 
 if has("syntax")
-  syntax enable
+    syntax enable
 endif
 
 set novisualbell
@@ -94,7 +122,7 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
     set hlsearch
     set incsearch
     set ignorecase
-    set smartcase
+    set nosmartcase
     set cursorline
 " }
 
@@ -121,6 +149,7 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
 
 " Tags
 " set tags=./tags*,./../tags*,./../../tags*,tags*,$VIM/tags,$VIM/phptags
+set tags+=vendor.tags
 
 " Do not wrap lines automatically
 set nowrap
@@ -146,9 +175,13 @@ set numberwidth=8
     " set background=dark
     colorscheme solarized
 
+    " Set colors for vim-easymotion
+    hi EasyMotionTarget2First ctermbg=none ctermfg=blue cterm=bold
+    hi EasyMotionTarget2Second ctermbg=none ctermfg=blue cterm=bold
+
     " Autoload toggle-bacground plugin if it was not loaded.
     if !exists(":ToggleBG")
-        call togglebg#map("")
+        call togglebg#map("F9")
     endif
 " }
 
@@ -298,20 +331,23 @@ endif
 
     noremap <Leader>` :FufFileWithCurrentBufferDir<CR>
     noremap <Leader>f :FufFileWithCurrentBufferDir<CR>
+
     noremap <Leader>dd :FufBookmarkDir<CR>
     noremap <Leader>dm :FufMruFile<CR>
     noremap <Leader>db :FufBuffer<CR>
 " }
 
 " Syntastic {
-    "Disable automatic check for some types.
-    let g:syntastic_mode_map = { 'mode': 'passive' ,
-                               \ 'active_filetypes': ['python', 'js'],
-                               \ 'passive_filetypes': ['puppet'] }
-    "Do not move cursor to first error after open/save.
-    let g:syntastic_auto_jump = 0
-    "Map key to run check.
-    nnoremap <silent> <F4> :w<CR> :SyntasticCheck<CR> :Errors<CR>
+    if exists("g:loaded_syntastic_plugin")
+        "Disable automatic check for some types.
+        let g:syntastic_mode_map = { 'mode': 'passive' ,
+                                   \ 'active_filetypes': ['python', 'js', 'php'],
+                                   \ 'passive_filetypes': ['puppet'] }
+        "Do not move cursor to first error after open/save.
+        let g:syntastic_auto_jump = 0
+        "Map key to run check.
+        nnoremap <silent> <F4> :w<CR> :SyntasticCheck<CR> :Errors<CR>
+    endif
 " }
 
 " Gundo {
@@ -322,7 +358,7 @@ endif
 
 " Command-T {
     " Ignore dirs
-    let g:CommandTWildIgnore=&wildignore . ",**/cache/**,**/logs/**,**/build/**"
+    let g:CommandTWildIgnore=&wildignore . ",**/cache/**,**/logs/**,**/build/**,**/app/sessions/**,*~,**/app/Resources/**"
     let g:CommandTMaxHeight=20
 " }
 
@@ -343,7 +379,7 @@ endif
    let b:phpgetset_getterTemplate =
     \ "    \n" .
     \ "    /**\n" .
-    \ "     * Get $%varname%\n" .
+    \ "     * Get %varname%\n" .
     \ "     *\n" .
     \ "     * @return\n" .
     \ "     */\n" .

@@ -22,6 +22,10 @@ snippet test
 snippet ns
 	namespace ${1:`substitute(substitute(expand("%:h"), '\v^\w+\/(\u)', '\1', ''), '\/', '\\\', 'g')`};
 
+# Namespace only
+snippet nso
+	${1:`substitute(substitute(expand("%:h"), '\v^\w+\/(\u)', '\1', ''), '\/', '\\\', 'g')`}
+
 # ReflectionMethod
 snippet refm
 	$${1:refl} = new \ReflectionMethod(${2:$class}, '${3:methodName}');

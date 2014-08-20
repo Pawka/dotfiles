@@ -31,7 +31,6 @@
         Bundle 'tlib'
         Bundle 'Rename'
         " Bundle 'sessionman.vim'
-        Bundle 'vim-addon-mw-utils'
         Bundle 'L9'
     " }
 
@@ -40,6 +39,7 @@
         Bundle 'wincent/Command-T'
         Bundle 'Lokaltog/vim-easymotion'
         Bundle 'vim-scripts/taglist.vim'
+        " Bundle 'majutsushi/tagbar'
     " }
  
     " Editing {
@@ -52,20 +52,22 @@
         " Bundle 'vim-scripts/AutoTag'
         Bundle 'nelstrom/vim-qargs'
         " Bundle 'ervandew/supertab'
+        Bundle 'scrooloose/syntastic'
+        Bundle 'mattn/emmet-vim'
     " }
     
     " Languages {
         Bundle 'tclem/vim-arduino'
-        Bundle 'jcf/vim-latex'
+        " Bundle 'jcf/vim-latex'
         Bundle 'tpope/vim-markdown'
         Bundle 'evanmiller/nginx-vim-syntax'
 
         " PHP {
-            Bundle 'arnaud-lb/vim-php-namespace'
+            " Bundle 'arnaud-lb/vim-php-namespace'
             Bundle '2072/PHP-Indenting-for-VIm'
             Bundle 'joonty/vim-phpunitqf.git'
             " Bundle 'shawncplus/phpcomplete.vim'
-            " Bundle 'docteurklein/vim-symfony'
+            Bundle 'docteurklein/vim-symfony'
             " Bundle 'beyondwords/vim-twig'
             Bundle "docteurklein/php-getter-setter.vim"
         " }
@@ -76,4 +78,3 @@
     " set autowrite                  " automatically write a file when leaving a modified buffer
     set shortmess+=filmnrxoOtT      " abbrev. of messages (avoids 'hit enter')
 " }
-

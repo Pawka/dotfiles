@@ -2,7 +2,7 @@ if !exists(':Tabularize')
   finish " Tabular.vim wasn't loaded
 endif
 
-AddTabularPattern! phpComment /\$\w*
+AddTabularPattern! phpComment /&\?\$\w*
 
 map <leader>st :Tab<cr>
 map <leader>sa :Tab /=><cr>
