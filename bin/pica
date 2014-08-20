@@ -1,6 +1,6 @@
 #!/bin/bash
 NAME='Express:'
-SOURCE=`curl -silent http://www.noriupicos.lt/picos/vilniuje | egrep '<h3>' | shuf -n 1 | sed -e 's/<[^<]*>//g' 2>&1`
+SOURCE=`curl -silent http://www.noriupicos.lt/picos/ | egrep '<h2>' | shuf -n 1 | sed -e 's/<[^<]*>//g' 2>&1`
 if [[ $# > 0 ]]; then
     if [[ $1 == 'dom' ]]; then
         NAME='Dominium:'

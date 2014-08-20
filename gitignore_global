@@ -18,7 +18,6 @@
  
 # Logs and databases
 *.log
-*.sql
 *.sqlite
  
 # OS generated files
@@ -36,4 +35,9 @@ Thumbs.db
 
 # Project files
 tags
+vendor.tags
 .svn
+
+Capfile
+config/deploy*
+Guardfile

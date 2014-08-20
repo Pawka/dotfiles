@@ -1,18 +1,16 @@
-# ~/.tmuxinator/boozt.yml
+# ~/.tmuxinator/isign.yml
 
-name: boozt
-root: ~/etc/code/boozt/webshop
+name: isign
+root: /home/pawka/etc/code/isign/isign-reborn
 
 # Optional tmux socket
 # socket_name: foo
 
 # Runs before everything. Use it to start daemons etc.
 # pre: sudo /etc/rc.d/mysqld start
-pre: searchd -c ~/etc/code/boozt/configs/sphinx.conf
 
 # Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
-# pre_window: rbenv shell 2.0.0-p247
-pre_window: export SYMFONY_ENV=povilas_shopboozt
+pre_window: export SYMFONY_ENV=app_dev
 
 # Pass command line options to tmux. Useful for specifying a different tmux.conf.
 # tmux_options: -f ~/.tmux.mac.conf
@@ -21,9 +19,5 @@ pre_window: export SYMFONY_ENV=povilas_shopboozt
 # tmux_command: byobu
 
 windows:
-  - editor:
-      layout: main-vertical
-      panes:
-        - vim
-        - guard
-  - shell: ~/etc/code/boozt/webshop
+  - editor: vim
+  - shell: /home/pawka/etc/code/isign/isign-reborn

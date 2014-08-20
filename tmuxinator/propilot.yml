@@ -21,4 +21,4 @@ pre_window: export SYMFONY_ENV=povilas
 
 windows:
   - editor: vim
-  - shell: ~/etc/code/boozt/webshop
+  - shell: ~/etc/code/boozt/platform-admin
