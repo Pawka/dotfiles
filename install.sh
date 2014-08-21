@@ -38,6 +38,31 @@ require vim
 git submodule update --init
 
 install exuberant-ctags 
+install xclip
+install colordiff
+
+# Guard related gems
 geminstall guard
 geminstall guard-ctags-composer
-geminstall guard-phpunit
+geminstall guard-phpunit2
+geminstall libnotify
+geminstall tmuxinator
+
+# PHP tools
+if ! [ -f ~/bin/phpunit ]; then
+    log "Installing phpunit"
+    wget https://phar.phpunit.de/phpunit.phar
+    chmod +x phpunit.phar
+    mv phpunit.phar ~/bin/phpunit
+else
+    log "Already installed phpunit"
+fi
+
+if ! [ -f ~/bin/psysh ]; then
+    log "Installing psysh"
+    wget psysh.org/psysh
+    chmod +x psysh
+    mv psysh ~/bin/psysh
+else
+    log "Already installed psysh"
+fi

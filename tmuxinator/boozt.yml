@@ -25,5 +25,7 @@ windows:
       layout: main-vertical
       panes:
         - vim
-        - guard
   - shell: ~/etc/code/boozt/webshop
+  - tools:
+      panes:
+        - guard
