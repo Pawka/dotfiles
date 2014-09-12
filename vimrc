@@ -178,11 +178,6 @@ set numberwidth=8
     " Set colors for vim-easymotion
     hi EasyMotionTarget2First ctermbg=none ctermfg=blue cterm=bold
     hi EasyMotionTarget2Second ctermbg=none ctermfg=blue cterm=bold
-
-    " Autoload toggle-bacground plugin if it was not loaded.
-    if !exists(":ToggleBG")
-        call togglebg#map("F9")
-    endif
 " }
 
 
@@ -317,10 +312,6 @@ endif
     "Display only classes and functions for php.
     let g:tlist_php_settings = 'php;c:class;f:function'
     nnoremap <silent> <F8> :TlistToggle<CR>
-" }
-
-" ZenCoding {
-    let g:user_zen_expandabbr_key = '<c-e>'
 " }
 
 " FuzzyFinder {

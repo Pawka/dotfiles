@@ -124,7 +124,17 @@ endif
 " autocmd BufEnter *Controller.php nmap <buffer><leader>v :SfJumpToView<CR>
 
 " Key bindings {
-    map <buffer> <leader>po :TestOutput<CR>
-    map <buffer> <leader>pf :TestFile<CR>
-    map <buffer> <leader>pp :Test<CR>
+    " Tests {
+        map <buffer> <leader>po :TestOutput<CR>
+        map <buffer> <leader>pf :TestFile<CR>
+        map <buffer> <leader>pp :Test<CR>
+    " }
+    " 
+    " vim-php-namespace plugin {
+        inoremap <Leader>u <C-O>:call PhpInsertUse()<CR>
+        noremap <Leader>u :call PhpInsertUse()<CR>
+        inoremap <Leader>e <C-O>:call PhpExpandClass()<CR>
+        noremap <Leader>e :call PhpExpandClass()<CR>
+    " }
 " }
+

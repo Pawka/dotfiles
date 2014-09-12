@@ -1,0 +1,40 @@
+# Create class. Detect namespace by file structure.
+snippet class
+	<?php
+
+	namespace ${1:`substitute(substitute(expand("%:h"), '\v^\w+\/(\u)', '\1', ''), '\/', '\\\', 'g')`};
+
+	class ${2:`Filename('', 'MyClass')`}
+	{
+		${3}
+	}
+# PHPUnit test case class.
+snippet test
+	<?php
+
+	namespace ${1:`substitute(substitute(expand("%:h"), '\v^\w+\/(\u)', '\1', ''), '\/', '\\\', 'g')`};
+
+	use Boozt\Bundle\CoreBundle\Tests\TestCase;
+
+	/**
+	 * $2
+	 */
+	class ${2:`Filename('', 'MyClass')`} extends TestCase
+	{
+		protected $service;
+
+		/**
+		 * setUp 
+		 */
+		public function setUp()
+		{
+			$this->service = new ${3:SomeService};
+		}
+
+		/**
+		 * test$4
+		 */
+		public function test${4:Something}()
+		{
+		}
+	}
