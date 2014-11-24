@@ -349,8 +349,8 @@ endif
 
 " Command-T {
     " Ignore dirs
-    let g:CommandTWildIgnore=&wildignore . ",**/cache/**,**/logs/**,**/build/**,**/app/sessions/**,*~,**/app/Resources/**"
-    let g:CommandTMaxHeight=20
+    " let g:CommandTWildIgnore=&wildignore . ",**/cache/**,**/logs/**,**/build/**,**/app/sessions/**,*~,**/app/Resources/**"
+    " let g:CommandTMaxHeight=20
 " }
 
 " php-getter-setter {

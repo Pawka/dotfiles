@@ -36,7 +36,8 @@
 
     " Navigation {
         Bundle 'FuzzyFinder'
-        Bundle 'wincent/Command-T'
+        " Bundle 'wincent/Command-T'
+        Bundle 'kien/ctrlp.vim'
         Bundle 'Lokaltog/vim-easymotion'
         Bundle 'vim-scripts/taglist.vim'
         " Bundle 'majutsushi/tagbar'
