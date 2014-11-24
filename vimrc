@@ -82,20 +82,8 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
 "GUI {
 
     " Statusline {
-        " Configs below will be overrided by Powerline if it is enabled.
-        set statusline=\                              " 
-        set statusline+=%f\                           " file name
-        set statusline+=[                             " 
-        set statusline+=%{strlen(&ft)?&ft:'none'},    " filetype
-        set statusline+=%{&fileformat}]               " file format
-        set statusline+=\ %{fugitive#statusline()}    " git branch
-        set statusline+=%h%1*%m%r%w%0*                " flag
-        set statusline+=%=                            " right align
-        set statusline+=%-14.(%l,%c%V%)\ %<%P         " offs
-    " }
-
-    " Powerline config {
-        set rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/
+        " Use powerline fonts
+        let g:airline_powerline_fonts = 1
     " }
 
     " Always show statusline

@@ -24,19 +24,18 @@
     
     " Appearance {
         Bundle 'altercation/vim-colors-solarized'
+        Plugin 'bling/vim-airline'
     " }
 
     " General {
         Bundle 'tComment'
         Bundle 'tlib'
         Bundle 'Rename'
-        " Bundle 'sessionman.vim'
         Bundle 'L9'
     " }
 
     " Navigation {
         Bundle 'FuzzyFinder'
-        " Bundle 'wincent/Command-T'
         Bundle 'kien/ctrlp.vim'
         Bundle 'Lokaltog/vim-easymotion'
         Bundle 'vim-scripts/taglist.vim'
@@ -50,7 +49,6 @@
         Bundle 'tpope/vim-unimpaired'
         Bundle 'garbas/vim-snipmate'
         Bundle 'honza/vim-snippets'
-        " Bundle 'vim-scripts/AutoTag'
         Bundle 'nelstrom/vim-qargs'
         " Bundle 'ervandew/supertab'
         Bundle 'scrooloose/syntastic'
@@ -67,10 +65,10 @@
             Bundle 'arnaud-lb/vim-php-namespace'
             Bundle '2072/PHP-Indenting-for-VIm'
             Bundle 'joonty/vim-phpunitqf.git'
-            " Bundle 'shawncplus/phpcomplete.vim'
             Bundle 'docteurklein/vim-symfony'
-            " Bundle 'beyondwords/vim-twig'
             Bundle "docteurklein/php-getter-setter.vim"
+            " Bundle 'shawncplus/phpcomplete.vim'
+            " Bundle 'beyondwords/vim-twig'
         " }
     " }
 " }
