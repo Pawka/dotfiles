@@ -60,8 +60,10 @@
 
     " PHPUnitQF support (joonty/vim-phpunitqf) {
     if exists(":Test")
-        " Symfony phpunit configuration
-        let g:phpunit_args = "-c app"
+        if isdirectory("app")
+            " Symfony phpunit configuration
+            let g:phpunit_args = "-c app"
+        endif
 
         " Let PHPUnitQf use the callback function
         let g:phpunit_callback = "SymfonyPHPTestCallback"

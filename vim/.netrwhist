@@ -1,7 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/home/pawka/etc/soft/vim/.vim/bundle/vim-latex/ftplugin/latex-suite'
-let g:netrw_dirhist_2='/home/pawka/etc/code/boozt/platform-admin/src/Boozt/Bundle/CategoryBundle/Form/Autosort/Filter'
-let g:netrw_dirhist_3='/etc/nginx/sites-enabled'
-let g:netrw_dirhist_4='/home/pawka/.zsh'
-let g:netrw_dirhist_5='/etc/nginx/sites-enabled'

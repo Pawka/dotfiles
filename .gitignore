@@ -3,3 +3,4 @@ vim/swap/*
 vim/doc/*
 vim/bundle/*
 vim/sessions/*
+vim/.netrwist
