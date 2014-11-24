@@ -183,8 +183,6 @@ set numberwidth=8
 autocmd FileType php let php_sql_query=1
 " does exactly that. highlights html inside of php strings
 autocmd FileType php let php_htmlInStrings=1
-" discourages use oh short tags. c'mon its deprecated remember
-autocmd FileType php let php_noShortTags=0
 " automagically folds functions & methods. this is getting IDE-like isn't it?
 autocmd FileType php let php_folding=0
 
@@ -315,6 +313,14 @@ endif
     noremap <Leader>dm :FufMruFile<CR>
     noremap <Leader>db :FufBuffer<CR>
 " }
+
+" CtrlP {
+    noremap <c-b> :CtrlPBuffer<CR>
+    let g:ctrlp_custom_ignore = {
+        \ 'dir': '\v(cache|logs|build|app\/sessions|app\/Resources)$'
+        \ }
+" }
+
 
 " Syntastic {
     if exists("g:loaded_syntastic_plugin")
