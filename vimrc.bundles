@@ -38,8 +38,8 @@
         Bundle 'FuzzyFinder'
         Bundle 'kien/ctrlp.vim'
         Bundle 'Lokaltog/vim-easymotion'
-        Bundle 'vim-scripts/taglist.vim'
-        " Bundle 'majutsushi/tagbar'
+        " Bundle 'vim-scripts/taglist.vim'
+        Bundle 'majutsushi/tagbar'
     " }
  
     " Editing {

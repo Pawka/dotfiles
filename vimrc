@@ -226,20 +226,8 @@ set backspace=indent,start,eol
 " PLUGINS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Taglist plugin {
-    let Tlist_Ctags_Cmd = "/usr/bin/ctags-exuberant"
-    let Tlist_Inc_Winwidth = 1
-    let Tlist_Use_Right_Window = 1
-    let Tlist_Exit_OnlyWindow = 1
-    let Tlist_File_Fold_Auto_Close = 1
-    let Tlist_Process_File_Always = 1
-    let Tlist_Enable_Fold_Column = 0
-    let Tlist_Sort_Type = "name"
-    let Tlist_File_Fold_Auto_Close = 1
-    let Tlist_Inc_Winwidth = 1
-    "Display only classes and functions for php.
-    let g:tlist_php_settings = 'php;c:class;f:function'
-    nnoremap <silent> <F8> :TlistToggle<CR>
+" Tagbar {
+    nmap <F8> :TagbarToggle<CR>
 " }
 
 " FuzzyFinder {
