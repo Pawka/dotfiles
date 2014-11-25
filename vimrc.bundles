@@ -53,6 +53,7 @@
         " Bundle 'ervandew/supertab'
         Bundle 'scrooloose/syntastic'
         Bundle 'mattn/emmet-vim'
+        Bundle 'cohama/lexima.vim'
     " }
     
     " Languages {

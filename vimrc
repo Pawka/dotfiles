@@ -222,64 +222,6 @@ set backspace=indent,start,eol
     autocmd! BufNewFile,BufRead *.twig set ft=htmldjango.html   " Twig/Django - same shit.
 " }
 
-"
-" Autocomplete
-"
-inoremap ( ()<ESC>i
-inoremap [ []<ESC>i
-inoremap ) <c-r>=ClosePair(')')<CR>
-inoremap ] <c-r>=ClosePair(']')<CR>
-" inoremap { <c-r>=OpenBracket()<CR>
-" inoremap } <c-r>=CloseBracket()<CR>
-inoremap " <c-r>=QuoteDelim('"')<CR>
-inoremap ' <c-r>=QuoteDelim("'")<CR>
-
-if !exists("*ClosePair")
-    function ClosePair(char)
-      if getline('.')[col('.') - 1] == a:char
-        return "\<Right>"
-      else
-        return a:char
-      endif
-    endf
-endif
-
-if !exists("*OpenBracket")
-    function OpenBracket()
-      if len(getline('.')) == col('.') - 1
-        return "{}\<ESC>i"
-      else
-        return "{}\<ESC>i"
-      endif
-    endf
-endif
-if !exists("*CloseBracket")
-    function CloseBracket()
-      if len(getline('.')) == col('.') - 1
-        return "}\<ESC>k$"
-      else
-        return "}"
-      endif
-    endf
-endif
-
-if !exists("*QuoteDelim")
-    function QuoteDelim(char)
-      let line = getline('.')
-      let col = col('.')
-      if line[col - 2] == "\\"
-        "Inserting a quoted quotation mark into the string
-        return a:char
-      elseif line[col - 1] == a:char
-        "Escaping out of the string
-        return "\<Right>"
-      else
-        "Starting a string
-        return a:char.a:char."\<ESC>i"
-      endif
-    endf
-endif
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PLUGINS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
