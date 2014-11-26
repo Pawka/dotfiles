@@ -38,8 +38,8 @@
         Bundle 'FuzzyFinder'
         Bundle 'kien/ctrlp.vim'
         Bundle 'Lokaltog/vim-easymotion'
-        " Bundle 'vim-scripts/taglist.vim'
         Bundle 'majutsushi/tagbar'
+        Bundle 'szw/vim-ctrlspace'
     " }
  
     " Editing {
@@ -67,7 +67,8 @@
             Bundle '2072/PHP-Indenting-for-VIm'
             Bundle 'joonty/vim-phpunitqf.git'
             Bundle 'docteurklein/vim-symfony'
-            Bundle "docteurklein/php-getter-setter.vim"
+            Bundle 'docteurklein/php-getter-setter.vim'
+            Bundle 'vim-php/tagbar-phpctags.vim'
             " Bundle 'shawncplus/phpcomplete.vim'
             " Bundle 'beyondwords/vim-twig'
         " }
