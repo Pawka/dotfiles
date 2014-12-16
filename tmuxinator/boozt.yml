@@ -21,11 +21,15 @@ pre_window: export SYMFONY_ENV=povilas_shopboozt
 # tmux_command: byobu
 
 windows:
+  - tools:
+      layout: tiled
+      panes:
+        - top
+        - watch df -h
+        - watch free -m
+        - cd ~/etc/code/boozt/webshop && guard
   - editor:
       layout: main-vertical
       panes:
         - vim
   - shell: ~/etc/code/boozt/webshop
-  - tools:
-      panes:
-        - guard

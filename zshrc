@@ -40,6 +40,7 @@ alias tmux="TERM=screen-256color-bce tmux"
 alias st="st -e tmux"
 alias mproc="mysql -u root -p -e 'SHOW PROCESSLIST;'"
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+
 stty -ixon -ixoff
+# Fix backspace key behaviour (remove ^H symbol)
+stty erase ^H 
