@@ -1,18 +1,12 @@
 # My Personal config files
 
-Config files by Povilas Balzaravičius. Repository is forked from Ryan Bates
-dotfiles.
+Config files by Povilas Balzaravičius. 
 
 ## Installation
 
 ``` sh
-git clone git://github.com/Pawka/dotfiles ~/.dotfiles
+git clone https://github.com/Pawka/dotfiles ~/.dotfiles
 cd ~/.dotfiles
-rake install
+./install.sh
 chsh -s /bin/zsh
 ```
-
-## Requirements
-
-* rake
-* colordiff - For diff alias.

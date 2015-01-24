@@ -8,9 +8,15 @@ log()
 require()
 {
     TMP=`which $1`
+    # Look for binary
     if [ $? -eq 1 ]; then
-        log "$1 not found"
-        exit 1
+ 	# Look for package
+	dpkg -s "$1" > /dev/null 2>&1 && {
+	    log "$1 package found"
+	} || {
+	    log "$1 not found"
+            exit 1
+	}
     fi;
 }
 
@@ -32,21 +38,29 @@ geminstall()
     fi
 }
 
+# Create required directories
+mkdir -p ~/bin
 
 require git
 require vim
+require ruby
+require ruby-dev # Required for some gems
 git submodule update --init
 
 install exuberant-ctags 
 install xclip
 install colordiff
 
-# Guard related gems
+# Gems
 geminstall guard
 geminstall guard-ctags-composer
 geminstall guard-phpunit2
 geminstall libnotify
 geminstall tmuxinator
+geminstall rake
+
+# Build symlinks
+rake install
 
 # PHP tools
 if ! [ -f ~/bin/phpunit ]; then
