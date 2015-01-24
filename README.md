@@ -6,7 +6,7 @@ dotfiles.
 ## Installation
 
 ``` sh
-git clone git://github.com/ryanb/dotfiles ~/.dotfiles
+git clone git://github.com/Pawka/dotfiles ~/.dotfiles
 cd ~/.dotfiles
 rake install
 chsh -s /bin/zsh
