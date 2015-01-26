@@ -1,45 +1,11 @@
-#!/bin/sh
+#!/bin/bash
 
-log()
-{
-    echo " > $@"
-}
+source functions.sh
 
-require()
-{
-    TMP=`which $1`
-    # Look for binary
-    if [ $? -eq 1 ]; then
-        # Look for package
-        dpkg -s "$1" > /dev/null 2>&1 && {
-            log "$1 package found"
-        } || {
-            log "$1 not found"
-            exit 1
-        }
-    fi;
-}
-
-install()
-{
-    log "Installing $1"
-    sudo apt-get install $1 > /dev/null
-}
-
-geminstall()
-{
-    require gem
-
-    if [ `sudo gem list | grep $1 | wc -l` -eq 0 ]; then
-        log "Installing $1"
-        sudo gem install $1
-    else
-        log "Already installed $1"
-    fi
-}
+log "Installing dotfiles..."
 
 # Create required directories
-mkdir -p ~/bin
+mkdir -p ~/bin 
 
 require git
 require vim
@@ -63,6 +29,19 @@ geminstall libnotify
 geminstall tmuxinator
 geminstall rake
 
+# Powerline
+if confirm "Do you want install Powerline? [y/n]"; then
+    pipinstall powerline-status
+
+    # Fonts
+    mkdir -p ~/.fonts ~/.config/fontconfig/conf.d
+    wget https://github.com/powerline/powerline/raw/develop/font/PowerlineSymbols.otf > /dev/null 2>&1
+    wget https://github.com/powerline/powerline/raw/develop/font/10-powerline-symbols.conf > /dev/null 2>&1
+    mv PowerlineSymbols.otf ~/.fonts/
+    fc-cache -vf ~/.fonts
+    mv 10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
+fi
+
 if ! [ -d ~/.oh-my-zsh ]; then
     log "Installing oh-my-zsh"
     curl -L http://install.ohmyz.sh | sh
@@ -84,5 +63,5 @@ if ! [ -f ~/bin/psysh ]; then
 fi
 
 # Build symlinks
-rake install
+confirm "Build symlinks [y/n]?" && rake install
 
