@@ -10,13 +10,13 @@ require()
     TMP=`which $1`
     # Look for binary
     if [ $? -eq 1 ]; then
- 	# Look for package
-	dpkg -s "$1" > /dev/null 2>&1 && {
-	    log "$1 package found"
-	} || {
-	    log "$1 not found"
+        # Look for package
+        dpkg -s "$1" > /dev/null 2>&1 && {
+            log "$1 package found"
+        } || {
+            log "$1 not found"
             exit 1
-	}
+        }
     fi;
 }
 
@@ -44,12 +44,16 @@ mkdir -p ~/bin
 require git
 require vim
 require ruby
-require ruby-dev # Required for some gems
 git submodule update --init
 
+install curl
+install ruby-dev # Required for some gems
 install exuberant-ctags 
 install xclip
 install colordiff
+install irssi
+install tig # Git cli GUI
+install python-pip
 
 # Gems
 geminstall guard
@@ -59,8 +63,10 @@ geminstall libnotify
 geminstall tmuxinator
 geminstall rake
 
-# Build symlinks
-rake install
+if ! [ -d ~/.oh-my-zsh ]; then
+    log "Installing oh-my-zsh"
+    curl -L http://install.ohmyz.sh | sh
+fi
 
 # PHP tools
 if ! [ -f ~/bin/phpunit ]; then
@@ -68,8 +74,6 @@ if ! [ -f ~/bin/phpunit ]; then
     wget https://phar.phpunit.de/phpunit.phar
     chmod +x phpunit.phar
     mv phpunit.phar ~/bin/phpunit
-else
-    log "Already installed phpunit"
 fi
 
 if ! [ -f ~/bin/psysh ]; then
@@ -77,6 +81,8 @@ if ! [ -f ~/bin/psysh ]; then
     wget psysh.org/psysh
     chmod +x psysh
     mv psysh ~/bin/psysh
-else
-    log "Already installed psysh"
 fi
+
+# Build symlinks
+rake install
+
