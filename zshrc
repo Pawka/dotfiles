@@ -20,7 +20,7 @@ plugins=(git mercurial composer symfony2 capistrano)
 
 source $ZSH/oh-my-zsh.sh
 
-#Disable autocorrect
+# Disable autocorrect
 unsetopt correct_all
 
 # Customize to your needs...
@@ -28,19 +28,17 @@ export PATH=~/.bin/:$PATH
 export XDG_CONFIG_HOME="$HOME/.config"
 export EDITOR=vim
 
-# Optimized version
-function git_prompt_info() {
-  ref=$(git symbolic-ref HEAD 2> /dev/null) || return
-  echo "$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}$ZSH_THEME_GIT_PROMPT_SUFFIX"
-}
+# Load custom scripts file.
+if [ -f $HOME/.zshrc.custom ]; then
+    source $HOME/.zshrc.custom
+fi
 
 #Aliases
 alias diff="colordiff"
 alias tmux="TERM=screen-256color-bce tmux"
 alias st="st -e tmux"
-alias mproc="mysql -u root -p -e 'SHOW PROCESSLIST;'"
 
 
 stty -ixon -ixoff
 # Fix backspace key behaviour (remove ^H symbol)
-stty erase ^H 
+# stty erase ^H 
