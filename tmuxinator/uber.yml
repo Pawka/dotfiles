@@ -1,7 +1,7 @@
-# ~/.tmuxinator/cseye.yml
+# ~/.tmuxinator/uber.yml
 
-name: cseye
-root: ~/etc/code/boozt/cseye
+name: uber
+root: ~/Uber
 
 # Optional tmux socket
 # socket_name: foo
@@ -13,11 +13,15 @@ root: ~/etc/code/boozt/cseye
 # pre_window: rbenv shell 2.0.0-p247
 
 # Pass command line options to tmux. Useful for specifying a different tmux.conf.
-pre_window: export SYMFONY_ENV=dev
+# tmux_options: -f ~/.tmux.mac.conf
 
 # Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
 # tmux_command: byobu
 
 windows:
-  - editor: vim
-  - shell: ~/etc/code/boozt/cseye
+  - editor:
+      layout: main-vertical
+      panes:
+        - vim
+        - guard
+  - shell: ~/Uber
