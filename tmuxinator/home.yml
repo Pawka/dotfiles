@@ -23,5 +23,4 @@ windows:
       layout: main-vertical
       panes:
         - irssi
-        - top
         - ~

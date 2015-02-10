@@ -20,6 +20,7 @@ install colordiff
 install irssi
 install tig # Git cli GUI
 install python-pip
+install ack-grep
 
 # Gems
 geminstall guard
