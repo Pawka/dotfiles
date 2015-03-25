@@ -18,3 +18,7 @@ snippet xhprof
 		 "http://localhost/xhprof/xhprof_html/index.php?run=$run_id&source=xhprof_foo\n".
 		 "---------------\n";
 	// END OF XHPROF CODE
+
+#debug backtrace
+snippet bt
+	var_dump(debug_backtrace()); exit;

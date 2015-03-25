@@ -59,12 +59,12 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
         set guifont=Monospace\ 10
     else
         se t_Co=16
-        se background=light
 
         " Use 256 colours 
         if $TERM =~ "-256color"
             se t_Co=256
-            let g:solarized_termcolors=256
+            se background=dark
+            " let g:solarized_termcolors=256
             " let g:solarized_contrast="high"
             " let g:solarized_termtrans=1
         endif
@@ -73,6 +73,8 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
     " loads color scheme if available
     try
         colorscheme solarized
+        " vim-gitgutter styling
+        highlight clear SignColumn
     catch /^Vim\%((\a\+)\)\=:E185/
         " deal with it
     endtry
@@ -155,6 +157,7 @@ set numberwidth=8
 " DJANGO + PYTHON
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd FileType python set ft=python.django " For SnipMate
+autocmd Filetype gitcommit setlocal spell textwidth=72
 
 " Autocomplete funcs and identifiers for languages {
     autocmd FileType python set omnifunc=pythoncomplete#Complete
@@ -163,6 +166,8 @@ autocmd FileType python set ft=python.django " For SnipMate
     autocmd FileType css set omnifunc=csscomplete#CompleteCSS
     autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
     autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+    autocmd FileType php setlocal ts=2 sts=2 sw=2
+    autocmd FileType json setlocal ts=2 sts=2 sw=2
 " }
 
 
@@ -239,29 +244,7 @@ set backspace=indent,start,eol
     " let g:CommandTMaxHeight=20
 " }
 
-" php-getter-setter {
-    " Templates needs to be set before plugin load
-    let b:phpgetset_setterTemplate =
-    \ "    \n" .
-    \ "    /**\n" .
-    \ "     * Set %varname%\n" .
-    \ "     *\n" .
-    \ "     * @param mixed $%varname%\n" .
-    \ "     */\n" .
-    \ "    public function %funcname%($%varname%)\n" .
-    \ "    {\n" .
-    \ "        $this->%varname% = $%varname%;\n" .
-    \ "    }"
-
-   let b:phpgetset_getterTemplate =
-    \ "    \n" .
-    \ "    /**\n" .
-    \ "     * Get %varname%\n" .
-    \ "     *\n" .
-    \ "     * @return\n" .
-    \ "     */\n" .
-    \ "    public function %funcname%()\n" .
-    \ "    {\n" .
-    \ "        return $this->%varname%;\n" .
-    \ "    }"
+" SnipMate {
+    imap <C-J> <Plug>snipMateNextOrTrigger
+    smap <C-J> <Plug>snipMateNextOrTrigger
 " }

@@ -50,10 +50,15 @@
         Bundle 'garbas/vim-snipmate'
         Bundle 'honza/vim-snippets'
         Bundle 'nelstrom/vim-qargs'
-        " Bundle 'ervandew/supertab'
+        Bundle 'ervandew/supertab'
         Bundle 'scrooloose/syntastic'
         Bundle 'mattn/emmet-vim'
         Bundle 'cohama/lexima.vim'
+        Bundle 'airblade/vim-gitgutter'
+    " }
+
+    " Tools {
+        Bundle 'vimoutliner/vimoutliner'
     " }
     
     " Languages {
@@ -61,9 +66,10 @@
         " Bundle 'jcf/vim-latex'
         Bundle 'tpope/vim-markdown'
         Bundle 'evanmiller/nginx-vim-syntax'
+        Bundle 'rodjek/vim-puppet'
 
         " PHP {
-            Bundle 'arnaud-lb/vim-php-namespace'
+            " Bundle 'arnaud-lb/vim-php-namespace'
             Bundle '2072/PHP-Indenting-for-VIm'
             Bundle 'joonty/vim-phpunitqf.git'
             Bundle 'docteurklein/vim-symfony'
@@ -71,6 +77,11 @@
             Bundle 'vim-php/tagbar-phpctags.vim'
             " Bundle 'shawncplus/phpcomplete.vim'
             " Bundle 'beyondwords/vim-twig'
+        " }
+        "
+        " Python {
+            " Bundle 'klen/python-mode'
+            " Bundle 'davidhalter/jedi-vim'
         " }
     " }
 " }

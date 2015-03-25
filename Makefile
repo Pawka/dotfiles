@@ -8,6 +8,7 @@ symlinks:
 	ln -s $(CURDIR)/vim $(HOME)/.vim
 	ln -s $(CURDIR)/vimrc $(HOME)/.vimrc
 	ln -s $(CURDIR)/vimrc.bundles $(HOME)/.vimrc.bundles
+	ln -s $(CURDIR)/vimoutlinerrc $(HOME)/.vimoutlinerrc
 
 update: submodules-update bundles
 	@echo Updating plugins

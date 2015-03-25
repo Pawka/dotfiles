@@ -11,13 +11,6 @@
         " Use global path
         let g:php_cs_fixer_path = "php-cs-fixer"
     " }
-
-    " php-getter-setter {
-
-        " Disable default mappings by plugin
-        let no_php_maps = 1
-        map <buffer> <leader>g :InsertBothGetterSetter<CR>
-    " }
 " }
 
 
@@ -130,13 +123,6 @@ endif
         map <buffer> <leader>po :TestOutput<CR>
         map <buffer> <leader>pf :TestFile<CR>
         map <buffer> <leader>pp :Test<CR>
-    " }
-    " 
-    " vim-php-namespace plugin {
-        inoremap <Leader>u <C-O>:call PhpInsertUse()<CR>
-        noremap <Leader>u :call PhpInsertUse()<CR>
-        inoremap <Leader>e <C-O>:call PhpExpandClass()<CR>
-        noremap <Leader>e :call PhpExpandClass()<CR>
     " }
 " }
 
