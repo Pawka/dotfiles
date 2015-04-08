@@ -221,10 +221,12 @@ set backspace=indent,start,eol
 
 " Syntastic {
     if exists("g:loaded_syntastic_plugin")
+        " Do not use phpcs
+        let g:syntastic_php_checkers = ["php"]
         "Disable automatic check for some types.
         let g:syntastic_mode_map = { 'mode': 'passive' ,
-                                   \ 'active_filetypes': ['python', 'js', 'php'],
-                                   \ 'passive_filetypes': ['puppet'] }
+                                   \ 'active_filetypes': ['python', 'js', 'php', 'puppet', 'sh', 'markdown', 'yaml', 'zsh'],
+                                   \ 'passive_filetypes': [] }
         "Do not move cursor to first error after open/save.
         let g:syntastic_auto_jump = 0
         "Map key to run check.
