@@ -1,6 +1,6 @@
 .PHONY: update install source bundles symlinks
 
-default: update
+default: install
 
 install: submodules bundles symlinks
 

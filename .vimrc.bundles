@@ -4,12 +4,11 @@
 
 " Environment {
     " Basics {
-        set nocompatible        " must be first line
+        set nocompatible 
+        filetype off
     " }
     "
     " Setup Bundle Support {
-    " The next three lines ensure that the ~/.vim/bundle/ system works
-        filetype off
         set rtp+=~/.vim/bundle/vundle
         call vundle#begin()
     " }
@@ -17,7 +16,7 @@
 
 " Bundles {
     " Deps {
-        Bundle 'gmarik/Vundle.vim'
+        Bundle 'vundle'
         Bundle 'MarcWeber/vim-addon-mw-utils'
         Bundle 'tomtom/tlib_vim'
     " }

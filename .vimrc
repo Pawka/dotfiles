@@ -1,20 +1,7 @@
 set nocompatible " Must be first line
 
 " Bundles {
-
-    " Setup {
-        filetype on
-        filetype off
-        set rtp+=~/.vim/bundle/vundle
-        call vundle#rc()
-    " }
-
-    " Use bundles config {
-        if filereadable(expand("~/.vimrc.bundles"))
-            source ~/.vimrc.bundles
-        endif
-    " }
-
+    source ~/.vimrc.bundles
 " }
 
 filetype plugin indent on     " required!
