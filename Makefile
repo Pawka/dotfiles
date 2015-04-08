@@ -5,10 +5,11 @@ default: update
 install: submodules bundles symlinks
 
 symlinks:
-	ln -s $(CURDIR)/vim $(HOME)/.vim
-	ln -s $(CURDIR)/vimrc $(HOME)/.vimrc
-	ln -s $(CURDIR)/vimrc.bundles $(HOME)/.vimrc.bundles
-	ln -s $(CURDIR)/vimoutlinerrc $(HOME)/.vimoutlinerrc
+	rm -f $(HOME)/.vim $(HOME)/.vimrc $(HOME)/.vimrc.bundles $(HOME)/.vimoutlinerrc
+	ln -s $(CURDIR)/.vim $(HOME)/.vim
+	ln -s $(CURDIR)/.vimrc $(HOME)/.vimrc
+	ln -s $(CURDIR)/.vimrc.bundles $(HOME)/.vimrc.bundles
+	ln -s $(CURDIR)/.vimoutlinerrc $(HOME)/.vimoutlinerrc
 
 update: submodules-update bundles
 	@echo Updating plugins
@@ -18,7 +19,7 @@ update: submodules-update bundles
 # Fetch and install provided required bundles.
 # 
 bundles:
-	vim -u vimrc.bundles +BundleInstall +qa
+	vim -u .vimrc.bundles +BundleInstall +qa
 
 # 
 # Submodules

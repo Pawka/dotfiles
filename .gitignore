@@ -1,7 +1,7 @@
-vim/backup/*
-vim/swap/*
-vim/doc/*
-vim/bundle/*
-vim/sessions/*
-vim/.netrwist
-vim/view/*
+.vim/backup/*
+.vim/swap/*
+.vim/doc/*
+.vim/bundle/*
+.vim/sessions/*
+.vim/.netrwhist
+.vim/view/*
