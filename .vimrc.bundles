@@ -11,13 +11,13 @@
     " The next three lines ensure that the ~/.vim/bundle/ system works
         filetype off
         set rtp+=~/.vim/bundle/vundle
-        call vundle#rc()
+        call vundle#begin()
     " }
 " }
 
 " Bundles {
     " Deps {
-        Bundle 'gmarik/vundle'
+        Bundle 'gmarik/Vundle.vim'
         Bundle 'MarcWeber/vim-addon-mw-utils'
         Bundle 'tomtom/tlib_vim'
     " }
@@ -89,4 +89,8 @@
 " General {
     " set autowrite                  " automatically write a file when leaving a modified buffer
     set shortmess+=filmnrxoOtT      " abbrev. of messages (avoids 'hit enter')
+" }
+
+" Destructor {
+    call vundle#end()  
 " }

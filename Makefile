@@ -29,5 +29,5 @@ submodules:
 	git submodule init
 	git submodule update -f
 
-submodules-update:
+submodules-update: submodules
 	git submodule foreach git pull origin master
