@@ -1,6 +1,6 @@
 set nocompatible " Must be first line
 
-" Bundles {
+" Vundle setup {
     source ~/.vimrc.bundles
 " }
 

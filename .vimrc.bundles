@@ -9,14 +9,14 @@
     " }
     "
     " Setup Bundle Support {
-        set rtp+=~/.vim/bundle/vundle
+        set rtp+=~/.vim/bundle/Vundle.vim
         call vundle#begin()
     " }
 " }
 
 " Bundles {
     " Deps {
-        Bundle 'vundle'
+        Bundle 'gmarik/Vundle.vim'
         Bundle 'MarcWeber/vim-addon-mw-utils'
         Bundle 'tomtom/tlib_vim'
     " }
