@@ -17,8 +17,9 @@ symlinks:
 	ln -s $(CURDIR)/.vimoutlinerrc $(HOME)/.vimoutlinerrc
 
 .PHONY: vundle
+VUNDLE_DIR=".vim/bundle/Vundle.vim"
 vundle:
-	git clone https://github.com/gmarik/Vundle.vim.git .vim/bundle/Vundle.vim
+	test -d $(VUNDLE_DIR) || git clone https://github.com/gmarik/Vundle.vim.git $(VUNDLE_DIR)
 
 .PHONY: bundles
 bundles:

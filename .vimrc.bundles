@@ -76,6 +76,7 @@
             Bundle 'vim-php/tagbar-phpctags.vim'
             " Bundle 'shawncplus/phpcomplete.vim'
             " Bundle 'beyondwords/vim-twig'
+            " Bundle 'rayburgemeestre/phpfolding.vim'
         " }
         "
         " Python {
