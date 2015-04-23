@@ -109,10 +109,13 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
     noremap \ ,
     nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
     nnoremap <Leader>m :make<CR>
+    " <number><Leader>z will set foldlevel to <number>
+    nnoremap <silent> <Leader>z :<C-u>let &foldlevel = v:count<CR>
 
     " Function keys {
         noremap <F5> :make<CR>
     " }
+    "
 " }
 "
 " Command mappings {
@@ -139,6 +142,7 @@ set vb t_vb=
 set exrc
 set number
 set numberwidth=8
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " DJANGO + PYTHON
@@ -208,12 +212,10 @@ set backspace=indent,start,eol
 
 " Syntastic {
     if exists("g:loaded_syntastic_plugin")
-        " Do not use phpcs
-        let g:syntastic_php_checkers = ["php"]
         "Disable automatic check for some types.
         let g:syntastic_mode_map = { 'mode': 'passive' ,
-                                   \ 'active_filetypes': ['python', 'js', 'php', 'puppet', 'sh', 'markdown', 'yaml', 'zsh'],
-                                   \ 'passive_filetypes': [] }
+                                   \ 'active_filetypes': ['python', 'js', 'puppet', 'sh', 'markdown', 'yaml', 'zsh'],
+                                   \ 'passive_filetypes': ['php'] }
         "Do not move cursor to first error after open/save.
         let g:syntastic_auto_jump = 0
         "Map key to run check.

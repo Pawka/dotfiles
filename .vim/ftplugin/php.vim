@@ -9,11 +9,11 @@
 
     " PHP cs fixer {
         " Use global path
-        let g:php_cs_fixer_path = "php-cs-fixer"
+        " let g:php_cs_fixer_path = "php-cs-fixer"
     " }
 " }
 
-let g:php_folding=2
+" let g:php_folding=2
 " set foldmethod=manual
 
 " PHPunit support  {
