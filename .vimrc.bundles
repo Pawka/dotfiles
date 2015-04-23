@@ -31,6 +31,7 @@
         Bundle 'tlib'
         Bundle 'Rename'
         Bundle 'L9'
+        Bundle 'embear/vim-localvimrc'
     " }
 
     " Navigation {

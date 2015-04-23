@@ -239,3 +239,12 @@ set backspace=indent,start,eol
     imap <C-J> <Plug>snipMateNextOrTrigger
     smap <C-J> <Plug>snipMateNextOrTrigger
 " }
+
+" Localvimrc {
+    " Disable sandbox mode
+    let g:localvimrc_sandbox=0
+    " Do not ask if .lvimrc should be loaded
+    let g:localvimrc_ask=0
+    " Load one .lvimrc
+    let g:localvimrc_count=1
+" }
