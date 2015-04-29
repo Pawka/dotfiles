@@ -16,7 +16,7 @@ export ZSH_THEME="fishy"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git symfony2 virtualenv web-search tmux ssh-agent fabric)
+plugins=(git symfony2 web-search tmux ssh-agent fabric)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -39,8 +39,10 @@ alias tmux="TERM=screen-256color-bce tmux"
 alias st="st -e tmux"
 alias ack="ack-grep"
 
+alias -s log="tail -f"
+
 zstyle :omz:plugins:ssh-agent agent-forwarding on
 
-stty -ixon -ixoff
+stty -ixon #-ixoff
 # Fix backspace key behaviour (remove ^H symbol)
-# stty erase ^H 
+stty erase ^H 

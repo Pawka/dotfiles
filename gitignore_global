@@ -37,6 +37,7 @@ Thumbs.db
 tags
 vendor.tags
 .svn
+.lvimrc
 
 Capfile
 config/deploy*
