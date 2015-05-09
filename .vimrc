@@ -80,6 +80,10 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
 
     " Always show statusline
     set laststatus=2
+    " Horisontal cursor line
+    set cursorline
+    " Set vertical 80 symbols mark.
+    let &colorcolumn=join([81, 81],",")
 " }
 
 " Command-Line mode {
@@ -100,7 +104,6 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
     set incsearch
     set ignorecase
     set nosmartcase
-    set cursorline
 " }
 
 " Global key bindings {
@@ -215,7 +218,7 @@ set backspace=indent,start,eol
         "Disable automatic check for some types.
         let g:syntastic_mode_map = { 'mode': 'passive' ,
                                    \ 'active_filetypes': ['python', 'js', 'puppet', 'sh', 'markdown', 'yaml', 'zsh'],
-                                   \ 'passive_filetypes': ['php'] }
+                                   \ 'passive_filetypes': [] }
         "Do not move cursor to first error after open/save.
         let g:syntastic_auto_jump = 0
         "Map key to run check.
