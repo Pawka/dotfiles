@@ -24,7 +24,7 @@ source $ZSH/oh-my-zsh.sh
 unsetopt correct_all
 
 # Customize to your needs...
-export PATH=~/.bin/:$PATH
+export PATH=~/.bin:$PATH
 export XDG_CONFIG_HOME="$HOME/.config"
 export EDITOR=vim
 
@@ -40,6 +40,7 @@ alias st="st -e tmux"
 alias ack="ack-grep"
 
 alias -s log="tail -f"
+alias -s html="gnome-open"
 
 zstyle :omz:plugins:ssh-agent agent-forwarding on
 
