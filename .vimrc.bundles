@@ -83,7 +83,8 @@
         "
         " Python {
             " Bundle 'klen/python-mode'
-            " Bundle 'davidhalter/jedi-vim'
+            Bundle 'davidhalter/jedi-vim'
+            Bundle 'alfredodeza/pytest.vim'
         " }
     " }
 " }
