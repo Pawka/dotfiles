@@ -37,7 +37,7 @@ set tabpagemax=100
 " Encoding
 set encoding=utf-8
 set fileencodings=utf-8,ucs-bom,latin1
-set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICENSE,**/doc/**
+set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICENSE,**/doc/**,*.pyc
 
 " Colors {
     if has("gui_running")
@@ -150,7 +150,6 @@ set numberwidth=8
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " DJANGO + PYTHON
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-autocmd FileType python set ft=python.django " For SnipMate
 autocmd Filetype gitcommit setlocal spell textwidth=72
 
 " Autocomplete funcs and identifiers for languages {
