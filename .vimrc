@@ -83,7 +83,7 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
     " Horisontal cursor line
     set cursorline
     " Set vertical 80 symbols mark.
-    let &colorcolumn=join([81, 81],",")
+    let &colorcolumn=join([80, 80],",")
 " }
 
 " Command-Line mode {
@@ -116,9 +116,12 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
     nnoremap <silent> <Leader>z :<C-u>let &foldlevel = v:count<CR>
 
     " Function keys {
-        noremap <F5> :make<CR>
+        " noremap <F5> :make<CR>
     " }
     "
+
+    " Select last edited or pasted text.
+    nnoremap gp `[v`]
 " }
 "
 " Command mappings {
@@ -249,4 +252,14 @@ set backspace=indent,start,eol
     let g:localvimrc_ask=0
     " Load one .lvimrc
     let g:localvimrc_count=1
+" }
+"
+" Vdebug {
+    " Break on breakpoints only.
+    let g:vdebug_options = {
+    \    "break_on_open" : 0,
+    \    "watch_window_style": 'compact',
+    \}
+
+    noremap <Leader>bp :Breakpoint<CR>
 " }

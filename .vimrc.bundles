@@ -63,11 +63,16 @@
     " }
     
     " Languages {
+        " Debuging {
+            Bundle 'joonty/vdebug'
+        " }
+
         Bundle 'tclem/vim-arduino'
         " Bundle 'jcf/vim-latex'
         Bundle 'tpope/vim-markdown'
         Bundle 'evanmiller/nginx-vim-syntax'
         Bundle 'rodjek/vim-puppet'
+        Bundle 'groenewege/vim-less'
 
         " PHP {
             " Bundle 'arnaud-lb/vim-php-namespace'
@@ -85,6 +90,7 @@
             " Bundle 'klen/python-mode'
             Bundle 'davidhalter/jedi-vim'
             Bundle 'alfredodeza/pytest.vim'
+            Bundle 'Glench/Vim-Jinja2-Syntax'
         " }
     " }
 " }
