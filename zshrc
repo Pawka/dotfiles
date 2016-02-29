@@ -18,6 +18,9 @@ export ZSH_THEME="fishy"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git symfony2 web-search tmux ssh-agent fabric)
 
+plugins+=(zsh-completions)
+autoload -U compinit && compinit
+
 source $ZSH/oh-my-zsh.sh
 
 # Disable autocorrect
@@ -38,12 +41,19 @@ alias diff="colordiff"
 alias tmux="TERM=screen-256color-bce tmux"
 alias st="st -e tmux"
 alias ack="ack-grep"
+alias weather="curl http://wttr.in/Vilnius"
 
 alias -s log="tail -f"
 alias -s html="gnome-open"
 
 zstyle :omz:plugins:ssh-agent agent-forwarding on
 
-stty -ixon #-ixoff
+# stty -ixon #-ixoff
 # Fix backspace key behaviour (remove ^H symbol)
-stty erase ^H 
+# stty erase ^H 
+stty erase '^?'
+
+# Autojump config
+[[ -s /home/pawka/.autojump/etc/profile.d/autojump.sh ]] && source /home/pawka/.autojump/etc/profile.d/autojump.sh
+
+autoload -U compinit && compinit -u]]
