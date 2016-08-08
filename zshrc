@@ -40,7 +40,6 @@ fi
 alias diff="colordiff"
 alias tmux="TERM=screen-256color-bce tmux"
 alias st="st -e tmux"
-alias ack="ack-grep"
 alias weather="curl http://wttr.in/Vilnius"
 
 alias -s log="tail -f"
@@ -51,9 +50,13 @@ zstyle :omz:plugins:ssh-agent agent-forwarding on
 # stty -ixon #-ixoff
 # Fix backspace key behaviour (remove ^H symbol)
 # stty erase ^H 
-stty erase '^?'
+# stty erase '^?'
 
 # Autojump config
 [[ -s /home/pawka/.autojump/etc/profile.d/autojump.sh ]] && source /home/pawka/.autojump/etc/profile.d/autojump.sh
 
 autoload -U compinit && compinit -u]]
+
+# GOPATH
+export GOPATH="$HOME/gocode"
+export PATH="$PATH:$GOPATH/bin"

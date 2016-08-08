@@ -65,4 +65,3 @@ fi
 
 # Build symlinks
 confirm "Build symlinks [y/n]?" && rake install
-
