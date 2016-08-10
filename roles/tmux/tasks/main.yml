@@ -1,0 +1,5 @@
+---
+- name: Install tmux modules
+  apt: name={{item}} state=installed
+  with_items:
+    - urlview
