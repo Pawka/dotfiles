@@ -1,0 +1,21 @@
+---
+- name: Install autofs
+  apt: name=autofs state=installed
+
+- name: Create autofs pictures mount to NAS
+  template:
+    src="auto.ds"
+    dest=/etc/auto.ds
+    owner=root
+    group=root
+    mode=644
+  become: true
+  notify: Reload autofs
+
+- name: Configure /etc/auto.master
+  lineinfile:
+    dest="/etc/auto.master"
+    regexp="auto\.ds"
+    line="/mnt /etc/auto.ds --timeout 60"
+  become: true
+  notify: Reload autofs

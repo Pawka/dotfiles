@@ -3,3 +3,4 @@
   roles:
     - roles/common
     - roles/tmux
+    - roles/media
