@@ -102,6 +102,7 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
 " Search {
     set hlsearch
     set incsearch
+    " Ignore case sensitivity by default when searching
     set ignorecase
     set nosmartcase
 " }
@@ -257,9 +258,18 @@ set backspace=indent,start,eol
 " Vdebug {
     " Break on breakpoints only.
     let g:vdebug_options = {
+    \    "port" : 9000,
+    \    "server" : 'localhost',
+    \    "timeout" : 20,
+    \    "on_close" : 'detach',
     \    "break_on_open" : 0,
-    \    "watch_window_style": 'compact',
+    \    "continuous_mode": 1,
+    \    "watch_window_style": 'compact'
     \}
 
     noremap <Leader>bp :Breakpoint<CR>
+" }
+"
+" Notes {
+    let g:notes_directories = ['~/Documents/notes']
 " }

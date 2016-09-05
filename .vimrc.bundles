@@ -58,8 +58,10 @@
         Bundle 'airblade/vim-gitgutter'
     " }
 
-    " Tools {
-        Bundle 'vimoutliner/vimoutliner'
+    " Notes {
+        " Bundle 'vimoutliner/vimoutliner'
+        Bundle 'xolox/vim-notes'
+        Bundle 'xolox/vim-misc'
     " }
     
     " Languages {
@@ -67,19 +69,20 @@
             Bundle 'joonty/vdebug'
         " }
 
-        Bundle 'tclem/vim-arduino'
+        " Bundle 'tclem/vim-arduino'
         " Bundle 'jcf/vim-latex'
         Bundle 'tpope/vim-markdown'
         Bundle 'evanmiller/nginx-vim-syntax'
         Bundle 'rodjek/vim-puppet'
         Bundle 'groenewege/vim-less'
+        Bundle 'chase/vim-ansible-yaml'
 
         " PHP {
             " Bundle 'arnaud-lb/vim-php-namespace'
             Bundle '2072/PHP-Indenting-for-VIm'
-            Bundle 'joonty/vim-phpunitqf.git'
+            " Bundle 'joonty/vim-phpunitqf.git'
             Bundle 'docteurklein/vim-symfony'
-            Bundle 'docteurklein/php-getter-setter.vim'
+            " Bundle 'docteurklein/php-getter-setter.vim'
             Bundle 'vim-php/tagbar-phpctags.vim'
             " Bundle 'shawncplus/phpcomplete.vim'
             " Bundle 'beyondwords/vim-twig'
@@ -89,8 +92,12 @@
         " Python {
             " Bundle 'klen/python-mode'
             Bundle 'davidhalter/jedi-vim'
-            Bundle 'alfredodeza/pytest.vim'
+            " Bundle 'alfredodeza/pytest.vim'
             Bundle 'Glench/Vim-Jinja2-Syntax'
+        " }
+        "
+        " GO {
+            Bundle 'fatih/vim-go'
         " }
     " }
 " }
