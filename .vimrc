@@ -219,9 +219,9 @@ set backspace=indent,start,eol
 " Syntastic {
     if exists("g:loaded_syntastic_plugin")
         "Disable automatic check for some types.
-        let g:syntastic_mode_map = { 'mode': 'passive' ,
-                                   \ 'active_filetypes': ['python', 'js', 'puppet', 'sh', 'markdown', 'yaml', 'zsh'],
-                                   \ 'passive_filetypes': [] }
+        let g:syntastic_mode_map = { 'mode': 'active' ,
+                                   \ 'active_filetypes': ['python', 'js', 'puppet', 'sh', 'markdown', 'yaml', 'zsh', 'go'],
+                                   \ 'passive_filetypes': ['php'] }
         "Do not move cursor to first error after open/save.
         let g:syntastic_auto_jump = 0
         "Map key to run check.
@@ -272,4 +272,15 @@ set backspace=indent,start,eol
 "
 " Notes {
     let g:notes_directories = ['~/Documents/notes']
+" }
+"
+" vim-go {
+    let g:go_highlight_functions = 1
+    let g:go_highlight_methods = 1
+    let g:go_highlight_fields = 1
+    let g:go_highlight_types = 1
+    let g:go_highlight_operators = 1
+    let g:go_highlight_build_constraints = 1
+    let g:go_fmt_command = "goimports"
+    let g:go_metalinter_autosave = 1
 " }
