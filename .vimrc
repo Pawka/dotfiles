@@ -241,11 +241,6 @@ set backspace=indent,start,eol
     " let g:CommandTMaxHeight=20
 " }
 
-" SnipMate {
-    imap <C-J> <Plug>snipMateNextOrTrigger
-    smap <C-J> <Plug>snipMateNextOrTrigger
-" }
-
 " Localvimrc {
     " Disable sandbox mode
     let g:localvimrc_sandbox=0

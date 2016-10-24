@@ -48,8 +48,6 @@
         Bundle 'tpope/vim-surround'
         Bundle 'tpope/vim-fugitive'
         Bundle 'tpope/vim-unimpaired'
-        Bundle 'garbas/vim-snipmate'
-        Bundle 'honza/vim-snippets'
         Bundle 'nelstrom/vim-qargs'
         Bundle 'scrooloose/syntastic'
         Bundle 'mattn/emmet-vim'
