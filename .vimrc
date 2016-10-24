@@ -122,7 +122,7 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
     "
 
     " Select last edited or pasted text.
-    nnoremap gp `[v`]
+    nnoremap <Leader>p `[v`]
 " }
 "
 " Command mappings {

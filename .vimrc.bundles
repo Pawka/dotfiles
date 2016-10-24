@@ -27,9 +27,8 @@
     " }
 
     " General {
-        Bundle 'tComment'
         Bundle 'tlib'
-        Bundle 'Rename'
+        Bundle 'tpope/vim-eunuch'
         Bundle 'L9'
         Bundle 'embear/vim-localvimrc'
     " }
@@ -44,6 +43,7 @@
     " }
  
     " Editing {
+		Bundle 'tpope/vim-commentary'
         Bundle 'godlygeek/tabular'
         Bundle 'tpope/vim-surround'
         Bundle 'tpope/vim-fugitive'
@@ -51,11 +51,19 @@
         Bundle 'garbas/vim-snipmate'
         Bundle 'honza/vim-snippets'
         Bundle 'nelstrom/vim-qargs'
-        Bundle 'ervandew/supertab'
         Bundle 'scrooloose/syntastic'
         Bundle 'mattn/emmet-vim'
         Bundle 'cohama/lexima.vim'
         Bundle 'airblade/vim-gitgutter'
+		" Bundle 'sjl/gundo.vim', { 'on': 'GundoToggle' }
+
+		" Autocomplete {
+			if has('python') || has('python3')
+			  Bundle 'Valloric/YouCompleteMe', { 'do': './install.sh' }
+			else
+			  Bundle 'ervandew/supertab'
+			endif
+		" }
     " }
 
     " Notes {
@@ -79,9 +87,9 @@
 
         " PHP {
             " Bundle 'arnaud-lb/vim-php-namespace'
-            Bundle '2072/PHP-Indenting-for-VIm'
+            " Bundle '2072/PHP-Indenting-for-VIm'
             " Bundle 'joonty/vim-phpunitqf.git'
-            Bundle 'docteurklein/vim-symfony'
+            " Bundle 'docteurklein/vim-symfony'
             " Bundle 'docteurklein/php-getter-setter.vim'
             Bundle 'vim-php/tagbar-phpctags.vim'
             " Bundle 'shawncplus/phpcomplete.vim'
