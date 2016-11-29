@@ -123,6 +123,8 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
 
     " Select last edited or pasted text.
     nnoremap <Leader>p `[v`]
+
+    nnoremap <Leader>cd :put =strftime('%Y-%m-%d')<CR>
 " }
 "
 " Command mappings {
@@ -280,4 +282,22 @@ set backspace=indent,start,eol
     let g:go_highlight_operators = 1
     let g:go_highlight_types = 1
     let g:go_metalinter_autosave = 1
+" }
+"
+" UtilSnips {
+    let g:UltiSnipsExpandTrigger="<tab>"
+    let g:UltiSnipsJumpForwardTrigger="<tab>"
+    let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+" }
+"
+" YCM {
+    " Make YCM compatible with UltiSnips as per:
+    " https://github.com/SirVer/ultisnips/issues/512#issuecomment-111733631
+    let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+    let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+    let g:SuperTabDefaultCompletionType = '<C-n>'
+
+    " Autoclose preview window
+    let g:ycm_autoclose_preview_window_after_completion = 1
+    let g:ycm_autoclose_preview_window_after_insertion = 1
 " }

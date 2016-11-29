@@ -54,6 +54,9 @@
         Bundle 'cohama/lexima.vim'
         Bundle 'airblade/vim-gitgutter'
 		" Bundle 'sjl/gundo.vim', { 'on': 'GundoToggle' }
+        Plugin 'SirVer/ultisnips'
+        Plugin 'honza/vim-snippets'
+        Plugin 'nvie/vim-rst-tables'
 
 		" Autocomplete {
 			if has('python') || has('python3')
