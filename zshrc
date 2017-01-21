@@ -16,7 +16,7 @@ export ZSH_THEME="fishy"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git symfony2 web-search tmux ssh-agent fabric)
+plugins=(git tmux ssh-agent fabric)
 
 plugins+=(zsh-completions)
 autoload -U compinit && compinit
@@ -41,6 +41,7 @@ alias diff="colordiff"
 alias tmux="TERM=screen-256color-bce tmux"
 alias st="st -e tmux"
 alias weather="curl http://wttr.in/Vilnius"
+alias sl="ls"
 
 alias -s log="tail -f"
 alias -s html="gnome-open"
@@ -55,7 +56,7 @@ zstyle :omz:plugins:ssh-agent agent-forwarding on
 # Autojump config
 [[ -s /home/pawka/.autojump/etc/profile.d/autojump.sh ]] && source /home/pawka/.autojump/etc/profile.d/autojump.sh
 
-autoload -U compinit && compinit -u]]
+autoload -U compinit && compinit -u
 
 # GOPATH
 export GOPATH="$HOME/gocode"
