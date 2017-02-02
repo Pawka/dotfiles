@@ -38,8 +38,6 @@ fi
 
 #Aliases
 alias diff="colordiff"
-alias tmux="TERM=screen-256color-bce tmux"
-alias st="st -e tmux"
 alias weather="curl http://wttr.in/Vilnius"
 alias sl="ls"
 
