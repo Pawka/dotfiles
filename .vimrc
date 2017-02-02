@@ -45,7 +45,7 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
         set guioptions-=T
         set guifont=Monospace\ 10
     else
-        se t_Co=16
+        set t_Co=16
 
         " Use 256 colours 
         if $TERM =~ "-256color"
@@ -111,7 +111,7 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
     " Map leader key to ','.
     let mapleader=',' 
     noremap \ ,
-    nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
+    nnoremap <silent> <Leader>l :<C-u>nohlsearch<CR><C-l>
     nnoremap <Leader>m :make<CR>
     " <number><Leader>z will set foldlevel to <number>
     nnoremap <silent> <Leader>z :<C-u>let &foldlevel = v:count<CR>
@@ -226,8 +226,6 @@ set backspace=indent,start,eol
                                    \ 'passive_filetypes': ['php'] }
         "Do not move cursor to first error after open/save.
         let g:syntastic_auto_jump = 0
-        "Map key to run check.
-        nnoremap <silent> <F4> :w<CR> :SyntasticCheck<CR> :Errors<CR>
     endif
 " }
 
