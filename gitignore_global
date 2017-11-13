@@ -38,6 +38,7 @@ tags
 vendor.tags
 .svn
 .lvimrc
+.idea
 
 Capfile
 config/deploy*

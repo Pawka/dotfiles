@@ -16,7 +16,7 @@ export ZSH_THEME="fishy"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git tmux ssh-agent fabric)
+plugins=(git tmux ssh-agent fabric symfony2 taskwarrior)
 
 plugins+=(zsh-completions)
 autoload -U compinit && compinit
