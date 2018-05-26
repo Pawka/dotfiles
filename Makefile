@@ -1,5 +1,5 @@
 .PHONY: install
 
 install:
-	ansible-playbook playbook.yml
+	@echo "Refactoring in progress"
 
