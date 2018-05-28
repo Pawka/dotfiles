@@ -5,6 +5,13 @@ only - no other dependencies. It is safe to clone dotfiles on any machine and
 install them. Installation will not bring any binaries. I install my
 dependencies with scripts stored on [Pawka/laptop-setup](https://github.com/Pawka/laptop-setup) repository.
 
+Dotfiles includes configuration for following tools:
+- Tmux
+- Vim
+- Git
+- Zsh
+
+And more...
 
 ## Install
 
@@ -23,4 +30,13 @@ Uninstalling dotfiles simply will remove previously created symlinks.
 
 ``` sh
 make uninstall
+```
+
+## Configure VIM
+
+VIM configuration requires cloned plugin manager and installed plugins.  The
+comamnd below needs to be called explicitly:
+
+``` sh
+make vim
 ```

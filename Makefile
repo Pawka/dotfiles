@@ -24,3 +24,15 @@ uninstall:
 	@for file in $(LINKS); do \
 		rm "${HOME}/.$$file" ; \
 	done
+
+
+# Configure VIM
+vim: vundle
+	vim +PluginInstall +qall
+
+
+# Plugin manager for VIM
+.PHONY: vundle
+VUNDLE_DIR="vim/bundle/Vundle.vim"
+vundle:
+	test -d $(VUNDLE_DIR) || git clone https://github.com/gmarik/Vundle.vim.git $(VUNDLE_DIR)
