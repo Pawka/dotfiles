@@ -7,13 +7,16 @@ LINKS = \
 		gitconfig \
 		gitignore_global \
 		tmux.conf \
+		vim \
+		vimrc \
+		vimrc.bundles \
 		zshenv \
 		zshrc \
 
 install:
 	@echo Creating symlinks...
 	@for file in $(LINKS); do \
-		ln -sf "$(CURRENT_DIR)/$$file" "${HOME}/.$$file" ; \
+		ln -sfn "$(CURRENT_DIR)/$$file" "${HOME}/.$$file" ; \
 	done
 
 uninstall:
