@@ -1,6 +1,6 @@
 .PHONY: install
 
-CURRENT_DIR=${PWD}
+CURRENT_DIR=$(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 
 LINKS = \
 		ctags \
