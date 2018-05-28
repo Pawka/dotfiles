@@ -1,0 +1,24 @@
+# PsySH debug line
+snippet psy
+	require 'psysh';
+	\Psy\Shell::debug(get_defined_vars());
+
+#xhprof profiling code
+snippet xhprof
+	xhprof_enable(XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY);
+
+	//PART FOR TEST SUBJECT
+	$xhprof_data = xhprof_disable();
+	$XHPROF_ROOT = '/home/pawka/www/xhprof';
+	include_once $XHPROF_ROOT . "/xhprof_lib/utils/xhprof_lib.php";
+	include_once $XHPROF_ROOT . "/xhprof_lib/utils/xhprof_runs.php";
+	$xhprof_runs = new \XHProfRuns_Default();
+	$run_id = $xhprof_runs->save_run($xhprof_data, "xhprof_foo");
+	echo "---------------\n".
+		 "http://localhost/xhprof/xhprof_html/index.php?run=$run_id&source=xhprof_foo\n".
+		 "---------------\n";
+	// END OF XHPROF CODE
+
+#debug backtrace
+snippet bt
+	var_dump(debug_backtrace()); exit;

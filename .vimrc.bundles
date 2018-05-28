@@ -1,0 +1,124 @@
+" Modeline and Notes {
+" vim: set foldmarker={,} foldlevel=0 foldmethod=marker spell:
+" }
+
+" Environment {
+    " Basics {
+        set nocompatible 
+        filetype off
+    " }
+    "
+    " Setup Bundle Support {
+        set rtp+=~/.vim/bundle/Vundle.vim
+        call vundle#begin()
+    " }
+" }
+
+" Bundles {
+    " Deps {
+        Bundle 'gmarik/Vundle.vim'
+        Bundle 'MarcWeber/vim-addon-mw-utils'
+        Bundle 'tomtom/tlib_vim'
+    " }
+    
+    " Appearance {
+        Bundle 'altercation/vim-colors-solarized'
+        Plugin 'bling/vim-airline'
+    " }
+
+    " General {
+        Bundle 'tlib'
+        Bundle 'tpope/vim-eunuch'
+        Bundle 'L9'
+        Bundle 'embear/vim-localvimrc'
+    " }
+
+    " Navigation {
+        Bundle 'FuzzyFinder'
+        Bundle 'kien/ctrlp.vim'
+        Bundle 'Lokaltog/vim-easymotion'
+        Bundle 'majutsushi/tagbar'
+        " Bundle 'szw/vim-ctrlspace'
+        Bundle 'rking/ag.vim'
+        Plugin 'christoomey/vim-tmux-navigator'
+    " }
+ 
+    " Editing {
+		Bundle 'tpope/vim-commentary'
+        Bundle 'godlygeek/tabular'
+        Bundle 'tpope/vim-surround'
+        Bundle 'tpope/vim-fugitive'
+        Bundle 'tpope/vim-unimpaired'
+        Bundle 'nelstrom/vim-qargs'
+        Bundle 'scrooloose/syntastic'
+        Bundle 'mattn/emmet-vim'
+        Bundle 'cohama/lexima.vim'
+        Bundle 'airblade/vim-gitgutter'
+		" Bundle 'sjl/gundo.vim', { 'on': 'GundoToggle' }
+        Plugin 'jiangmiao/auto-pairs'
+        Plugin 'SirVer/ultisnips'
+        Plugin 'honza/vim-snippets'
+        Plugin 'nvie/vim-rst-tables'
+
+		" Autocomplete {
+			if has('python') || has('python3')
+			  Bundle 'Valloric/YouCompleteMe', { 'do': './install.sh' }
+			else
+			  Bundle 'ervandew/supertab'
+			endif
+		" }
+    " }
+
+    " Notes {
+        " Bundle 'vimoutliner/vimoutliner'
+        Bundle 'xolox/vim-notes'
+        Bundle 'xolox/vim-misc'
+    " }
+    
+    " Languages {
+        " Debuging {
+            Bundle 'joonty/vdebug'
+        " }
+
+        " Bundle 'tclem/vim-arduino'
+        " Bundle 'jcf/vim-latex'
+        Bundle 'tpope/vim-markdown'
+        Bundle 'evanmiller/nginx-vim-syntax'
+        Bundle 'rodjek/vim-puppet'
+        Bundle 'groenewege/vim-less'
+        Bundle 'chase/vim-ansible-yaml'
+        Bundle 'rdolgushin/groovy.vim'
+
+        " PHP {
+            " Bundle 'arnaud-lb/vim-php-namespace'
+            " Bundle '2072/PHP-Indenting-for-VIm'
+            " Bundle 'joonty/vim-phpunitqf.git'
+            " Bundle 'docteurklein/vim-symfony'
+            " Bundle 'docteurklein/php-getter-setter.vim'
+            Bundle 'vim-php/tagbar-phpctags.vim'
+            " Bundle 'shawncplus/phpcomplete.vim'
+            " Bundle 'beyondwords/vim-twig'
+            " Bundle 'rayburgemeestre/phpfolding.vim'
+        " }
+        "
+        " Python {
+            " Bundle 'klen/python-mode'
+            Bundle 'davidhalter/jedi-vim'
+            " Bundle 'alfredodeza/pytest.vim'
+            Bundle 'Glench/Vim-Jinja2-Syntax'
+        " }
+        "
+        " GO {
+            Bundle 'fatih/vim-go'
+        " }
+    " }
+" }
+
+" General {
+    " set autowrite                  " automatically write a file when leaving a modified buffer
+    set shortmess+=filmnrxoOtT      " abbrev. of messages (avoids 'hit enter')
+" }
+
+" Destructor {
+    call vundle#end()  
+" }
