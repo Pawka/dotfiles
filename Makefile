@@ -2,7 +2,13 @@
 
 CURRENT_DIR=${PWD}
 
-LINKS = ctags gitconfig gitignore_global
+LINKS = \
+		ctags \
+		gitconfig \
+		gitignore_global \
+		tmux.conf \
+		zshenv \
+		zshrc \
 
 install:
 	@echo Creating symlinks...
