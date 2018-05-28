@@ -38,7 +38,7 @@
         Bundle 'kien/ctrlp.vim'
         Bundle 'Lokaltog/vim-easymotion'
         Bundle 'majutsushi/tagbar'
-        Bundle 'szw/vim-ctrlspace'
+        " Bundle 'szw/vim-ctrlspace'
         Bundle 'rking/ag.vim'
         Plugin 'christoomey/vim-tmux-navigator'
     " }
@@ -55,6 +55,7 @@
         Bundle 'cohama/lexima.vim'
         Bundle 'airblade/vim-gitgutter'
 		" Bundle 'sjl/gundo.vim', { 'on': 'GundoToggle' }
+        Plugin 'jiangmiao/auto-pairs'
         Plugin 'SirVer/ultisnips'
         Plugin 'honza/vim-snippets'
         Plugin 'nvie/vim-rst-tables'
