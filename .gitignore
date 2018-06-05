@@ -8,6 +8,3 @@ vim/bundle/*
 vim/sessions/*
 vim/.netrwhist
 vim/view/*
-
-# Submodules
-oh-my-zsh
