@@ -6,6 +6,7 @@ LINKS = \
 		ctags \
 		gitconfig \
 		gitignore_global \
+		oh-my-zsh \
 		tmux.conf \
 		vim \
 		vimrc \
@@ -13,7 +14,7 @@ LINKS = \
 		zshenv \
 		zshrc \
 
-install:
+install: submodules
 	@echo Creating symlinks...
 	@for file in $(LINKS); do \
 		ln -sfn "$(CURRENT_DIR)/$$file" "${HOME}/.$$file" ; \
@@ -24,6 +25,9 @@ uninstall:
 	@for file in $(LINKS); do \
 		rm "${HOME}/.$$file" ; \
 	done
+
+submodules:
+	git submodule init
 
 
 # Configure VIM
