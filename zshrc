@@ -51,8 +51,8 @@ zstyle :omz:plugins:ssh-agent agent-forwarding on
 # stty erase ^H 
 # stty erase '^?'
 
-# Autojump config
-[[ -s /home/pawka/.autojump/etc/profile.d/autojump.sh ]] && source /home/pawka/.autojump/etc/profile.d/autojump.sh
+# Load autojump config
+[[ -s /usr/share/autojump/autojump.sh ]] && source /usr/share/autojump/autojump.sh
 
 autoload -U compinit && compinit -u
 
