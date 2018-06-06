@@ -60,6 +60,8 @@ autoload -U compinit && compinit -u
 export GOPATH="$HOME/gocode"
 export PATH="$PATH:$GOPATH/bin"
 
+# Export locale
+export LC_ALL="us_EN.UTF-8"
 
 # Colorful man pages
 # http://boredzo.org/blog/archives/2016-08-15/colorized-man-pages-understood-and-customized
