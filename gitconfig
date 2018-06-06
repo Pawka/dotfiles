@@ -45,4 +45,4 @@
     editor = vim
 
 [include]
-    path = ~/.gitconfig.github
+    path = ~/.gitconfig.custom
