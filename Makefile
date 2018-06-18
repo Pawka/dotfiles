@@ -4,6 +4,7 @@ LINKS = \
 		gitconfig \
 		gitignore_global \
 		oh-my-zsh \
+		tmux \
 		tmux.conf \
 		vim \
 		vimrc \
