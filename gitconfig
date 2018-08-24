@@ -39,10 +39,10 @@
 
 [color]
     ui = true
-    excludesfile = ~/.gitignore_global
 
 [core]
     editor = vim
+    excludesfile = ~/.gitignore_global
 
 [include]
     path = ~/.gitconfig.custom
