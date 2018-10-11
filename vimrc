@@ -159,7 +159,6 @@ set numberwidth=8
 autocmd Filetype gitcommit setlocal spell textwidth=72
 
 " Autocomplete funcs and identifiers for languages {
-    autocmd FileType python set omnifunc=pythoncomplete#Complete
     autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
     autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
     autocmd FileType css set omnifunc=csscomplete#CompleteCSS
