@@ -83,7 +83,6 @@
         " Bundle 'tclem/vim-arduino'
         " Bundle 'jcf/vim-latex'
         Bundle 'tpope/vim-markdown'
-        Bundle 'evanmiller/nginx-vim-syntax'
         Bundle 'rodjek/vim-puppet'
         Bundle 'groenewege/vim-less'
         Bundle 'chase/vim-ansible-yaml'
