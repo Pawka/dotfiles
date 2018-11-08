@@ -2,3 +2,19 @@ snippet ifen
 	if err != nil {
 		${1}
 	}
+
+snippet tdt "Table-driven test"
+	func Test${1}(t *testing.T) {
+		testCases := map[string]struct {
+			${2}
+		}{
+			"${3}": {
+				 ${4}
+			},
+		}
+		for name, test := range testCases {
+			t.Run(name, func(t *testing.T) {
+				${5}
+			})
+		}
+	}
