@@ -298,3 +298,12 @@ set backspace=indent,start,eol
     let g:ycm_autoclose_preview_window_after_completion = 1
     let g:ycm_autoclose_preview_window_after_insertion = 1
 " }
+"
+" Emmet {
+    let g:user_emmet_leader_key='<Tab>'
+    let g:user_emmet_settings = {
+    \  'javascript.jsx' : {
+    \      'extends' : 'jsx',
+    \  },
+    \}
+" }

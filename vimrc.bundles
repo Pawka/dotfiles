@@ -110,6 +110,11 @@
         " GO {
             Bundle 'fatih/vim-go'
         " }
+        "
+        " JavaScript {
+            Plugin 'pangloss/vim-javascript'
+            Plugin 'mxw/vim-jsx'
+        " }
     " }
 " }
 
