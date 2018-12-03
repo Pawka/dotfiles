@@ -58,7 +58,6 @@
         Plugin 'jiangmiao/auto-pairs'
         Plugin 'SirVer/ultisnips'
         Plugin 'honza/vim-snippets'
-        Plugin 'nvie/vim-rst-tables'
         Plugin 'w0rp/ale'
 
 		" Autocomplete {
