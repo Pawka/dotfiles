@@ -50,7 +50,7 @@
         Bundle 'tpope/vim-fugitive'
         Bundle 'tpope/vim-unimpaired'
         Bundle 'nelstrom/vim-qargs'
-        Bundle 'scrooloose/syntastic'
+        " Bundle 'scrooloose/syntastic'
         Bundle 'mattn/emmet-vim'
         Bundle 'cohama/lexima.vim'
         Bundle 'airblade/vim-gitgutter'
@@ -59,6 +59,7 @@
         Plugin 'SirVer/ultisnips'
         Plugin 'honza/vim-snippets'
         Plugin 'nvie/vim-rst-tables'
+        Plugin 'w0rp/ale'
 
 		" Autocomplete {
 			if has('python') || has('python3')
