@@ -73,6 +73,7 @@
         " Bundle 'vimoutliner/vimoutliner'
         Bundle 'xolox/vim-notes'
         Bundle 'xolox/vim-misc'
+        Bundle 'vimwiki/vimwiki'
     " }
     
     " Languages {

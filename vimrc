@@ -265,7 +265,15 @@ set backspace=indent,start,eol
 " }
 "
 " Notes {
-    let g:notes_directories = ['~/Documents/notes']
+    let g:notes_directories = ['~/fs/Apps/vimnotes']
+" }
+"
+" vim-wiki {
+    let g:vimwiki_list = [{
+    \    'path': '~/fs/Apps/vimwiki/',
+    \    'syntax': 'markdown',
+    \    'ext': '.md'
+    \}]
 " }
 "
 " vim-go {
