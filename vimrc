@@ -123,8 +123,6 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
 
     " Select last edited or pasted text.
     nnoremap <Leader>p `[v`]
-
-    nnoremap <Leader>cd :put =strftime('%Y-%m-%d')<CR>
 " }
 "
 " Command mappings {
