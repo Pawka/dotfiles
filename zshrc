@@ -18,7 +18,6 @@ export ZSH_THEME="fishy"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git tmux ssh-agent fabric symfony2 taskwarrior)
 
-plugins+=(zsh-completions)
 autoload -U compinit && compinit
 
 source $ZSH/oh-my-zsh.sh
