@@ -41,6 +41,8 @@
         " Bundle 'szw/vim-ctrlspace'
         Bundle 'rking/ag.vim'
         Plugin 'christoomey/vim-tmux-navigator'
+        Plugin 'junegunn/fzf'
+        Plugin 'junegunn/fzf.vim'
     " }
  
     " Editing {
