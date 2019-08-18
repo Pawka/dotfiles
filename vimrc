@@ -207,13 +207,10 @@ set backspace=indent,start,eol
     noremap <Leader>db :FufBuffer<CR>
 " }
 
-" CtrlP {
-    noremap <c-b> :CtrlPBuffer<CR>
-    let g:ctrlp_custom_ignore = {
-        \ 'dir': '\v(cache|logs|build|app\/sessions|app\/Resources)$'
-        \ }
+" FZF {
+    nnoremap <c-p> :<c-u>FZF<CR>
+    nnoremap <c-b> :<c-u>Buffers<CR>
 " }
-
 
 " Syntastic {
     if exists("g:loaded_syntastic_plugin")

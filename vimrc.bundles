@@ -35,7 +35,6 @@
 
     " Navigation {
         Bundle 'FuzzyFinder'
-        Bundle 'kien/ctrlp.vim'
         Bundle 'Lokaltog/vim-easymotion'
         Bundle 'majutsushi/tagbar'
         " Bundle 'szw/vim-ctrlspace'
