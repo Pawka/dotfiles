@@ -16,7 +16,7 @@ export ZSH_THEME="fishy"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git tmux ssh-agent fabric symfony2 taskwarrior)
+plugins=(git tmux ssh-agent fabric symfony2 taskwarrior ripgrep)
 
 autoload -U compinit && compinit
 
@@ -29,6 +29,10 @@ unsetopt correct_all
 export PATH=~/.bin:$PATH
 export XDG_CONFIG_HOME="$HOME/.config"
 export EDITOR=vim
+
+# FZF will use this command to list files. This leads to ignored temporary
+# files, following .gitignore and other optimizations.
+export FZF_DEFAULT_COMMAND='rg --files'
 
 # Load custom scripts file.
 if [ -f $HOME/.zshrc.custom ]; then
