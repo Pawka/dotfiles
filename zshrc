@@ -34,6 +34,13 @@ export EDITOR=vim
 # files, following .gitignore and other optimizations.
 export FZF_DEFAULT_COMMAND='rg --files'
 
+# GOPATH
+export GOPATH="$HOME/gocode"
+export PATH="$PATH:$GOPATH/bin"
+
+# Export locale
+export LC_ALL="en_US.UTF-8"
+
 # Load custom scripts file.
 if [ -f $HOME/.zshrc.custom ]; then
     source $HOME/.zshrc.custom
@@ -58,13 +65,6 @@ zstyle :omz:plugins:ssh-agent agent-forwarding on
 [[ -s /usr/share/autojump/autojump.sh ]] && source /usr/share/autojump/autojump.sh
 
 autoload -U compinit && compinit -u
-
-# GOPATH
-export GOPATH="$HOME/gocode"
-export PATH="$PATH:$GOPATH/bin"
-
-# Export locale
-export LC_ALL="en_US.UTF-8"
 
 # Colorful man pages
 # http://boredzo.org/blog/archives/2016-08-15/colorized-man-pages-understood-and-customized
