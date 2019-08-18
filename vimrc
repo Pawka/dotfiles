@@ -210,6 +210,10 @@ set backspace=indent,start,eol
 " FZF {
     nnoremap <c-p> :<c-u>FZF<CR>
     nnoremap <c-b> :<c-u>Buffers<CR>
+    nnoremap <c-n> :<c-u>History<CR>
+
+    " [Buffers] Jump to the existing window if possible
+    let g:fzf_buffers_jump = 1
 " }
 
 " Syntastic {
