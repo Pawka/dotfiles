@@ -152,7 +152,7 @@ set numberwidth=8
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" DJANGO + PYTHON
+" FILETYPES
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd Filetype gitcommit setlocal spell textwidth=72
 
@@ -214,29 +214,6 @@ set backspace=indent,start,eol
 
     " [Buffers] Jump to the existing window if possible
     let g:fzf_buffers_jump = 1
-" }
-
-" Syntastic {
-    if exists("g:loaded_syntastic_plugin")
-        "Disable automatic check for some types.
-        let g:syntastic_mode_map = { 'mode': 'active' ,
-                                   \ 'active_filetypes': ['python', 'js', 'puppet', 'sh', 'markdown', 'yaml', 'zsh', 'go'],
-                                   \ 'passive_filetypes': ['php'] }
-        "Do not move cursor to first error after open/save.
-        let g:syntastic_auto_jump = 0
-    endif
-" }
-
-" Gundo {
-    "Display preview window at bottom.
-    " let g:gundo_preview_bottom = 1
-    " nnoremap <F7> :GundoToggle<CR>
-" }
-
-" Command-T {
-    " Ignore dirs
-    " let g:CommandTWildIgnore=&wildignore . ",**/cache/**,**/logs/**,**/build/**,**/app/sessions/**,*~,**/app/Resources/**"
-    " let g:CommandTMaxHeight=20
 " }
 
 " Localvimrc {
