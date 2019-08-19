@@ -47,7 +47,7 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
     else
         set t_Co=16
 
-        " Use 256 colours 
+        " Use 256 colours
         if $TERM =~ "-256color"
             se t_Co=256
             se background=dark
@@ -109,7 +109,7 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
 
 " Global key bindings {
     " Map leader key to ','.
-    let mapleader=',' 
+    let mapleader=','
     noremap \ ,
     nnoremap <silent> <Leader>l :<C-u>nohlsearch<CR><C-l>
     nnoremap <Leader>m :make<CR>
@@ -186,6 +186,11 @@ set backspace=indent,start,eol
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PLUGINS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Ale {
+    let g:ale_fixers = {
+    \   '*': ['remove_trailing_lines', 'trim_whitespace'],
+    \}
+" }
 
 " Tagbar {
     nmap <F8> :TagbarToggle<CR>
