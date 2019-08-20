@@ -193,6 +193,14 @@ set backspace=indent,start,eol
 
     " Set this variable to 1 to fix files when you save them.
     let g:ale_fix_on_save = 1
+    " Always show sign column.
+    let g:ale_sign_column_always = 1
+
+    " Mappings in the style of unimpaired-next
+    nmap <silent> [W <Plug>(ale_first)
+    nmap <silent> [w <Plug>(ale_previous)
+    nmap <silent> ]w <Plug>(ale_next)
+    nmap <silent> ]W <Plug>(ale_last)
 " }
 
 " Tagbar {
