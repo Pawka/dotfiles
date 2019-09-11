@@ -58,7 +58,7 @@ zstyle :omz:plugins:ssh-agent agent-forwarding on
 
 # stty -ixon #-ixoff
 # Fix backspace key behaviour (remove ^H symbol)
-# stty erase ^H 
+# stty erase ^H
 # stty erase '^?'
 
 # Load autojump config
@@ -80,3 +80,6 @@ man() {
 }
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Load direnv
+eval "$(direnv hook zsh)"
