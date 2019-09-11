@@ -280,6 +280,7 @@ set backspace=indent,start,eol
     let g:go_highlight_types = 1
     let g:go_metalinter_autosave = 1
     let g:go_list_type = "quickfix"
+    let $USE_SYSTEM_GO=1
 " }
 "
 " UtilSnips {
