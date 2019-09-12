@@ -1,12 +1,12 @@
-# Compiled source 
+# Compiled source
 *.com
 *.class
 *.dll
 *.exe
 *.o
 *.so
- 
-# Packages 
+
+# Packages
 *.7z
 *.dmg
 *.gz
@@ -15,11 +15,11 @@
 *.rar
 *.tar
 *.zip
- 
+
 # Logs and databases
 *.log
 *.sqlite
- 
+
 # OS generated files
 .DS_Store
 .DS_Store?
@@ -39,6 +39,7 @@ vendor.tags
 .svn
 .lvimrc
 .idea
+Session.vim
 
 Capfile
 config/deploy*
