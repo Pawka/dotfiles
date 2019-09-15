@@ -8,7 +8,7 @@
         filetype off
     " }
     "
-    " Setup Bundle Support {
+    " Setup Plugin Support {
         set rtp+=~/.vim/bundle/Vundle.vim
         call vundle#begin()
     " }
@@ -16,107 +16,94 @@
 
 " Bundles {
     " Deps {
-        Bundle 'gmarik/Vundle.vim'
-        Bundle 'MarcWeber/vim-addon-mw-utils'
-        Bundle 'tomtom/tlib_vim'
+        Plugin 'gmarik/Vundle.vim'
+        Plugin 'MarcWeber/vim-addon-mw-utils'
+        Plugin 'tomtom/tlib_vim'
     " }
 
     " Appearance {
-        Bundle 'altercation/vim-colors-solarized'
+        Plugin 'altercation/vim-colors-solarized'
         Plugin 'bling/vim-airline'
     " }
 
     " General {
-        Bundle 'tlib'
-        Bundle 'tpope/vim-eunuch'
-        Bundle 'L9'
-        Bundle 'embear/vim-localvimrc'
+        Plugin 'embear/vim-localvimrc'
+        Plugin 'L9'
+        Plugin 'tlib'
+        Plugin 'tpope/vim-eunuch'
     " }
 
     " Navigation {
-        Bundle 'FuzzyFinder'
-        Bundle 'Lokaltog/vim-easymotion'
-        Bundle 'majutsushi/tagbar'
         Plugin 'christoomey/vim-tmux-navigator'
+        Plugin 'FuzzyFinder'
         Plugin 'junegunn/fzf'
         Plugin 'junegunn/fzf.vim'
+        Plugin 'Lokaltog/vim-easymotion'
+        Plugin 'majutsushi/tagbar'
         Plugin 'tpope/vim-obsession'
         Plugin 'tpope/vim-projectionist'
     " }
 
     " Editing {
-		Bundle 'tpope/vim-commentary'
-        Bundle 'godlygeek/tabular'
-        Bundle 'tpope/vim-surround'
-        Bundle 'tpope/vim-fugitive'
-        Bundle 'tpope/vim-unimpaired'
-        Bundle 'nelstrom/vim-qargs'
-        " Bundle 'scrooloose/syntastic'
-        Bundle 'mattn/emmet-vim'
-        Bundle 'cohama/lexima.vim'
-        Bundle 'airblade/vim-gitgutter'
-		" Bundle 'sjl/gundo.vim', { 'on': 'GundoToggle' }
-        Plugin 'jiangmiao/auto-pairs'
-        Plugin 'SirVer/ultisnips'
+		Plugin 'tpope/vim-commentary'
+        Plugin 'airblade/vim-gitgutter'
+        Plugin 'cohama/lexima.vim'
+        Plugin 'editorconfig/editorconfig-vim'
+        Plugin 'godlygeek/tabular'
         Plugin 'honza/vim-snippets'
+        Plugin 'janko/vim-test'
+        Plugin 'jiangmiao/auto-pairs'
+        Plugin 'mattn/emmet-vim'
+        Plugin 'mhinz/vim-grepper'
+        Plugin 'nelstrom/vim-qargs'
+        Plugin 'SirVer/ultisnips'
+        Plugin 'tpope/vim-dispatch'
+        Plugin 'tpope/vim-fugitive'
+        Plugin 'tpope/vim-surround'
+        Plugin 'tpope/vim-unimpaired'
         Plugin 'w0rp/ale'
-        Plugin  'editorconfig/editorconfig-vim'
 
 		" Autocomplete {
 			if has('python') || has('python3')
-			  Bundle 'Valloric/YouCompleteMe', { 'do': './install.sh' }
+			  Plugin 'Valloric/YouCompleteMe', { 'do': './install.sh' }
 			else
-			  Bundle 'ervandew/supertab'
+			  Plugin 'ervandew/supertab'
 			endif
 		" }
     " }
 
     " Notes {
-        " Bundle 'vimoutliner/vimoutliner'
-        Bundle 'xolox/vim-notes'
-        Bundle 'xolox/vim-misc'
-        Bundle 'vimwiki/vimwiki'
+        Plugin 'xolox/vim-notes'
+        Plugin 'xolox/vim-misc'
+        Plugin 'vimwiki/vimwiki'
     " }
 
     " Languages {
         " Debuging {
-            Bundle 'joonty/vdebug'
+            Plugin 'joonty/vdebug'
         " }
 
-        " Bundle 'tclem/vim-arduino'
-        " Bundle 'jcf/vim-latex'
-        Bundle 'tpope/vim-markdown'
-        Bundle 'rodjek/vim-puppet'
-        Bundle 'groenewege/vim-less'
-        Bundle 'chase/vim-ansible-yaml'
-        Bundle 'rdolgushin/groovy.vim'
+        " Plugin 'tclem/vim-arduino'
+        " Plugin 'jcf/vim-latex'
+        Plugin 'tpope/vim-markdown'
+        Plugin 'rodjek/vim-puppet'
+        " Plugin 'groenewege/vim-less'
+        Plugin 'chase/vim-ansible-yaml'
+        " Plugin 'rdolgushin/groovy.vim'
 
         " PHP {
-            " Bundle 'arnaud-lb/vim-php-namespace'
-            " Bundle '2072/PHP-Indenting-for-VIm'
-            " Bundle 'joonty/vim-phpunitqf.git'
-            " Bundle 'docteurklein/vim-symfony'
-            " Bundle 'docteurklein/php-getter-setter.vim'
-            Bundle 'vim-php/tagbar-phpctags.vim'
-            " Bundle 'shawncplus/phpcomplete.vim'
-            " Bundle 'beyondwords/vim-twig'
-            " Bundle 'rayburgemeestre/phpfolding.vim'
+            Plugin 'vim-php/tagbar-phpctags.vim'
         " }
         "
         " Python {
-            " Bundle 'klen/python-mode'
-            Bundle 'davidhalter/jedi-vim'
-            " Bundle 'alfredodeza/pytest.vim'
-            Bundle 'Glench/Vim-Jinja2-Syntax'
+            " Plugin 'klen/python-mode'
+            Plugin 'davidhalter/jedi-vim'
+            " Plugin 'alfredodeza/pytest.vim'
+            Plugin 'Glench/Vim-Jinja2-Syntax'
         " }
         "
         " GO {
-            Bundle 'fatih/vim-go'
-        " }
-        "
-        " JavaScript {
-            Plugin 'pangloss/vim-javascript'
-            Plugin 'mxw/vim-jsx'
+            Plugin 'fatih/vim-go'
         " }
     " }
 " }
