@@ -26,7 +26,7 @@ set smarttab
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
-set textwidth=0
+set textwidth=80
 
 " List characters
 set listchars=tab:→\ ,eol:¶
@@ -74,7 +74,7 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
 "GUI {
     " Statusline {
         " Use powerline fonts
-        let g:airline_powerline_fonts = 1
+        let g:airline_powerline_fonts = 0
         let g:airline_exclude_preview = 1
     " }
 
@@ -84,6 +84,12 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
     set cursorline
     " Set vertical 80 symbols mark.
     let &colorcolumn=join([80, 80],",")
+    " Show line numbers on the left.
+    set number
+    " Set fixed line number column width to avoid toggle.
+    set numberwidth=8
+    " Show cursor position
+    set ruler
 " }
 
 " Command-Line mode {
@@ -112,14 +118,6 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
     let mapleader=','
     noremap \ ,
     nnoremap <silent> <Leader>l :<C-u>nohlsearch<CR><C-l>
-    nnoremap <Leader>m :make<CR>
-    " <number><Leader>z will set foldlevel to <number>
-    nnoremap <silent> <Leader>z :<C-u>let &foldlevel = v:count<CR>
-
-    " Function keys {
-        " noremap <F5> :make<CR>
-    " }
-    "
 
     " Select last edited or pasted text.
     nnoremap <Leader>p `[v`]
@@ -135,20 +133,15 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
 " }
 
 " Tags
-" set tags=./tags*,./../tags*,./../../tags*,tags*,$VIM/tags,$VIM/phptags
 set tags+=vendor.tags
 
 " Do not wrap lines automatically
 set nowrap
-" Show cursor position
-set ruler
 
 set mouse=a
 set nocp
 set vb t_vb=
 set exrc
-set number
-set numberwidth=8
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -167,8 +160,6 @@ autocmd Filetype gitcommit setlocal spell textwidth=72
 " }
 
 
-filetype on
-filetype plugin indent on
 " Repair wired terminal/vim settings
 set backspace=indent,start,eol
 
@@ -216,11 +207,6 @@ set backspace=indent,start,eol
     let g:fuf_mrucmd_maxItem = 100
 
     noremap <Leader>` :FufFileWithCurrentBufferDir<CR>
-    noremap <Leader>f :FufFileWithCurrentBufferDir<CR>
-
-    noremap <Leader>dd :FufBookmarkDir<CR>
-    noremap <Leader>dm :FufMruFile<CR>
-    noremap <Leader>db :FufBuffer<CR>
 " }
 
 " FZF {
@@ -253,6 +239,7 @@ set backspace=indent,start,eol
     \    "watch_window_style": 'compact'
     \}
 
+    " NOTE: move to language-native files.
     noremap <Leader>bp :Breakpoint<CR>
 " }
 "
