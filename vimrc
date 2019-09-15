@@ -155,8 +155,6 @@ autocmd Filetype gitcommit setlocal spell textwidth=72
     autocmd FileType css set omnifunc=csscomplete#CompleteCSS
     autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
     autocmd FileType php set omnifunc=phpcomplete#CompletePHP
-    autocmd FileType php setlocal ts=2 sts=2 sw=2
-    autocmd FileType json setlocal ts=2 sts=2 sw=2
 " }
 
 
