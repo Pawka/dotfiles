@@ -2,6 +2,7 @@ CURRENT_DIR=$(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 LINKS = \
 		config/nvim \
 		ctags \
+		editorconfig \
 		gitconfig \
 		gitignore_global \
 		oh-my-zsh \
