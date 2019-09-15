@@ -41,6 +41,7 @@
         Plugin 'junegunn/fzf'
         Plugin 'junegunn/fzf.vim'
         Plugin 'tpope/vim-obsession'
+        Plugin 'tpope/vim-projectionist'
     " }
 
     " Editing {
