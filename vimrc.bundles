@@ -4,7 +4,7 @@
 
 " Environment {
     " Basics {
-        set nocompatible 
+        set nocompatible
         filetype off
     " }
     "
@@ -20,7 +20,7 @@
         Bundle 'MarcWeber/vim-addon-mw-utils'
         Bundle 'tomtom/tlib_vim'
     " }
-    
+
     " Appearance {
         Bundle 'altercation/vim-colors-solarized'
         Plugin 'bling/vim-airline'
@@ -40,8 +40,9 @@
         Plugin 'christoomey/vim-tmux-navigator'
         Plugin 'junegunn/fzf'
         Plugin 'junegunn/fzf.vim'
+        Plugin 'tpope/vim-obsession'
     " }
- 
+
     " Editing {
 		Bundle 'tpope/vim-commentary'
         Bundle 'godlygeek/tabular'
@@ -74,7 +75,7 @@
         Bundle 'xolox/vim-misc'
         Bundle 'vimwiki/vimwiki'
     " }
-    
+
     " Languages {
         " Debuging {
             Bundle 'joonty/vdebug'
@@ -124,5 +125,5 @@
 " }
 
 " Destructor {
-    call vundle#end()  
+    call vundle#end()
 " }
