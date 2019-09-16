@@ -4,3 +4,6 @@
 [submodule "tmux/plugins/tpm"]
 	path = tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm.git
+[submodule "zsh_custom/plugins/bazel"]
+	path = zsh_custom/plugins/bazel
+	url = https://github.com/jackwish/bazel.git

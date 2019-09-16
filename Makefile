@@ -12,6 +12,7 @@ LINKS = \
 		vim \
 		vimrc \
 		vimrc.bundles \
+		zsh_custom \
 		zshenv \
 		zshrc \
 
