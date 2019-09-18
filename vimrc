@@ -251,6 +251,10 @@ set backspace=indent,start,eol
     \    'syntax': 'markdown',
     \    'ext': '.md'
     \}]
+
+    " Needs to be disabled to make UtilSnips work on vimwiki files.
+    " Source: https://github.com/vimwiki/vimwiki/issues/357
+    let g:vimwiki_table_mappings = 0
 " }
 "
 " vim-go {
