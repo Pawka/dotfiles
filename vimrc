@@ -82,8 +82,8 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
     set laststatus=2
     " Horisontal cursor line
     set cursorline
-    " Set vertical 80 symbols mark.
-    let &colorcolumn=join([80, 80],",")
+    " Set vertical after 80 symbols mark.
+    let &colorcolumn=join([81, 81],",")
     " Show line numbers on the left.
     set number
     " Set fixed line number column width to avoid toggle.
