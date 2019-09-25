@@ -46,11 +46,11 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
         set guifont=Monospace\ 10
     else
         set t_Co=16
+        set background=dark
 
         " Use 256 colours
         if $TERM =~ "-256color"
-            se t_Co=256
-            se background=dark
+            set t_Co=256
             " let g:solarized_termcolors=256
             " let g:solarized_contrast="high"
             " let g:solarized_termtrans=1
