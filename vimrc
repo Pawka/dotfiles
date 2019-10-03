@@ -212,6 +212,9 @@ set backspace=indent,start,eol
     nnoremap <c-b> :<c-u>Buffers<CR>
     nnoremap <c-n> :<c-u>History<CR>
 
+    " Open FZF for directory of current file.
+    nnoremap <leader>f :<c-u>FZF %:h<CR>
+
     " [Buffers] Jump to the existing window if possible
     let g:fzf_buffers_jump = 1
 " }
