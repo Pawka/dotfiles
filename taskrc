@@ -32,3 +32,4 @@ data.location=~/.task
 urgency.user.tag.later.coefficient=-12.0
 uda.priority.values=H,M,,L
 alias.uber=add proj:uber
+alias.personal=add proj:personal
