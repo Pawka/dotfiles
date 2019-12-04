@@ -95,7 +95,7 @@ _taskwarrior_reminder() {
     local binary="task"
     local target_file="/tmp/taskwarrior_daycheck"
     # Tasks will be displayed if #target_file is older than $delay_mins.
-    local delay_mins=240
+    local delay_mins=180
 
     # Check if binary exists. Fail silently if not.
     $(command -v "$binary" > /dev/null)
