@@ -18,3 +18,17 @@ snippet tdt "Table-driven test"
 			})
 		}
 	}
+
+snippet table "Table-driven test table"
+	testCases := map[string]struct {
+		${2}
+	}{
+		"${3}": {
+			 ${4}
+		},
+	}
+	for name, test := range testCases {
+		t.Run(name, func(t *testing.T) {
+			${5}
+		})
+	}
