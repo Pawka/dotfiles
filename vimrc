@@ -301,3 +301,8 @@ set backspace=indent,start,eol
     \  },
     \}
 " }
+"
+" Grepper {
+    " Search for the current word"
+    nnoremap <Leader>* :Grepper -cword -noprompt<CR>
+" }
