@@ -1,5 +1,6 @@
 CURRENT_DIR=$(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 LINKS = \
+		config/i3 \
 		config/nvim \
 		ctags \
 		editorconfig \
