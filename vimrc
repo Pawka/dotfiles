@@ -306,3 +306,8 @@ set backspace=indent,start,eol
     " Search for the current word"
     nnoremap <Leader>* :Grepper -cword -noprompt<CR>
 " }
+"
+" Projectionist {
+    " Jump to alternate file
+    nmap <Leader>a :A<CR>
+" }
