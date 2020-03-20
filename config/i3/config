@@ -180,3 +180,6 @@ exec_always --no-startup-id "sleep 1; setxkbmap -option ctrl:nocaps"
 
 # Moving workspaces between screens
 bindsym $mod+p move workspace to output right
+
+# Lock screen
+bindsym $mod+Shift+x exec i3lock -c 000000
