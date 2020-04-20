@@ -38,17 +38,18 @@ submodules:
 
 # Configure VIM
 .PHONY: vim
-vim: vundle ycm
-	vim +PluginInstall +qall
-
+vim: vimplugins ycm
 
 # Plugin manager for VIM
-.PHONY: vundle
-VUNDLE_DIR="vim/bundle/Vundle.vim"
-vundle:
-	test -d $(VUNDLE_DIR) || git clone https://github.com/gmarik/Vundle.vim.git $(VUNDLE_DIR)
+VUNDLE_DIR=vim/bundle/Vundle.vim
+$(VUNDLE_DIR):
+	git clone https://github.com/gmarik/Vundle.vim.git $(VUNDLE_DIR)
+
+.PHONY: vimplugins
+vimplugins: $(VUNDLE_DIR)
+	vim +PluginInstall +qall
 
 # Compile YouCompleteMe server
 .PHONY: ycm
-ycm:
+ycm: vimplugins
 	./vim/bundle/YouCompleteMe/install.py --go-completer
