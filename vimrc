@@ -249,11 +249,10 @@ set backspace=indent,start,eol
 " }
 "
 " vim-wiki {
-    let g:vimwiki_list = [{
-    \    'path': '~/fs/Apps/vimwiki/',
-    \    'syntax': 'markdown',
-    \    'ext': '.md'
-    \}]
+    let g:vimwiki_list = [
+    \ {'path': '~/fs/Apps/vimwiki/', 'syntax': 'markdown', 'ext': '.md'},
+    \ {'path': '~/fs/Apps/vimwiki-uber/', 'syntax': 'markdown', 'ext': '.md'}
+    \ ]
 
     " Needs to be disabled to make UtilSnips work on vimwiki files.
     " Source: https://github.com/vimwiki/vimwiki/issues/357
@@ -270,7 +269,7 @@ set backspace=indent,start,eol
     let g:go_highlight_methods = 1
     let g:go_highlight_operators = 1
     let g:go_highlight_types = 1
-    let g:go_metalinter_autosave = 1
+    let g:go_metalinter_autosave = 0
     let g:go_list_type = "quickfix"
     let $USE_SYSTEM_GO=1
 " }
