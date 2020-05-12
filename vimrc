@@ -290,6 +290,9 @@ set backspace=indent,start,eol
     " Autoclose preview window
     let g:ycm_autoclose_preview_window_after_completion = 1
     let g:ycm_autoclose_preview_window_after_insertion = 1
+
+    " Do not show documentation popup.
+    let g:ycm_auto_hover = ''
 " }
 "
 " Emmet {
