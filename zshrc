@@ -112,3 +112,6 @@ _taskwarrior_reminder() {
 
 }
 _taskwarrior_reminder
+
+export MONOREPO_GOPATH_MODE=1 # This is optional. Without it, GOPATH mode will be off by default
+source "$ZSH_CUSTOM/gopathmodeFunc.bash"
