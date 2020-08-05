@@ -33,6 +33,7 @@ uda.priority.values=H,M,,L
 uda.est.type=numeric
 alias.uber=add proj:uber
 alias.personal=add proj:personal
+alias.today=list +TODAY
 urgency.user.project.hobby.coefficient=-1.0
 
 report.next.columns=id,start.age,entry.age,depends,priority,project,tags,recur,scheduled.countdown,due.relative,until.remaining,est,description,urgency
