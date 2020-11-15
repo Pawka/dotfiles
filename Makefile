@@ -52,4 +52,4 @@ vimplugins: $(VUNDLE_DIR)
 # Compile YouCompleteMe server
 .PHONY: ycm
 ycm: vimplugins
-	./vim/bundle/YouCompleteMe/install.py --go-completer
+	./vim/bundle/YouCompleteMe/install.py --go-completer --rust-completer

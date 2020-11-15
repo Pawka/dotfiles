@@ -105,6 +105,10 @@
         " GO {
             Plugin 'fatih/vim-go'
         " }
+        "
+        " Rust {
+            Plugin 'rust-lang/rust.vim'
+        " }
     " }
 " }
 
