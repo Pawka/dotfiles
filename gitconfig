@@ -37,6 +37,9 @@
 
     lasttag = describe --tags --abbrev=0
 
+    # Remove all local branches except current, main and master.
+    brclean = "!git branch -l | grep -Ev '(main|master)' | xargs -r git branch -D 2>/dev/null"
+
 [color]
     ui = true
 
