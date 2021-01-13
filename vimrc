@@ -280,6 +280,11 @@ set backspace=indent,start,eol
     let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 " }
 "
+" vim-jedi {
+    " Do not show call signatures from jedi since signatures clashes with YCM
+    " completion and pollutes the file which is being edited.
+    let g:jedi#show_call_signatures=0
+" }
 " YCM {
     " Make YCM compatible with UltiSnips as per:
     " https://github.com/SirVer/ultisnips/issues/512#issuecomment-111733631
