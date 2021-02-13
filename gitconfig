@@ -1,6 +1,5 @@
 [user]
     name = Povilas Balzaravicius Pawka
-    email = pavvka@gmail.com
 
 [alias]
     st = status --ignore-submodules -s
