@@ -213,7 +213,24 @@ set backspace=indent,start,eol
     nnoremap <c-n> :<c-u>History<CR>
 
     " Open FZF for directory of current file.
-    nnoremap <leader>f :<c-u>FZF %:h<CR>
+    " - If current file is inside the path of CWD where vim is opened then fzf
+    "   is prefilled with path of current file. This enables to search back to
+    "   parent directories.
+    " - If current file is outside CWD of vim then fzf is opened at the path
+    "   where file is located.
+    function! FZFFromCurrentFile()
+        let l:path = expand('%:h')
+        " If path starts from root (e.g. /home) it means current file is outside
+        " vim CWD.
+        if l:path[0] == "/"
+            let l:options = {'source': join(['find', l:path], " ")}
+        else
+            let l:options = {'options': join(['-q', l:path])}
+        endif
+        call fzf#run(fzf#wrap(l:options))
+    endfunction
+
+    nnoremap <leader>f :call FZFFromCurrentFile()<CR>
 
     " [Buffers] Jump to the existing window if possible
     let g:fzf_buffers_jump = 1
