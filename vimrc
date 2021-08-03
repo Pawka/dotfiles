@@ -244,6 +244,9 @@ autocmd Filetype gitcommit setlocal spell textwidth=72
 " }
 "
 " YCM {
+    " Load global YCM config.
+    let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_global_conf.py'
+
     " Autoclose preview window
     let g:ycm_autoclose_preview_window_after_completion = 1
     let g:ycm_autoclose_preview_window_after_insertion = 1
