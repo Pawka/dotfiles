@@ -243,31 +243,33 @@ autocmd Filetype gitcommit setlocal spell textwidth=72
     let $USE_SYSTEM_GO=1
 " }
 "
-" UtilSnips {
-    let g:UltiSnipsExpandTrigger="<tab>"
-    let g:UltiSnipsJumpForwardTrigger="<tab>"
-    let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-" }
-"
-" vim-jedi {
-    " Do not show call signatures from jedi since signatures clashes with YCM
-    " completion and pollutes the file which is being edited.
-    let g:jedi#show_call_signatures=0
-" }
-"
 " YCM {
-    " Make YCM compatible with UltiSnips as per:
-    " https://github.com/SirVer/ultisnips/issues/512#issuecomment-111733631
-    let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-    let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-    let g:SuperTabDefaultCompletionType = '<C-n>'
-
     " Autoclose preview window
     let g:ycm_autoclose_preview_window_after_completion = 1
     let g:ycm_autoclose_preview_window_after_insertion = 1
 
-    " Do not show documentation popup.
+    " Do not show documentation popup. This slows down the YCM on huge
+    " codebases.
     let g:ycm_auto_hover = ''
+
+    " Make YCM compatible with UltiSnips as per:
+    " https://github.com/SirVer/ultisnips/issues/512#issuecomment-111733631
+    let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+    let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+
+    " UtilSnips {
+        let g:UltiSnipsExpandTrigger="<tab>"
+        " Once snippet expanded jump to the next position in the snippet
+        let g:UltiSnipsJumpForwardTrigger="<tab>"
+        " Once snippet expanded jump to the previous position in the snippet
+        let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+    " }
+
+    " vim-jedi {
+        " Do not show call signatures from jedi since signatures clashes with YCM
+        " completion and pollutes the file which is being edited.
+        let g:jedi#show_call_signatures=0
+    " }
 " }
 "
 " Grepper {
