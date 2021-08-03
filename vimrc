@@ -1,10 +1,8 @@
-
 " Vundle setup {
     source ~/.vimrc.bundles
 " }
 
-set nocompatible " Must be first line
-
+set nocompatible
 filetype plugin indent on     " required!
 
 if has("syntax")
@@ -28,6 +26,8 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set textwidth=80
+" Do not wrap lines automatically
+set nowrap
 
 " List characters
 set listchars=tab:→\ ,eol:¶
@@ -39,6 +39,8 @@ set tabpagemax=100
 set encoding=utf-8
 set fileencodings=utf-8,ucs-bom,latin1
 set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICENSE,**/doc/**,*.pyc
+
+set exrc
 
 " Colors {
     if has("gui_running")
@@ -52,9 +54,6 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
         " Use 256 colours
         if $TERM =~ "-256color"
             set t_Co=256
-            " let g:solarized_termcolors=256
-            " let g:solarized_contrast="high"
-            " let g:solarized_termtrans=1
         endif
     endif
 
@@ -71,8 +70,8 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
     hi EasyMotionTarget2First ctermbg=none ctermfg=blue cterm=bold
     hi EasyMotionTarget2Second ctermbg=none ctermfg=blue cterm=bold
 " }
-
-"GUI {
+"
+" GUI {
     " Statusline {
         " Use powerline fonts
         let g:airline_powerline_fonts = 0
@@ -92,7 +91,7 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
     " Show cursor position
     set ruler
 " }
-
+"
 " Command-Line mode {
     " Enable wildmenu on command mode autocomplete.
     set wildmenu
@@ -105,7 +104,7 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
     cnoremap <C-p> <Up>
     cnoremap <C-n> <Down>
 " }
-
+"
 " Search {
     set hlsearch
     set incsearch
@@ -113,11 +112,12 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
     set ignorecase
     set nosmartcase
 " }
-
+"
 " Global key bindings {
     " Map leader key to ','.
     let mapleader=','
     noremap \ ,
+    " Deselect text highlighted by search.
     nnoremap <silent> <Leader>l :<C-u>nohlsearch<CR><C-l>
 
     " Select last edited or pasted text.
@@ -125,7 +125,6 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
 " }
 "
 " Command mappings {
-
     " Map wq commands to avoid case errors
     :command! WQ wq
     :command! Wq wq
@@ -133,45 +132,10 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
     :command! Q q
 " }
 
-" Tags
-set tags+=vendor.tags
-
-" Do not wrap lines automatically
-set nowrap
-
-set mouse=a
-set nocp
-set vb t_vb=
-set exrc
-
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FILETYPES
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd Filetype gitcommit setlocal spell textwidth=72
-
-" Autocomplete funcs and identifiers for languages {
-    autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-    autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-    autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-    autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
-    autocmd FileType php set omnifunc=phpcomplete#CompletePHP
-" }
-
-
-" Repair wired terminal/vim settings
-set backspace=indent,start,eol
-
-" Syntax {
-    autocmd! BufNewFile,BufRead *.pde set ft=arduino            " Arduino syntax highlighting.
-    autocmd! BufNewFile,BufRead *.ino set ft=arduino
-    autocmd! BufNewFile,BufRead *.json set ft=json              " JSON highlighting.
-    autocmd! BufNewFile,BufRead *.php set ft=php
-    autocmd! BufNewFile,BufRead *.html set ft=phtml
-    autocmd! BufNewFile,BufRead *.html.php set ft=phtml
-    autocmd! BufNewFile,BufRead *.text set ft=tex
-    autocmd! BufNewFile,BufRead *.twig set ft=htmldjango.html   " Twig/Django - same shit.
-" }
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PLUGINS
@@ -192,22 +156,13 @@ set backspace=indent,start,eol
     nmap <silent> ]w <Plug>(ale_next)
     nmap <silent> ]W <Plug>(ale_last)
 " }
-
+"
 " Tagbar {
     nmap <F8> :TagbarToggle<CR>
     let g:tagbar_phpctags_bin='phpctags'
     let g:tagbar_phpctags_memory_limit = '512M'
 " }
-
-" FuzzyFinder {
-    let g:fuf_file_exclude = '\v\~$|\.(o|exe|dll|bak|orig|swp)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])'
-    let g:fuf_modesDisable = []
-    let g:fuf_mrufile_maxItem = 100
-    let g:fuf_mrucmd_maxItem = 100
-
-    noremap <Leader>` :FufFileWithCurrentBufferDir<CR>
-" }
-
+"
 " FZF {
     nnoremap <c-p> :<c-u>FZF<CR>
     nnoremap <c-b> :<c-u>Buffers<CR>
@@ -236,12 +191,12 @@ set backspace=indent,start,eol
     " [Buffers] Jump to the existing window if possible
     let g:fzf_buffers_jump = 1
 " }
-
+"
 " Localvimrc {
     " Disable sandbox mode
     let g:localvimrc_sandbox=0
     " Do not ask if .lvimrc should be loaded
-    let g:localvimrc_ask=0
+    let g:localvimrc_ask=1
     " Load one .lvimrc
     let g:localvimrc_count=1
 " }
@@ -260,10 +215,6 @@ set backspace=indent,start,eol
 
     " NOTE: move to language-native files.
     noremap <Leader>bp :Breakpoint<CR>
-" }
-"
-" Notes {
-    let g:notes_directories = ['~/fs/Apps/vimnotes']
 " }
 "
 " vim-wiki {
@@ -303,6 +254,7 @@ set backspace=indent,start,eol
     " completion and pollutes the file which is being edited.
     let g:jedi#show_call_signatures=0
 " }
+"
 " YCM {
     " Make YCM compatible with UltiSnips as per:
     " https://github.com/SirVer/ultisnips/issues/512#issuecomment-111733631
@@ -316,15 +268,6 @@ set backspace=indent,start,eol
 
     " Do not show documentation popup.
     let g:ycm_auto_hover = ''
-" }
-"
-" Emmet {
-    let g:user_emmet_leader_key='<Tab>'
-    let g:user_emmet_settings = {
-    \  'javascript.jsx' : {
-    \      'extends' : 'jsx',
-    \  },
-    \}
 " }
 "
 " Grepper {
