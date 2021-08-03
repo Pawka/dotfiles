@@ -2,121 +2,108 @@
 " vim: set foldmarker={,} foldlevel=0 foldmethod=marker spell:
 " }
 
-" Environment {
-    " Basics {
-        set nocompatible
-        filetype off
-    " }
-    "
-    " Setup Plugin Support {
-        set rtp+=~/.vim/bundle/Vundle.vim
-        call vundle#begin()
-    " }
+" Setup Plugin Support {
+    call plug#begin('~/.vim/plugged')
 " }
 
 " Bundles {
     " Deps {
-        Plugin 'gmarik/Vundle.vim'
-        Plugin 'MarcWeber/vim-addon-mw-utils'
-        Plugin 'tomtom/tlib_vim'
+        Plug 'gmarik/Vundle.vim'
+        Plug 'MarcWeber/vim-addon-mw-utils'
+        Plug 'tomtom/tlib_vim'
     " }
 
     " Appearance {
-        Plugin 'altercation/vim-colors-solarized'
-        Plugin 'bling/vim-airline'
+        Plug 'altercation/vim-colors-solarized'
+        Plug 'bling/vim-airline'
     " }
 
     " General {
-        Plugin 'embear/vim-localvimrc'
-        Plugin 'L9'
-        Plugin 'tlib'
-        Plugin 'tpope/vim-eunuch'
+        Plug 'embear/vim-localvimrc'
+        Plug 'L9'
+        Plug 'tlib'
+        Plug 'tpope/vim-eunuch'
     " }
 
     " Navigation {
-        Plugin 'christoomey/vim-tmux-navigator'
-        Plugin 'FuzzyFinder'
-        Plugin 'junegunn/fzf'
-        Plugin 'junegunn/fzf.vim'
-        Plugin 'Lokaltog/vim-easymotion'
-        Plugin 'majutsushi/tagbar'
-        Plugin 'tpope/vim-obsession'
-        Plugin 'tpope/vim-projectionist'
+        Plug 'christoomey/vim-tmux-navigator'
+        Plug 'FuzzyFinder'
+        Plug 'junegunn/fzf'
+        Plug 'junegunn/fzf.vim'
+        Plug 'Lokaltog/vim-easymotion'
+        Plug 'majutsushi/tagbar'
+        Plug 'tpope/vim-obsession'
+        Plug 'tpope/vim-projectionist'
     " }
 
     " Editing {
-		Plugin 'tpope/vim-commentary'
-        Plugin 'airblade/vim-gitgutter'
-        Plugin 'cohama/lexima.vim'
-        Plugin 'editorconfig/editorconfig-vim'
-        Plugin 'godlygeek/tabular'
-        Plugin 'honza/vim-snippets'
-        Plugin 'janko/vim-test'
-        Plugin 'jiangmiao/auto-pairs'
-        Plugin 'mattn/emmet-vim'
-        Plugin 'mhinz/vim-grepper'
-        Plugin 'nelstrom/vim-qargs'
-        Plugin 'SirVer/ultisnips'
-        Plugin 'tpope/vim-dispatch'
-        Plugin 'tpope/vim-fugitive'
-        Plugin 'tpope/vim-surround'
-        Plugin 'tpope/vim-unimpaired'
-        Plugin 'w0rp/ale'
+		Plug 'tpope/vim-commentary'
+        Plug 'airblade/vim-gitgutter'
+        Plug 'cohama/lexima.vim'
+        Plug 'editorconfig/editorconfig-vim'
+        Plug 'godlygeek/tabular'
+        Plug 'honza/vim-snippets'
+        Plug 'janko/vim-test'
+        Plug 'jiangmiao/auto-pairs'
+        Plug 'mattn/emmet-vim'
+        Plug 'mhinz/vim-grepper'
+        Plug 'nelstrom/vim-qargs'
+        Plug 'SirVer/ultisnips'
+        Plug 'tpope/vim-dispatch'
+        Plug 'tpope/vim-fugitive'
+        Plug 'tpope/vim-surround'
+        Plug 'tpope/vim-unimpaired'
+        Plug 'w0rp/ale'
 
 		" Autocomplete {
 			if has('python') || has('python3')
-			  Plugin 'Valloric/YouCompleteMe', { 'do': './install.sh' }
+			  Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
 			else
-			  Plugin 'ervandew/supertab'
+			  Plug 'ervandew/supertab'
 			endif
 		" }
     " }
 
     " Notes {
-        Plugin 'xolox/vim-notes'
-        Plugin 'xolox/vim-misc'
-        Plugin 'vimwiki/vimwiki'
+        Plug 'xolox/vim-notes'
+        Plug 'xolox/vim-misc'
+        Plug 'vimwiki/vimwiki'
     " }
 
     " Languages {
         " Debuging {
-            Plugin 'joonty/vdebug'
+            Plug 'joonty/vdebug'
         " }
 
-        " Plugin 'tclem/vim-arduino'
-        " Plugin 'jcf/vim-latex'
-        Plugin 'tpope/vim-markdown'
-        Plugin 'rodjek/vim-puppet'
-        " Plugin 'groenewege/vim-less'
-        Plugin 'chase/vim-ansible-yaml'
-        " Plugin 'rdolgushin/groovy.vim'
+        " Plug 'tclem/vim-arduino'
+        " Plug 'jcf/vim-latex'
+        Plug 'tpope/vim-markdown'
+        Plug 'rodjek/vim-puppet'
+        " Plug 'groenewege/vim-less'
+        Plug 'chase/vim-ansible-yaml'
+        " Plug 'rdolgushin/groovy.vim'
 
         " PHP {
-            Plugin 'vim-php/tagbar-phpctags.vim'
+            Plug 'vim-php/tagbar-phpctags.vim'
         " }
         "
         " Python {
-            " Plugin 'klen/python-mode'
-            Plugin 'davidhalter/jedi-vim'
-            " Plugin 'alfredodeza/pytest.vim'
-            Plugin 'Glench/Vim-Jinja2-Syntax'
+            " Plug 'klen/python-mode'
+            Plug 'davidhalter/jedi-vim'
+            " Plug 'alfredodeza/pytest.vim'
+            Plug 'Glench/Vim-Jinja2-Syntax'
         " }
         "
         " GO {
-            Plugin 'fatih/vim-go'
+            Plug 'fatih/vim-go'
         " }
         "
         " Rust {
-            Plugin 'rust-lang/rust.vim'
+            Plug 'rust-lang/rust.vim'
         " }
     " }
 " }
 
-" General {
-    " set autowrite                  " automatically write a file when leaving a modified buffer
-    set shortmess+=filmnrxoOtT      " abbrev. of messages (avoids 'hit enter')
-" }
-
 " Destructor {
-    call vundle#end()
+    call plug#end()
 " }

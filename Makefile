@@ -41,12 +41,13 @@ submodules:
 vim: vimplugins ycm
 
 # Plugin manager for VIM
-VUNDLE_DIR=vim/bundle/Vundle.vim
-$(VUNDLE_DIR):
-	git clone https://github.com/gmarik/Vundle.vim.git $(VUNDLE_DIR)
+PLUG_DIR=vim/autoload/plug.vim
+PLUG_URL=https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+$(PLUG_DIR):
+	curl -fLo $(PLUG_DIR) --create-dirs $(PLUG_URL)
 
 .PHONY: vimplugins
-vimplugins: $(VUNDLE_DIR)
+vimplugins: $(PLUG_DIR)
 	vim +PluginInstall +qall
 
 # Compile YouCompleteMe server

@@ -1,8 +1,9 @@
-set nocompatible " Must be first line
 
 " Vundle setup {
     source ~/.vimrc.bundles
 " }
+
+set nocompatible " Must be first line
 
 filetype plugin indent on     " required!
 

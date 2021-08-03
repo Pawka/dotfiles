@@ -1,10 +1,12 @@
 *.swp
 
 # VIM
-vim/backup/*
-vim/swap/*
-vim/doc/*
-vim/bundle/*
-vim/sessions/*
 vim/.netrwhist
+vim/autoload/plug.vim
+vim/backup/*
+vim/bundle/*
+vim/doc/*
+vim/plugged/*
+vim/sessions/*
+vim/swap/*
 vim/view/*
