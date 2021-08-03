@@ -254,6 +254,8 @@ autocmd Filetype gitcommit setlocal spell textwidth=72
     " Do not show documentation popup. This slows down the YCM on huge
     " codebases.
     let g:ycm_auto_hover = ''
+    " Toggle (display) documentation for the keyword under the cursor.
+    nmap <leader>D <plug>(YCMHover)
 
     " Make YCM compatible with UltiSnips as per:
     " https://github.com/SirVer/ultisnips/issues/512#issuecomment-111733631
