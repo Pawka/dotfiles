@@ -7,12 +7,6 @@
 " }
 
 " Bundles {
-    " Deps {
-        Plug 'gmarik/Vundle.vim'
-        Plug 'MarcWeber/vim-addon-mw-utils'
-        Plug 'tomtom/tlib_vim'
-    " }
-
     " Appearance {
         Plug 'altercation/vim-colors-solarized'
         Plug 'bling/vim-airline'
@@ -20,25 +14,21 @@
 
     " General {
         Plug 'embear/vim-localvimrc'
-        Plug 'L9'
-        Plug 'tlib'
         Plug 'tpope/vim-eunuch'
     " }
 
     " Navigation {
         Plug 'christoomey/vim-tmux-navigator'
-        Plug 'FuzzyFinder'
         Plug 'junegunn/fzf'
         Plug 'junegunn/fzf.vim'
         Plug 'Lokaltog/vim-easymotion'
         Plug 'majutsushi/tagbar'
-        Plug 'tpope/vim-obsession'
         Plug 'tpope/vim-projectionist'
     " }
 
     " Editing {
-		Plug 'tpope/vim-commentary'
         Plug 'airblade/vim-gitgutter'
+        " Auto close parentheses
         Plug 'cohama/lexima.vim'
         Plug 'editorconfig/editorconfig-vim'
         Plug 'godlygeek/tabular'
@@ -49,6 +39,7 @@
         Plug 'mhinz/vim-grepper'
         Plug 'nelstrom/vim-qargs'
         Plug 'SirVer/ultisnips'
+		Plug 'tpope/vim-commentary'
         Plug 'tpope/vim-dispatch'
         Plug 'tpope/vim-fugitive'
         Plug 'tpope/vim-surround'
@@ -56,17 +47,13 @@
         Plug 'w0rp/ale'
 
 		" Autocomplete {
-			if has('python') || has('python3')
-			  Plug 'Valloric/YouCompleteMe', { 'do': './install.sh' }
-			else
-			  Plug 'ervandew/supertab'
-			endif
+        if has('python') || has('python3')
+            Plug 'Valloric/YouCompleteMe', { 'do': './install.sh --go-completer --rust-completer' }
+        endif
 		" }
     " }
 
     " Notes {
-        Plug 'xolox/vim-notes'
-        Plug 'xolox/vim-misc'
         Plug 'vimwiki/vimwiki'
     " }
 
@@ -75,23 +62,16 @@
             Plug 'joonty/vdebug'
         " }
 
-        " Plug 'tclem/vim-arduino'
-        " Plug 'jcf/vim-latex'
         Plug 'tpope/vim-markdown'
         Plug 'rodjek/vim-puppet'
-        " Plug 'groenewege/vim-less'
         Plug 'chase/vim-ansible-yaml'
-        " Plug 'rdolgushin/groovy.vim'
 
         " PHP {
             Plug 'vim-php/tagbar-phpctags.vim'
         " }
         "
         " Python {
-            " Plug 'klen/python-mode'
             Plug 'davidhalter/jedi-vim'
-            " Plug 'alfredodeza/pytest.vim'
-            Plug 'Glench/Vim-Jinja2-Syntax'
         " }
         "
         " GO {
