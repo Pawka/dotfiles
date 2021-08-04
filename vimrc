@@ -143,6 +143,7 @@ autocmd Filetype gitcommit setlocal spell textwidth=72
 " Ale {
     let g:ale_fixers = {
     \   '*': ['remove_trailing_lines', 'trim_whitespace'],
+    \   'rust': ['rustfmt'],
     \}
 
     " Set this variable to 1 to fix files when you save them.
