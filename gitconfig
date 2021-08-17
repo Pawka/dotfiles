@@ -45,6 +45,7 @@
 [core]
     editor = vim
     excludesfile = ~/.gitignore_global
+    untrackedCache = true
 
 [include]
     path = ~/.gitconfig.custom
