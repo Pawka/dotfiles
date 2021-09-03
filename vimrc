@@ -29,6 +29,9 @@ set textwidth=80
 " Do not wrap lines automatically
 set nowrap
 
+" Ensure backspace is working the same in all environments.
+set backspace=indent,eol,start
+
 " List characters
 set listchars=tab:→\ ,eol:¶
 
