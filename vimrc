@@ -89,6 +89,8 @@ set exrc
     let &colorcolumn=join([81, 81],",")
     " Show line numbers on the left.
     set number
+    " Display relative numbers on the left.
+    set relativenumber
     " Set fixed line number column width to avoid toggle.
     set numberwidth=8
     " Show cursor position
