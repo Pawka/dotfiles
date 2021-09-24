@@ -97,6 +97,10 @@ set exrc
     set ruler
 " }
 "
+" Folding {
+    set foldnestmax=1
+" }
+"
 " Command-Line mode {
     " Enable wildmenu on command mode autocomplete.
     set wildmenu
