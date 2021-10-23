@@ -19,7 +19,6 @@ plugins=(
     git
     ripgrep
     ssh-agent
-    taskwarrior
     tmux
 )
 
@@ -88,30 +87,6 @@ man() {
 
 # Load direnv
 eval "$(direnv hook zsh)"
-
-# Display taskwarrior tasks on terminal launch every few (configurable) hours.
-_taskwarrior_reminder() {
-    # TaskWarrior binary
-    local binary="task"
-    local target_file="/tmp/taskwarrior_daycheck"
-    # Tasks will be displayed if #target_file is older than $delay_mins.
-    local delay_mins=180
-
-    # Check if binary exists. Fail silently if not.
-    $(command -v "$binary" > /dev/null)
-    if [[ $? -ne 0 ]]; then
-        return
-    fi
-
-    if [ -f "$target_file" ] && [ -z $(find "$target_file" -mmin +$delay_mins) ]
-    then
-        return
-    fi
-    $binary
-    touch "$target_file"
-
-}
-_taskwarrior_reminder
 
 export MONOREPO_GOPATH_MODE=1 # This is optional. Without it, GOPATH mode will be off by default
 source "$ZSH_CUSTOM/gopathmodeFunc.bash"
