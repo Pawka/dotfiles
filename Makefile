@@ -17,6 +17,9 @@ LINKS = \
 		zshenv \
 		zshrc \
 
+.PHONY: all
+all: install vim
+
 .PHONY: install
 install: submodules
 	@echo Creating symlinks...
@@ -49,7 +52,7 @@ $(PLUG_DIR):
 
 .PHONY: vimplugins
 vimplugins: $(PLUG_DIR)
-	vim +PluginInstall +qall
+	vim +PlugInstall +qall
 
 # Compile YouCompleteMe server
 .PHONY: ycm
