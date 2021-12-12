@@ -9,3 +9,27 @@ snippet st "Standup entry"
 snippet log "Log entry with date in bold and itemized list below"
 	*`strftime("%Y-%m-%d")`*
 	- ${1:Log entry here}
+
+snippet beer "Beer brewing log"
+	# Alaus virimas: ${1:Pavadinimas}
+
+	:homebrewing:
+
+	Receptas: $1
+
+	Salyklo smulkumas: ${2:0.045}
+
+	$3
+
+	## Kas pavyko
+
+	- $4
+	## Kas galėjo būti geriau
+
+	$5
+	## Ateityje
+
+	$6
+	## Įspūdžiai
+
+	Bus papildyta.
