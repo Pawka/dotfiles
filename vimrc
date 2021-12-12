@@ -235,8 +235,8 @@ autocmd Filetype gitcommit setlocal spell textwidth=72
 "
 " vim-wiki {
     let g:vimwiki_list = [
-    \ {'path': '~/fs/Apps/vimwiki/', 'syntax': 'markdown', 'ext': '.md'},
-    \ {'path': '~/fs/Apps/vimwiki-uber/', 'syntax': 'markdown', 'ext': '.md'}
+    \ {'path': '~/Documents/Apps/vimwiki/', 'syntax': 'markdown', 'ext': '.md'},
+    \ {'path': '~/Documents/Apps/vimwiki-uber/', 'syntax': 'markdown', 'ext': '.md'}
     \ ]
 
     " Needs to be disabled to make UtilSnips work on vimwiki files.
