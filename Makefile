@@ -10,6 +10,7 @@ LINKS = \
 		taskrc \
 		tmux \
 		tmux.conf \
+		urlview \
 		vim \
 		vimrc \
 		vimrc.bundles \
