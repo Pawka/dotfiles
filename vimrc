@@ -91,12 +91,6 @@ set exrc
     set number
     " Display relative numbers on the left.
     set relativenumber
-	" Toggle relativenumber on exit/enter insert mode.
-	augroup NumberInsertModeOnly
-		autocmd!
-		autocmd InsertEnter * setlocal relativenumber!
-		autocmd InsertLeave * setlocal relativenumber!
-	augroup END
     " Set fixed line number column width to avoid toggle.
     set numberwidth=8
     " Show cursor position
