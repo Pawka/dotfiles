@@ -217,3 +217,7 @@ bar {
 }
 
 include /etc/sway/config.d/*
+
+input "type:keyboard" {
+    xkb_options caps:ctrl_modifier
+}
