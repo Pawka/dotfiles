@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Current date
+date=$(date +'%Y-%m-%d %l:%M:%S %p')
+
+# Battery
+battery=$(cat /sys/class/power_supply/BAT0/capacity)
+
+echo "$battery% | $date"
