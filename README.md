@@ -16,7 +16,7 @@ And more...
 ## Install
 
 Installation will create symlinks on home directory pointing to files on
-repository folder. 
+repository folder.
 
 ``` sh
 git clone https://github.com/Pawka/dotfiles ~/.dotfiles
@@ -40,3 +40,12 @@ comamnd below needs to be called explicitly:
 ``` sh
 make vim
 ```
+
+## Resources
+
+### Fonts
+
+- https://github.com/google/material-design-icons
+- https://github.com/Templarian/MaterialDesign-Webfont
+- https://github.com/FortAwesome/Font-Awesome
+- https://github.com/stephenhutchings/typicons.font

@@ -4,6 +4,7 @@ LINKS = \
 		config/sway \
 		ctags \
 		editorconfig \
+		fonts \
 		gitconfig \
 		gitignore_global \
 		oh-my-zsh \
