@@ -60,6 +60,15 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 
+input * {
+    xkb_layout "lt(us)"
+}
+
+# Configure Caps Lock key act as Ctrl
+input "type:keyboard" {
+    xkb_options caps:ctrl_modifier
+}
+
 ### Key bindings
 #
 # Basics:
@@ -228,7 +237,3 @@ bar {
 }
 
 include /etc/sway/config.d/*
-
-input "type:keyboard" {
-    xkb_options caps:ctrl_modifier
-}
