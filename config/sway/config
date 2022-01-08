@@ -94,6 +94,9 @@ input "type:keyboard" {
 
     # Exit sway (launch wlogout window)
     bindsym $mod+Shift+e exec wlogout
+
+    # Toggle gammastep
+    bindsym $mod+Shift+t exec pkill -USR1 gammastep
 #
 # Moving around:
 #
