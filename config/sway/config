@@ -241,3 +241,6 @@ bar {
 }
 
 include /etc/sway/config.d/*
+
+# Start gammastep to adjust screen temperature according day time.
+exec /usr/bin/gammastep -l 54.699:25.306 -m wayland
