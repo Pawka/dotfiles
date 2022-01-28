@@ -2,6 +2,7 @@ CURRENT_DIR=$(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 LINKS = \
 		config/mako \
 		config/nvim \
+		config/rofi \
 		config/sway \
 		ctags \
 		editorconfig \
@@ -24,11 +25,15 @@ LINKS = \
 all: install vim
 
 .PHONY: install
-install: submodules
+install: submodules symlinks
+
+.PHONY: symlinks
+symlinks:
 	@echo Creating symlinks...
 	@for file in $(LINKS); do \
 		ln -sfn "$(CURRENT_DIR)/$$file" "${HOME}/.$$file" ; \
 	done
+	@echo Done.
 
 .PHONY: uninstall
 uninstall:
