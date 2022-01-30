@@ -97,6 +97,9 @@ input "type:keyboard" {
 
     # Toggle gammastep
     bindsym $mod+Shift+t exec pkill -USR1 gammastep
+
+    # Screenshot
+    bindsym $mod+p exec grim -g "$(slurp -d)" - | wl-copy -t "image/png"
 #
 # Moving around:
 #
