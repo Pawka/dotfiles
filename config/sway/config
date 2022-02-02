@@ -100,6 +100,9 @@ input "type:keyboard" {
 
     # Screenshot
     bindsym $mod+p exec grim -g "$(slurp -d)" - | wl-copy -t "image/png"
+
+    # Bluetooth manager
+    bindsym $mod+Shift+b exec --no-startup-id $HOME/.config/sway/bin/rofi-bluetooth
 #
 # Moving around:
 #
