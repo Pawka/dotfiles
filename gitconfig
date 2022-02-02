@@ -49,3 +49,5 @@
 
 [include]
     path = ~/.gitconfig.custom
+[init]
+	defaultBranch = master
