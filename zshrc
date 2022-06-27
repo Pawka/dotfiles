@@ -26,14 +26,14 @@ autoload -U compinit && compinit
 
 source $ZSH/oh-my-zsh.sh
 
-# Unset unnecesary alias from zsh. 
+# Unset unnecesary alias from zsh.
 unalias "..."
 
 # Disable autocorrect
 unsetopt correct_all
 
 # Customize to your needs...
-export PATH=~/.bin:$PATH
+export PATH=~/bin:$PATH
 export XDG_CONFIG_HOME="$HOME/.config"
 export EDITOR=vim
 
