@@ -155,6 +155,7 @@ input "type:keyboard" {
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
 
+    assign [class="firefox"] workspace number 2
     assign [class="discord|Slack"] workspace number 10
 
 #
