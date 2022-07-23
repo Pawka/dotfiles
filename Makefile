@@ -4,6 +4,7 @@ LINKS = \
 		config/nvim \
 		config/rofi \
 		config/sway \
+		config/wlogout \
 		ctags \
 		editorconfig \
 		fonts \
