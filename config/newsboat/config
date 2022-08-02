@@ -1,0 +1,2 @@
+include /usr/share/doc/newsboat/contrib/colorschemes/solarized-dark
+auto-reload yes
