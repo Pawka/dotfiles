@@ -1,2 +1,8 @@
 include /usr/share/doc/newsboat/contrib/colorschemes/solarized-dark
 auto-reload yes
+
+bind-key k up
+bind-key j down
+bind-key g home
+bind-key G end
+bind-key t toggle-article-read
