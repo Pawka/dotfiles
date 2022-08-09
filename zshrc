@@ -57,6 +57,7 @@ fi
 alias diff="colordiff"
 alias weather="curl http://wttr.in/Vilnius"
 alias sl="ls"
+alias imv="imv-x11"  # Since current Ubuntu install does not create imv binary.
 
 alias -s log="tail -f"
 alias -s html="gnome-open"
