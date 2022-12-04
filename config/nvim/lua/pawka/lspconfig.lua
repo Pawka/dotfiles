@@ -33,7 +33,6 @@ end
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
-
 for _, lsp in ipairs(servers) do
     nvim_lsp[lsp].setup{
       capabilities = capabilities,
@@ -55,8 +54,7 @@ cmp.setup {
 		format = lspkind.cmp_format()
 	},
 	mapping = {
-        -- Use Tab and shift-Tab to navigate autocomplete menu
-        ['<Tab>'] = function(fallback)
+        ['<C-n>'] = function(fallback)
             if cmp.visible() then
               cmp.select_next_item()
             elseif luasnip.expand_or_jumpable() then
@@ -65,7 +63,7 @@ cmp.setup {
               fallback()
             end
           end,
-        ['<S-Tab>'] = function(fallback)
+        ['<C-p>'] = function(fallback)
             if cmp.visible() then
               cmp.select_prev_item()
             elseif luasnip.jumpable(-1) then
@@ -78,6 +76,7 @@ cmp.setup {
             behavior = cmp.ConfirmBehavior.Replace,
             select = true,
         },
+        ['<C-Space>'] = cmp.mapping.complete(),
     },
     snippet = {
         expand = function(args)
