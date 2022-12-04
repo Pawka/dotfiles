@@ -10,3 +10,6 @@ vim/plugged/*
 vim/sessions/*
 vim/swap/*
 vim/view/*
+
+# Neovim
+config/nvim/plugged/*
