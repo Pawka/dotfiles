@@ -15,7 +15,6 @@ export ZSH_CUSTOM="$HOME/.zsh_custom"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(
     autojump
-    bazel
     git
     ripgrep
     ssh-agent
@@ -71,6 +70,8 @@ zstyle :omz:plugins:ssh-agent agent-forwarding on
 
 # Load autojump config
 [[ -s /usr/share/autojump/autojump.sh ]] && source /usr/share/autojump/autojump.sh
+# Load autojump installed via brew on MacOS.
+[ -f /opt/homebrew/etc/profile.d/autojump.sh  ] && . /opt/homebrew/etc/profile.d/autojump.sh
 
 autoload -U compinit && compinit -u
 
@@ -88,9 +89,3 @@ man() {
 }
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# Load direnv
-eval "$(direnv hook zsh)"
-
-export MONOREPO_GOPATH_MODE=1 # This is optional. Without it, GOPATH mode will be off by default
-source "$ZSH_CUSTOM/gopathmodeFunc.bash"
