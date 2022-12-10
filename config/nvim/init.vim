@@ -136,7 +136,7 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
     autocmd BufRead,BufNewFile *.star set filetype=python
 " }
 "
-
+"
 " Command mappings {
     " Map wq commands to avoid case errors
     :command! WQ wq
@@ -144,7 +144,7 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
     :command! W w
     :command! Q q
 " }
-
+"
 " Global key bindings {
     " Map leader key to ','.
     let mapleader=','
@@ -155,11 +155,17 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
     " Select last edited or pasted text.
     nnoremap <Leader>p `[v`]
 " }
-
-
-nnoremap <C-p> :Telescope find_files<Cr>
-nnoremap <C-b> :Telescope buffers<Cr>
-
+"
+" Telescope {
+    nnoremap <C-p> :Telescope find_files<Cr>
+    nnoremap <C-b> :Telescope buffers<Cr>
+    nnoremap <Leader>lr :Telescope lsp_references<Cr>
+    nnoremap <Leader>li :Telescope lsp_implementations<Cr>
+    nnoremap <Leader>lc :Telescope lsp_incoming_calls<Cr>
+    nnoremap <Leader>ls :Telescope lsp_document_symbols<Cr>
+    nnoremap <Leader>g :Telescope live_grep<Cr>
+"}
+"
 " EasyMotion {
     " Set colors for vim-easymotion
     hi EasyMotionTarget2First ctermbg=none ctermfg=blue cterm=bold
