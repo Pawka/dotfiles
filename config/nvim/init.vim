@@ -158,6 +158,7 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
 "
 " Telescope {
     nnoremap <C-p> :Telescope find_files<Cr>
+    nnoremap <Leader>f :Telescope find_files cwd=%:h<Cr>
     nnoremap <C-b> :Telescope buffers<Cr>
     nnoremap <Leader>lr :Telescope lsp_references<Cr>
     nnoremap <Leader>li :Telescope lsp_implementations<Cr>
