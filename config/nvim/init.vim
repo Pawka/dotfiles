@@ -32,6 +32,8 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'nvim-telescope/telescope.nvim'
     " An optional plugin recommended by Telescope docs
     Plug 'nvim-telescope/telescope-fzf-native.nvim', {'do': 'make' }
+    " Recent files for Telescope
+    Plug 'smartpde/telescope-recent-files'
 " }
 " Editing {
     Plug 'airblade/vim-gitgutter'
