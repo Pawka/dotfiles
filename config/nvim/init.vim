@@ -14,62 +14,6 @@ set textwidth=80
 " Do not wrap lines automatically
 set nowrap
 
-" Ensure backspace is working the same in all environments.
-set backspace=indent,eol,start
-
-" Max tabs
-set tabpagemax=100
-
-" Encoding
-set encoding=utf-8
-set fileencodings=utf-8,ucs-bom,latin1
-set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICENSE,**/doc/**,*.pyc
-
-" GUI {
-    " List characters
-    set listchars=tab:→\ ,eol:¶
-    " Set vertical after 80 symbols mark.
-    let &colorcolumn=join([81, 81],",")
-    " Show line numbers on the left.
-    set number
-    " Display relative numbers on the left.
-    set relativenumber
-    " Set fixed line number column width to avoid toggle.
-    set numberwidth=8
-    " Show cursor position
-    set ruler
-" }
-
-" Folding {
-    set foldnestmax=1
-" }
-
-" Command-Line mode {
-    " Enable wildmenu on command mode autocomplete.
-    set wildmenu
-    set wildmode=full
-
-    " CL default is 20.
-    set history=200
-
-    " Map <C-p> and <C-n> filter command history.
-    cnoremap <C-p> <Up>
-    cnoremap <C-n> <Down>
-" }
-
-" Search {
-    set hlsearch
-    set incsearch
-    " Ignore case sensitivity by default when searching
-    set ignorecase
-    set nosmartcase
-" }
-"
-" Filetypes {
-    autocmd Filetype gitcommit setlocal spell textwidth=72
-    autocmd BufRead,BufNewFile *.star set filetype=python
-" }
-"
 " Plugins
 call plug#begin('~/.config/nvim/plugged')
 
@@ -127,7 +71,69 @@ call plug#begin('~/.config/nvim/plugged')
 
 call plug#end()
 
-colorscheme solarized
+" Ensure backspace is working the same in all environments.
+set backspace=indent,eol,start
+
+" Max tabs
+set tabpagemax=100
+
+" Encoding
+set encoding=utf-8
+set fileencodings=utf-8,ucs-bom,latin1
+set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICENSE,**/doc/**,*.pyc
+
+" GUI {
+    " List characters
+    set listchars=tab:→\ ,eol:¶
+    " Set vertical after 80 symbols mark.
+    let &colorcolumn=join([81, 81],",")
+    " Show line numbers on the left.
+    set number
+    " Display relative numbers on the left.
+    set relativenumber
+    " Set fixed line number column width to avoid toggle.
+    set numberwidth=8
+    " Show cursor position
+    set ruler
+    " Show horisontal cursor lint
+    set cursorline
+
+    colorscheme solarized
+
+    " vim-gitgutter styling
+    highlight clear SignColumn
+" }
+
+" Folding {
+    set foldnestmax=1
+" }
+
+" Command-Line mode {
+    " Enable wildmenu on command mode autocomplete.
+    set wildmenu
+    set wildmode=full
+
+    " CL default is 20.
+    set history=200
+
+    " Map <C-p> and <C-n> filter command history.
+    cnoremap <C-p> <Up>
+    cnoremap <C-n> <Down>
+" }
+
+" Search {
+    set hlsearch
+    set incsearch
+    " Ignore case sensitivity by default when searching
+    set ignorecase
+    set nosmartcase
+" }
+"
+" Filetypes {
+    autocmd Filetype gitcommit setlocal spell textwidth=72
+    autocmd BufRead,BufNewFile *.star set filetype=python
+" }
+"
 
 " Command mappings {
     " Map wq commands to avoid case errors
