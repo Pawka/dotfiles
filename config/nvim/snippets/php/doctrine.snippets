@@ -1,0 +1,44 @@
+# Column
+snippet col
+	/**
+	 * @ORM\Column${2:(name="$1", type="string")}
+	 */
+	private $${1:name};
+
+# Column annotation
+snippet cola
+	@ORM\Column(name="${1:name}", type="${2:string}")
+
+# Entity
+snippet ent
+	/**
+	 * $1 entity
+	 *
+	 * @ORM\Table(name="$1")
+	 * @ORM\Entity
+	 */
+	class ${1:Entity}
+	{
+	}
+
+# ManyToOne annotation
+snippet mtoa
+	@ORM\ManyToOne(targetEntity="${1:Target}", inversedBy="${2:column}")
+
+# ManyToMany annotation
+snippet mtma
+	@ORM\ManyToMany(targetEntity="${1:Target}", inversedBy="${2:column}")
+	@ORM\JoinTable(name="${3:table}")
+
+# OneToOne annotation
+snippet otoa
+	@ORM\OneToOne(targetEntity="${1:Target}")
+	@ORM\JoinTable(name="${2:join_table}", referencedColumnName="${3:column}")
+
+# OneToMany annotation
+snippet otma
+	@ORM\OneToMany(targetEntity="${1:Target}", mappedBy="${2:column}")
+
+# JoinTable annotation
+snippet jta
+	@ORM\JoinTable(name="${1:table}")

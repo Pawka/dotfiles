@@ -220,4 +220,9 @@ nnoremap <C-b> :Telescope buffers<Cr>
     nmap <Leader>a :A<CR>
 " }
 
+
+" LuaSnip {
+    " press <Tab> to expand or jump in a snippet.
+    imap <silent><expr> <Tab> luasnip#expand_or_jumpable() ? '<Plug>luasnip-expand-or-jump' : '<Tab>'
+" }
 lua require('pawka')

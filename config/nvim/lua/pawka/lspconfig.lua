@@ -45,6 +45,14 @@ local cmp = require('cmp')
 local lspkind = require('lspkind')
 local luasnip = require('luasnip')
 
+-- honza-like snippets
+require("luasnip.loaders.from_snipmate").lazy_load()
+-- load personal snippets
+require("luasnip.loaders.from_snipmate").lazy_load({
+    paths = { "./snippets" }
+})
+luasnip.filetype_extend("all", { "_" })
+
 -- better autocompletion experience
 vim.o.completeopt = 'menuone,noselect'
 
