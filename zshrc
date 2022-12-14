@@ -16,6 +16,9 @@ export ZSH_CUSTOM="$HOME/.zsh_custom"
 plugins=(
     autojump
     git
+    kube-ps1
+    kubectl
+    kubectx
     ripgrep
     ssh-agent
     tmux
