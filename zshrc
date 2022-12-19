@@ -28,9 +28,6 @@ autoload -U compinit && compinit
 
 source $ZSH/oh-my-zsh.sh
 
-# Unset unnecesary alias from zsh.
-unalias "..."
-
 # Disable autocorrect
 unsetopt correct_all
 
