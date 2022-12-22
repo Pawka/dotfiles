@@ -47,7 +47,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'tpope/vim-commentary'
     Plug 'tpope/vim-eunuch'
     Plug 'tpope/vim-fugitive'
-    Plug 'tpope/vim-projectionist'
+    Plug 'rgroli/other.nvim'
     Plug 'tpope/vim-surround'
     Plug 'tpope/vim-unimpaired'
     " Notes
@@ -219,12 +219,11 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
 "
 " Grepper {
     " Search for the current word"
-    nnoremap <Leader>* :Grepper -cword -noprompt<CR>
+    nnoremap <Leader>* :Grepper -tool rg -cword -noprompt<CR>
 " }
 "
-" Projectionist {
-    " Jump to alternate file
-    nmap <Leader>a :A<CR>
+" other-nvim {
+    noremap <Leader>a :Other<CR>
 " }
 "
 " LuaSnip {
