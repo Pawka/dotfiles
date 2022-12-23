@@ -34,6 +34,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'nvim-telescope/telescope-fzf-native.nvim', {'do': 'make' }
     " Recent files for Telescope
     Plug 'smartpde/telescope-recent-files'
+    Plug 'tpope/vim-rhubarb'
 " }
 " Editing {
     Plug 'airblade/vim-gitgutter'
@@ -157,14 +158,14 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
 " }
 "
 " Telescope {
+    nnoremap <C-b> :Telescope buffers<Cr>
+    nnoremap <C-g> :Telescope live_grep<Cr>
     nnoremap <C-p> :Telescope find_files<Cr>
     nnoremap <Leader>f :Telescope find_files cwd=%:h<Cr>
-    nnoremap <C-b> :Telescope buffers<Cr>
     nnoremap <Leader>lr :Telescope lsp_references<Cr>
     nnoremap <Leader>li :Telescope lsp_implementations<Cr>
     nnoremap <Leader>lc :Telescope lsp_incoming_calls<Cr>
     nnoremap <Leader>ls :Telescope lsp_document_symbols<Cr>
-    nnoremap <Leader>g :Telescope live_grep<Cr>
 "}
 "
 " EasyMotion {
@@ -223,11 +224,20 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
 " }
 "
 " other-nvim {
-    noremap <Leader>a :Other<CR>
+    nnoremap <Leader>a :Other<CR>
 " }
 "
 " LuaSnip {
     " press <Tab> to expand or jump in a snippet.
     imap <silent><expr> <Tab> luasnip#expand_or_jumpable() ? '<Plug>luasnip-expand-or-jump' : '<Tab>'
 " }
+"
+" Github & Git {
+    " Open Github PR in a browser. PR number must be a current word under
+    " cursor. Requires `gh` tool to be installed and configured.
+    nnoremap <expr> <Leader>pr ':!gh pr view -w '.expand('<cword>').'<CR>'
+    nnoremap <Leader>gb :Git blame<CR>
+    nnoremap <Leader>go :GBrowse<CR>
+" }
+
 lua require('pawka')
