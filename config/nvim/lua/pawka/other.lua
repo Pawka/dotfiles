@@ -12,6 +12,17 @@ other.setup({
 			pattern = "(.+)_test.go$",
 			target = "%1.go",
 			context = "code"
+		},
+        -- C
+		{
+			pattern = "(.*).c$",
+			target = "%1.h",
+			context = "header"
+		},
+		{
+			pattern = "(.+).h",
+			target = "%1.c",
+			context = "code"
 		}
 	}
 })
