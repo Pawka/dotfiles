@@ -13,6 +13,17 @@ other.setup({
 			target = "%1.go",
 			context = "code"
 		},
+        -- Golang: Protobuf
+		{
+			pattern = "(.*).pb.go$",
+			target = "%1.proto",
+			context = "code"
+		},
+		{
+			pattern = "(.*).proto$",
+			target = "%1.pb.go",
+			context = "header"
+		},
         -- C
 		{
 			pattern = "(.*).c$",
