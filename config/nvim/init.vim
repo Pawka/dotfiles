@@ -37,13 +37,11 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'tpope/vim-rhubarb'
 " }
 " Editing {
+    Plug 'windwp/nvim-autopairs'
     Plug 'airblade/vim-gitgutter'
-    " Auto close parentheses
-    Plug 'cohama/lexima.vim'
     Plug 'editorconfig/editorconfig-vim'
     Plug 'honza/vim-snippets'
     Plug 'janko/vim-test'
-    Plug 'jiangmiao/auto-pairs'
     Plug 'mhinz/vim-grepper'
     Plug 'tpope/vim-commentary'
     Plug 'tpope/vim-eunuch'
