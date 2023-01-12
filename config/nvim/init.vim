@@ -165,7 +165,7 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
     nnoremap <Leader>lr :Telescope lsp_references<Cr>
     nnoremap <Leader>li :Telescope lsp_implementations<Cr>
     nnoremap <Leader>lc :Telescope lsp_incoming_calls<Cr>
-    nnoremap <Leader>ls :Telescope lsp_document_symbols<Cr>
+    nnoremap <Leader>ls :Telescope lsp_document_symbols show_line=true ignore_symbols=field<Cr>
 "}
 "
 " EasyMotion {
@@ -214,7 +214,7 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
     " let g:go_highlight_operators = 1
     " let g:go_highlight_types = 1
     " let g:go_metalinter_autosave = 0
-    " let g:go_list_type = "quickfix"
+    let g:go_list_type = "quickfix"
     " let $USE_SYSTEM_GO=1
 " }
 "
