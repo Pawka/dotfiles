@@ -58,6 +58,9 @@ alias weather="curl http://wttr.in/Vilnius"
 alias sl="ls"
 alias imv="imv-x11"  # Since current Ubuntu install does not create imv binary.
 
+# git: show list of local branches and allow to select those via fzf.
+alias gb="git branch --sort=-committerdate --format='%(HEAD)%(color:yellow)%(refname:short)|%(color:bold green)%(committerdate:relative) %(color:magenta)%(color:reset)' --color=always | column -ts'|' | head -n 20 | fzf --ansi | sed 's/^*//g' | awk '{print \$1}' | xargs -n1 git checkout"
+
 alias -s log="tail -f"
 alias -s html="gnome-open"
 
