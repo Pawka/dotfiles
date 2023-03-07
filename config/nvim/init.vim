@@ -195,12 +195,7 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
 " vim-wiki {
     let g:vimwiki_list = [
     \ {'path': '~/Documents/Apps/vimwiki/', 'syntax': 'markdown', 'ext': '.md'},
-    \ {'path': '~/Documents/Apps/vimwiki-uber/', 'syntax': 'markdown', 'ext': '.md'}
     \ ]
-
-    " Needs to be disabled to make UtilSnips work on vimwiki files.
-    " Source: https://github.com/vimwiki/vimwiki/issues/357
-    let g:vimwiki_table_mappings = 0
 " }
 "
 " vim-go {
