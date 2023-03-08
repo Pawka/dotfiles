@@ -35,9 +35,17 @@ capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 for _, lsp in ipairs(servers) do
     nvim_lsp[lsp].setup{
-      capabilities = capabilities,
-      on_attach = on_attach,
+        capabilities = capabilities,
+        on_attach = on_attach,
     }
+    nvim_lsp[lsp].handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+        vim.lsp.diagnostic.on_publish_diagnostics, {
+            -- Do not display errors from LSP. Ale plugin is responsible for
+            -- that. Having virtual_text enabled leads to duplicated error
+            -- messages since one is printed from Ale, another from LSP.
+            virtual_text = false,
+        }
+    )
 end
 
 -- nvim-cmp
