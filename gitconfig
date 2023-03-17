@@ -1,5 +1,5 @@
 [user]
-    name = Povilas Balzaravicius
+    name = Povilas Balzaravičius
 
 [alias]
     st = status --ignore-submodules -s
@@ -32,7 +32,7 @@
     brclean = "!git branch -l | grep -Ev '^(main|master)' | xargs -r git branch -D 2>/dev/null"
 
     # Push current branch to origin.
-    pb = push -u origin HEAD
+    bp = push -u origin HEAD
 
 [color]
     ui = true
