@@ -151,7 +151,7 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
     let mapleader=','
     noremap \ ,
     " Deselect text highlighted by search.
-    nnoremap <silent> <Leader>l :<C-u>nohlsearch<CR><C-l>
+    nnoremap <silent> <Leader>ll :<C-u>nohlsearch<CR><C-l>
 
     " Select last edited or pasted text.
     nnoremap <Leader>p `[v`]
@@ -236,7 +236,7 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
 " Github & Git {
     " Open Github PR in a browser. PR number must be a current word under
     " cursor. Requires `gh` tool to be installed and configured.
-    nnoremap <expr> <Leader>pr ':!gh pr view -w '.expand('<cword>').'<CR>'
+    nnoremap <expr> <Leader>gh ':!gh pr view -w '.expand('<cword>').'<CR>'
     nnoremap <Leader>gb :Git blame<CR>
     nnoremap <Leader>go :GBrowse<CR>
 " }
