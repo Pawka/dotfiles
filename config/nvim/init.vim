@@ -25,7 +25,8 @@ call plug#begin('~/.config/nvim/plugged')
 
 " Navigation {
     Plug 'christoomey/vim-tmux-navigator'
-    Plug 'Lokaltog/vim-easymotion'
+    " EasyMotion alternative.
+    Plug 'phaazon/hop.nvim'
     " Telescope requires plenary to function
     Plug 'nvim-lua/plenary.nvim'
     " The main Telescope plugin
@@ -173,12 +174,6 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
     nnoremap <Leader>lc :Telescope lsp_incoming_calls<Cr>
     nnoremap <Leader>ls :Telescope lsp_document_symbols show_line=true ignore_symbols=field<Cr>
 "}
-"
-" EasyMotion {
-    " Set colors for vim-easymotion
-    hi EasyMotionTarget2First ctermbg=none ctermfg=blue cterm=bold
-    hi EasyMotionTarget2Second ctermbg=none ctermfg=blue cterm=bold
-" }
 "
 " Ale {
     let g:ale_fixers = {
