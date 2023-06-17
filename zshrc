@@ -22,6 +22,7 @@ plugins=(
     ripgrep
     ssh-agent
     tmux
+    terraform
 )
 
 autoload -U compinit && compinit
