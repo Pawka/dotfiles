@@ -64,6 +64,8 @@ alias gb="git branch --sort=-committerdate --format='%(HEAD)%(color:yellow)%(ref
 
 alias -s log="tail -f"
 alias -s html="gnome-open"
+# Make ripgrep search in hidden directories by default.
+alias rg="rg --hidden --glob '!.git'"
 
 zstyle :omz:plugins:ssh-agent agent-forwarding on
 
