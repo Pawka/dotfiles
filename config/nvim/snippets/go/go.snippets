@@ -5,6 +5,8 @@ snippet ifen
 
 snippet tdt "Table-driven test"
 	func Test${1}(t *testing.T) {
+		t.Parallel()
+
 		testCases := map[string]struct {
 			${2}
 		}{
@@ -13,7 +15,9 @@ snippet tdt "Table-driven test"
 			},
 		}
 		for name, test := range testCases {
+			test := test
 			t.Run(name, func(t *testing.T) {
+				t.Parallel()
 				${5}
 			})
 		}
@@ -28,7 +32,9 @@ snippet table "Table-driven test table"
 		},
 	}
 	for name, test := range testCases {
+		test := test
 		t.Run(name, func(t *testing.T) {
+			t.Parallel()
 			${5}
 		})
 	}
@@ -41,4 +47,9 @@ snippet str "Struct"
 snippet meth "Method"
 	func (${1:receiver} ${2:type}) ${3:name}(${4:params}) ${5:type} {
 		${0:${VISUAL}}
+	}
+
+snippet fork "for loop with key & value"
+	for _, ${1:val} := range ${2:collection} {
+		${3}
 	}
