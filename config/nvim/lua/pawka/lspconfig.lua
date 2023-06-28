@@ -43,7 +43,7 @@ for _, lsp in ipairs(servers) do
             -- Do not display errors from LSP. Ale plugin is responsible for
             -- that. Having virtual_text enabled leads to duplicated error
             -- messages since one is printed from Ale, another from LSP.
-            virtual_text = false,
+            -- virtual_text = false,
         }
     )
 end

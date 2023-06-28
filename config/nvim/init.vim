@@ -135,7 +135,7 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
 " Filetypes {
     autocmd Filetype gitcommit setlocal spell textwidth=72
     autocmd BufRead,BufNewFile *.star set filetype=python
-    autocmd Filetype proto,json,terraform setlocal ts=2 sw=2 expandtab
+    autocmd Filetype sh,proto,json,terraform setlocal ts=2 sw=2 expandtab
 " }
 "
 "
@@ -179,6 +179,11 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
     let g:ale_fixers = {
     \   '*': ['remove_trailing_lines', 'trim_whitespace'],
     \   'rust': ['rustfmt'],
+    \}
+
+    " Disable ALE for Go, because errors are displayed by LSP there.
+    let g:ale_pattern_options = {
+    \   '\.go$': {'ale_enabled': 0},
     \}
 
     " Set this variable to 1 to fix files when you save them.
