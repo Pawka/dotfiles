@@ -34,6 +34,17 @@ other.setup({
 			pattern = "(.+).h",
 			target = "%1.c",
 			context = "code"
-		}
+		},
+        -- bash/bats
+		{
+			pattern = "(.+).sh$",
+			target = "%1.bats",
+			context = "test"
+		},
+		{
+			pattern = "(.+).bats$",
+			target = "%1.sh",
+			context = "code"
+		},
 	}
 })

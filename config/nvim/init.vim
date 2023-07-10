@@ -133,8 +133,9 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
 " }
 "
 " Filetypes {
-    autocmd Filetype gitcommit setlocal spell textwidth=72
     autocmd BufRead,BufNewFile *.star set filetype=python
+    autocmd BufRead,BufNewFile *.bats set filetype=sh
+    autocmd Filetype gitcommit setlocal spell textwidth=72
     autocmd Filetype sh,proto,json,terraform setlocal ts=2 sw=2 expandtab
 " }
 "
