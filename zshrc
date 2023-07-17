@@ -8,6 +8,11 @@ export ZSH_THEME="fishy"
 # Set directory of custom plugins.
 export ZSH_CUSTOM="$HOME/.zsh_custom"
 
+# Load custom scripts file.
+if [ -f $HOME/.zshrc.custom ]; then
+    source $HOME/.zshrc.custom
+fi
+
 # Set to this to use case-sensitive completion
 # export CASE_SENSITIVE="true"
 
@@ -47,11 +52,6 @@ export PATH="$PATH:$GOPATH/bin"
 
 # Export locale
 export LC_ALL="en_US.UTF-8"
-
-# Load custom scripts file.
-if [ -f $HOME/.zshrc.custom ]; then
-    source $HOME/.zshrc.custom
-fi
 
 #Aliases
 alias diff="colordiff"
