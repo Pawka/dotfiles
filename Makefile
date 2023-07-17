@@ -25,7 +25,7 @@ LINKS = \
 		zshrc \
 
 .PHONY: all
-all: install vim
+all: install
 
 .PHONY: install
 install: submodules symlinks
