@@ -38,12 +38,15 @@
     ui = true
 
 [core]
-    editor = vim
+    editor = nvim
     excludesfile = ~/.gitignore_global
     untrackedCache = true
 
 [include]
     path = ~/.gitconfig.custom
+
+[includeIf "gitdir:~/work/"]
+    path = ~/.gitconfig.work
 
 [init]
 	defaultBranch = master
