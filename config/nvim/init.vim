@@ -17,6 +17,11 @@ set nowrap
 " Plugins
 call plug#begin('~/.config/nvim/plugged')
 
+if has('nvim')
+    " Easier exiting from terminal on neovim.
+    tmap <C-o> <C-\><C-n>
+endif
+
 " GUI {
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     Plug 'altercation/vim-colors-solarized'
@@ -240,6 +245,15 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
     nnoremap <expr> <Leader>gh ':!gh pr view -w '.expand('<cword>').'<CR>'
     nnoremap <Leader>gb :Git blame<CR>
     nnoremap <Leader>go :GBrowse<CR>
+" }
+"
+" Test {
+    nmap <silent> <leader>t :TestNearest<CR>
+    if has('nvim')
+        let test#strategy = "neovim"
+    else
+        let test#strategy = "vimterminal"
+    endif
 " }
 
 lua require('pawka')
