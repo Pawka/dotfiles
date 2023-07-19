@@ -30,6 +30,8 @@ plugins=(
     terraform
 )
 
+PROMPT='$(kube_ps1)'$PROMPT
+
 autoload -U compinit && compinit
 
 source $ZSH/oh-my-zsh.sh
@@ -52,6 +54,14 @@ export PATH="$PATH:$GOPATH/bin"
 
 # Export locale
 export LC_ALL="en_US.UTF-8"
+
+# Bind keys for MacOS. If these bindings does not work - need to disable
+# shortucts of Mission Control.
+bindkey -e
+bindkey '\e\e[C' forward-word
+bindkey '\e\e[D' backward-word
+bindkey '\e[H'   beginning-of-line
+bindkey '\e[F'   end-of-line
 
 #Aliases
 alias diff="colordiff"
