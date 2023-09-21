@@ -42,7 +42,7 @@ unsetopt correct_all
 # Customize to your needs...
 export PATH=~/bin:$PATH
 export XDG_CONFIG_HOME="$HOME/.config"
-export EDITOR=vim
+export EDITOR=nvim
 
 # FZF will use this command to list files. This leads to ignored temporary
 # files, following .gitignore and other optimizations.
