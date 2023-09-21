@@ -1,1 +1,1 @@
-nnoremap <Leader>tf :GoTestFile<Cr>
+nnoremap <Leader>c :GoCoverageToggle<CR>

@@ -141,7 +141,7 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
     autocmd BufRead,BufNewFile *.star set filetype=python
     autocmd BufRead,BufNewFile *.bats set filetype=sh
     autocmd Filetype gitcommit setlocal spell textwidth=72
-    autocmd Filetype sh,proto,json,terraform setlocal ts=2 sw=2 expandtab
+    autocmd Filetype proto,json,terraform setlocal ts=2 sw=2 expandtab
 " }
 "
 "
@@ -248,7 +248,8 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
 " }
 "
 " Test {
-    nmap <silent> <leader>t :TestNearest<CR>
+    nmap <silent> <leader>tt :TestNearest<CR>
+    nmap <silent> <leader>tf :TestFile<CR>
     if has('nvim')
         let test#strategy = "neovim"
     else
