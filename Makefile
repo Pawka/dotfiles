@@ -1,5 +1,6 @@
 CURRENT_DIR=$(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 LINKS = \
+		config/bat \
 		config/mako \
 		config/newsboat/config \
 		config/newsboat/urls \
