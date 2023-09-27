@@ -167,7 +167,7 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
 "
 " Telescope {
     nnoremap <C-b> :Telescope buffers<Cr>
-    nnoremap <C-g> :Telescope live_grep<Cr>
+    nnoremap <Leader>/ :Telescope live_grep<Cr>
     nnoremap <C-p> :Telescope find_files<Cr>
     " Recently opened files.
     nnoremap <C-n> :Telescope oldfiles<Cr>
