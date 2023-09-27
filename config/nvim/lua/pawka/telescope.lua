@@ -2,6 +2,9 @@ local telescope = require('telescope')
 
 telescope.setup {
   defaults = {
+    file_ignore_patterns = {
+        "^.git/",
+    },
     mappings = {
       i = {
         ["<C-u>"] = false
@@ -23,6 +26,11 @@ telescope.setup {
           ["<c-d>"] = require("telescope.actions").delete_buffer,
         }
       }
+    },
+    find_files = {
+        -- Include hidden files too. Directories which should be excluded (such
+        -- as ".git") are defined in file_ignore_patterns.
+        hidden = true
     }
   },
   extensions = {
