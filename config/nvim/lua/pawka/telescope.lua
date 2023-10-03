@@ -10,6 +10,22 @@ telescope.setup {
         ["<C-u>"] = false
       },
     },
+    -- Live grep and other grep tools ignores hidden directories and files by
+    -- default. Override arguments to grep hidden files too. Most flags here are
+    -- mandatory (see :help telescope.defaults.vimgrep_arguments).
+    -- There is no need to exclude directories such as .git here because
+    -- excludes list is maintained via "file_ignore_patterns".
+    vimgrep_arguments = {
+        'rg',
+        '--color=never',
+        '--no-heading',
+        '--with-filename',
+        '--line-number',
+        '--column',
+        '--smart-case',
+        -- This is the flag to search hidden files.
+        '--hidden',
+    },
   },
   pickers = {
     -- Your special builtin config goes in here
