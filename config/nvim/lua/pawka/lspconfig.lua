@@ -89,7 +89,7 @@ cmp.setup {
             end
         end,
         ['<Tab>'] = cmp.mapping.confirm {
-            behavior = cmp.ConfirmBehavior.Replace,
+            behavior = cmp.ConfirmBehavior.Insert,
             select = true,
         },
         ['<C-Space>'] = cmp.mapping.complete(),

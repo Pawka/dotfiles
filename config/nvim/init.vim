@@ -185,6 +185,7 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
     let g:ale_fixers = {
     \   '*': ['remove_trailing_lines', 'trim_whitespace'],
     \   'rust': ['rustfmt'],
+    \   'terraform': ['terraform'],
     \}
 
     " Disable ALE for Go, because errors are displayed by LSP there.
