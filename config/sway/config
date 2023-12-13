@@ -170,6 +170,12 @@ input "type:keyboard" {
     assign [class="obsidian"] workspace number 9
     assign [class="discord|Slack|Signal"] workspace number 10
 
+    # HAM apps
+    assign [app_id="wsjtx"] workspace number 3
+    assign [class="GridTracker"] workspace number 4
+    assign [app_id="quisk"] workspace number 5
+    assign [app_id="xyz.klog.klog"] workspace number 8
+
 #
 # Layout stuff:
 #
