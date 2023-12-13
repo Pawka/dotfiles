@@ -24,6 +24,8 @@ endif
 
 " GUI {
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+    " TreeSitter debugger.
+    Plug 'nvim-treesitter/playground'
     Plug 'altercation/vim-colors-solarized'
     Plug 'bling/vim-airline'
 " }
@@ -39,6 +41,8 @@ endif
     " An optional plugin recommended by Telescope docs
     Plug 'nvim-telescope/telescope-fzf-native.nvim', {'do': 'make' }
     Plug 'tpope/vim-rhubarb'
+    " Syntax-aware text objects.
+    Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 " }
 " Editing {
     Plug 'windwp/nvim-autopairs'
@@ -186,6 +190,7 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
     \   '*': ['remove_trailing_lines', 'trim_whitespace'],
     \   'rust': ['rustfmt'],
     \   'terraform': ['terraform'],
+    \   'lua': ['lua-format'],
     \}
 
     " Disable ALE for Go, because errors are displayed by LSP there.
