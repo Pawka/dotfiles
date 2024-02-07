@@ -104,4 +104,7 @@ cmp.setup {
         { name = 'luasnip' },
         { name = 'buffer' },
     },
+    completion = {
+        completeopt = 'menu,menuone,noinsert'
+    },
 }
