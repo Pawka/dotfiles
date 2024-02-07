@@ -188,15 +188,22 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
 " Ale {
     let g:ale_fixers = {
     \   '*': ['remove_trailing_lines', 'trim_whitespace'],
+    \   'lua': ['lua-format'],
     \   'rust': ['rustfmt'],
     \   'terraform': ['terraform'],
-    \   'lua': ['lua-format'],
     \}
 
-    " Disable ALE for Go, because errors are displayed by LSP there.
-    let g:ale_pattern_options = {
-    \   '\.go$': {'ale_enabled': 0},
+    " rust: disable linter, because errors are checked by LSP.
+    " go: disable linter, because errors are checked by LSP.
+    let g:ale_linters = {
+    \   'go': [],
+    \   'rust': [],
     \}
+
+    " Rust specific options {
+        " rustfmt doesn't work if edition is not passed.
+        let g:ale_rust_rustfmt_options = '--edition 2021'
+    " }
 
     " Set this variable to 1 to fix files when you save them.
     let g:ale_fix_on_save = 1
