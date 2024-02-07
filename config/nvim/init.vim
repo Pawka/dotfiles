@@ -248,13 +248,13 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
 " }
 "
 " LuaSnip {
-    " press <Tab> to expand or jump in a snippet.
-    imap <silent><expr> <Tab> luasnip#expand_or_jumpable() ? '<Plug>luasnip-expand-or-jump' : '<Tab>'
+    " press <Tab> to jump in a snippet.
+    imap <silent><expr> <Tab> luasnip#jumpable(1) ? '<Plug>luasnip-jump-next' : '<Tab>'
     " -1 for jumping backwards.
-    inoremap <silent> <S-Tab> <cmd>lua require'luasnip'.jump(-1)<Cr>
+    inoremap <silent> <S-Tab> <cmd>lua require'luasnip'.jump(-1)<CR>
 
-    snoremap <silent> <Tab> <cmd>lua require('luasnip').jump(1)<Cr>
-    snoremap <silent> <S-Tab> <cmd>lua require('luasnip').jump(-1)<Cr>
+    " snoremap <silent> <Tab> <cmd>lua require('luasnip').jump(1)<Cr>
+    " snoremap <silent> <S-Tab> <cmd>lua require('luasnip').jump(-1)<Cr>
 " }
 "
 " Github & Git {

@@ -88,7 +88,7 @@ cmp.setup {
               fallback()
             end
         end,
-        ['<Tab>'] = cmp.mapping.confirm {
+        ['<CR>'] = cmp.mapping.confirm {
             behavior = cmp.ConfirmBehavior.Insert,
             select = true,
         },
