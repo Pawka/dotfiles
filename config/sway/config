@@ -172,8 +172,8 @@ input "type:keyboard" {
 
     # HAM apps
     assign [app_id="wsjtx"] workspace number 3
-    assign [class="GridTracker"] workspace number 4
-    assign [app_id="quisk"] workspace number 5
+    assign [class="GridTracker"] workspace number 3
+    assign [app_id="quisk"] workspace number 4
 
 #
 # Layout stuff:
