@@ -174,7 +174,7 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
     nnoremap <Leader>/ :Telescope live_grep<Cr>
     nnoremap <C-p> :Telescope find_files<Cr>
     " Recently opened files.
-    nnoremap <C-n> :Telescope oldfiles<Cr>
+    nnoremap <C-o> :Telescope oldfiles<Cr>
     " Open directory of current file.
     nnoremap <Leader>f :Telescope find_files cwd=%:h<Cr>
     " Open parent directory of current file.
