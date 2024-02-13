@@ -247,16 +247,6 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
     nnoremap <Leader>a :Other<CR>
 " }
 "
-" LuaSnip {
-    " press <Tab> to jump in a snippet.
-    imap <silent><expr> <Tab> luasnip#jumpable(1) ? '<Plug>luasnip-jump-next' : '<Tab>'
-    " -1 for jumping backwards.
-    inoremap <silent> <S-Tab> <cmd>lua require'luasnip'.jump(-1)<CR>
-
-    " snoremap <silent> <Tab> <cmd>lua require('luasnip').jump(1)<Cr>
-    " snoremap <silent> <S-Tab> <cmd>lua require('luasnip').jump(-1)<Cr>
-" }
-"
 " Github & Git {
     " Open Github PR in a browser. PR number must be a current word under
     " cursor. Requires `gh` tool to be installed and configured.
