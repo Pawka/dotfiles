@@ -1,5 +1,7 @@
 http://antirez.com/rss "programming"
 https://ciechanow.ski/atom.xml
+https://danluu.com/atom.xml "engineering"
+https://engineering.fb.com/feed/ "engineering"
 https://go.dev/blog/feed.atom "programming"
 https://heredragonsabound.blogspot.com/feeds/posts/default "programming"
 https://journal.stuffwithstuff.com/rss.xml "programming"
@@ -8,4 +10,3 @@ https://medium.com/feed/@copyconstruct
 https://simblob.blogspot.com/feeds/posts/default "programming"
 https://www.brendangregg.com/blog/rss.xml "programming"
 https://www.rtl-sdr.com/feed/ "ham"
-https://engineering.fb.com/feed/ "engineering"
