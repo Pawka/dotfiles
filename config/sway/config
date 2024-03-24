@@ -100,7 +100,7 @@ input "type:keyboard" {
     floating_modifier $mod normal
 
     # Reload the configuration file
-    bindsym $mod+Shift+c reload
+    bindsym $mod+Shift+r reload
 
     # Exit sway (launch wlogout window)
     bindsym $mod+Shift+e exec wlogout
@@ -112,7 +112,10 @@ input "type:keyboard" {
     bindsym $mod+p exec grim -g "$(slurp -d)" - | wl-copy -t "image/png"
 
     # Bluetooth manager
-    bindsym $mod+Shift+b exec --no-startup-id $HOME/.config/sway/bin/rofi-bluetooth
+    bindsym $mod+b exec --no-startup-id $HOME/.config/sway/bin/rofi-bluetooth
+
+    # Calculator
+    bindsym $mod+c exec --no-startup-id "rofi -show calc -modi calc -no-show-match -no-sort > /dev/null"
 #
 # Moving around:
 #
@@ -181,8 +184,8 @@ input "type:keyboard" {
     # You can "split" the current object of your focus with
     # $mod+b or $mod+v, for horizontal and vertical splits
     # respectively.
-    bindsym $mod+b splith
-    bindsym $mod+v splitv
+    # bindsym $mod+b splith
+    # bindsym $mod+v splitv
 
     # Switch the current container between different layout styles
     bindsym $mod+s layout stacking
