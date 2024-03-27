@@ -40,6 +40,7 @@ endif
     Plug 'nvim-telescope/telescope.nvim'
     " An optional plugin recommended by Telescope docs
     Plug 'nvim-telescope/telescope-fzf-native.nvim', {'do': 'make' }
+    Plug 'debugloop/telescope-undo.nvim'
     Plug 'tpope/vim-rhubarb'
     " Syntax-aware text objects.
     Plug 'nvim-treesitter/nvim-treesitter-textobjects'
@@ -183,6 +184,7 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
     nnoremap <Leader>li :Telescope lsp_implementations<Cr>
     nnoremap <Leader>lc :Telescope lsp_incoming_calls<Cr>
     nnoremap <Leader>ls :Telescope lsp_document_symbols show_line=true ignore_symbols=field<Cr>
+    nnoremap <Leader>u :Telescope undo<Cr>
 "}
 "
 " Ale {
