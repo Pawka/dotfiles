@@ -26,7 +26,7 @@ endif
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     " TreeSitter debugger.
     Plug 'nvim-treesitter/playground'
-    Plug 'lifepillar/vim-solarized8'
+    Plug 'maxmx03/solarized.nvim'
     Plug 'bling/vim-airline'
 " }
 
@@ -109,7 +109,7 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
     " Show horisontal cursor lint
     set cursorline
 
-    colorscheme solarized8_flat
+    colorscheme solarized
 
     " vim-gitgutter styling
     highlight clear SignColumn
