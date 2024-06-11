@@ -27,7 +27,10 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, bufopts)
   vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
   vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
-  -- vim.keymap.set('n', '<space>f', vim.lsp.buf.formatting, bufopts)
+
+  -- Display LSP disgnostic error in a float window. Useful when the error line
+  -- is long and does not fit into the screen.
+  vim.keymap.set('n', '<leader>e', '<cmd>lua vim.diagnostic.open_float(0, {scope="line", border="single"})<cr>', opts)
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
