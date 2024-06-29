@@ -169,7 +169,7 @@ input "type:keyboard" {
     # We just use 1-10 as the default.
 
     # Get tree: swaymsg -t get_tree
-    assign [class="firefox"] workspace number 2
+    assign [app_id="firefox"] workspace number 2
     assign [class="obsidian"] workspace number 9
     assign [class="discord|Slack|Signal"] workspace number 10
 
