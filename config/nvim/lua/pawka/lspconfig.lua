@@ -3,6 +3,8 @@ local servers = {
   'gopls',
   'pyright',
   'rust_analyzer',
+  'terraform_lsp',
+  'tsserver',
 }
 
 -- after the language server attaches to the current buffer
