@@ -46,5 +46,16 @@ other.setup({
 			target = "%1.sh",
 			context = "code"
 		},
+        -- tsx
+		{
+			pattern = "(.+).tsx$",
+			target = "%1.test.tsx",
+			context = "test"
+		},
+		{
+			pattern = "(.+).test.tsx$",
+			target = "%1.tsx",
+			context = "code"
+		},
 	}
 })
