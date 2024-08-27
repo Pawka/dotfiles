@@ -24,7 +24,6 @@ plugins=(
     kube-ps1
     kubectl
     kubectx
-    ripgrep
     ssh-agent
     tmux
     terraform
