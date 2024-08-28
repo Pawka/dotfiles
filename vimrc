@@ -145,7 +145,7 @@ set exrc
 " FILETYPES
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd Filetype gitcommit setlocal spell textwidth=72
-autocmd BufRead,BufNewFile *.star set filetype=python
+autocmd BufRead,BufNewFile *.star set filetype=starlark
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PLUGINS
