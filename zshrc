@@ -51,6 +51,9 @@ export FZF_DEFAULT_COMMAND='rg --files'
 export GOPATH="$HOME/gocode"
 export PATH="$PATH:$GOPATH/bin"
 
+# Cargo bin (Rust)
+export PATH="$PATH:$HOME/.cargo/bin"
+
 # Export locale
 export LC_ALL="en_US.UTF-8"
 
