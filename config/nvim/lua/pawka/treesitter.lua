@@ -8,6 +8,7 @@ treesitter.setup {
         "dockerfile",
         "go",
         "gomod",
+        "html",
         "json",
         "lua",
         "markdown",
@@ -21,7 +22,7 @@ treesitter.setup {
         enable = true
     },
     indent = {
-        enable = true
+        enable = false
     },
     textobjects = {
         select = {
