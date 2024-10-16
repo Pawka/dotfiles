@@ -7,7 +7,22 @@ telescope.setup {
     },
     mappings = {
       i = {
-        ["<C-u>"] = false
+        -- Remap preview scoll keys to match navigation keis
+        ["<C-d>"] = false,
+        ["<C-u>"] = false,
+        ["<C-h>"] = "preview_scrolling_left",
+        ["<C-l>"] = "preview_scrolling_right",
+        ["<C-k>"] = "preview_scrolling_up",
+        ["<C-j>"] = "preview_scrolling_down",
+      },
+      n = {
+        -- Remap preview scoll keys to match navigation keis
+        ["<C-d>"] = false,
+        ["<C-u>"] = false,
+        ["<C-h>"] = "preview_scrolling_left",
+        ["<C-l>"] = "preview_scrolling_right",
+        ["<C-k>"] = "preview_scrolling_up",
+        ["<C-j>"] = "preview_scrolling_down",
       },
     },
     -- Live grep and other grep tools ignores hidden directories and files by
@@ -34,12 +49,12 @@ telescope.setup {
       previewer = false,
       mappings = {
         i = {
-          ["<c-d>"] = require("telescope.actions").delete_buffer,
-          -- Right hand side can also be the name of the action as a string
-          ["<c-d>"] = "delete_buffer",
+          -- Delete buffer under cursor.
+          ["<C-d>"] = "delete_buffer",
         },
         n = {
-          ["<c-d>"] = require("telescope.actions").delete_buffer,
+          -- Delete buffer under cursor.
+          ["<C-d>"] = "delete_buffer",
         }
       }
     },
@@ -47,6 +62,18 @@ telescope.setup {
       -- Include hidden files too. Directories which should be excluded (such
       -- as ".git") are defined in file_ignore_patterns.
       hidden = true
+    },
+    marks = {
+      mappings = {
+        i = {
+          -- Delete mark under cursor.
+          ["<C-d>"] = "delete_mark",
+        },
+        n = {
+          -- Delete mark under cursor.
+          ["<C-d>"] = "delete_mark",
+        }
+      }
     },
   },
   extensions = {

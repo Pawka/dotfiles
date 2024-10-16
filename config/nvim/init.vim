@@ -184,6 +184,7 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
     nnoremap <Leader>lc :Telescope lsp_incoming_calls<Cr>
     nnoremap <Leader>ls :Telescope lsp_document_symbols show_line=true ignore_symbols=field<Cr>
     nnoremap <Leader>u :Telescope undo<Cr>
+    nnoremap <Leader>m :Telescope marks<Cr>
 "}
 "
 " Ale {

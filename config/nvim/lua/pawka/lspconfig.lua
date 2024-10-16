@@ -75,8 +75,8 @@ cmp.setup {
 		format = lspkind.cmp_format()
 	},
 	mapping = {
-        ["<C-d>"] = cmp.mapping.scroll_docs(-4),
-        ["<C-f>"] = cmp.mapping.scroll_docs(4),
+        ["<C-d>"] = cmp.mapping.scroll_docs(4),
+        ["<C-f>"] = cmp.mapping.scroll_docs(-4),
         ["<C-e>"] = cmp.mapping.close(),
         ['<C-n>'] = function(fallback)
             if cmp.visible() then
@@ -97,7 +97,7 @@ cmp.setup {
             end
         end,
         ['<CR>'] = cmp.mapping.confirm {
-            behavior = cmp.ConfirmBehavior.Insert,
+            behavior = cmp.ConfirmBehavior.Replace,
             select = true,
         },
         ['<C-Space>'] = cmp.mapping.complete(),
