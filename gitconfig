@@ -28,8 +28,8 @@
 
     lasttag = describe --tags --abbrev=0
 
-    # Remove all local branches except current, main and master.
-    brclean = "!git branch -l | grep -Ev '^(main|master)' | xargs -r git branch -D 2>/dev/null"
+    # Remove all local branches except current, main and master and wip.
+    brclean = "!git branch -l | sed 's/^[* ]*//g' | grep -Ev '^(main|master|wip)' | xargs -r git branch -D 2>/dev/null"
 
     # Push current branch to origin.
     bp = push -u origin HEAD
@@ -41,6 +41,7 @@
     editor = nvim
     excludesfile = ~/.gitignore_global
     untrackedCache = true
+	hooksPath = /Users/pb/.config/git/hooks
 
 [include]
     path = ~/.gitconfig.custom
@@ -50,3 +51,5 @@
 
 [init]
 	defaultBranch = master
+[url "git@github.com:"]
+	insteadOf = https://github.com/
