@@ -14,6 +14,7 @@ LINKS = \
 		gitconfig \
 		gitignore_global \
 		oh-my-zsh \
+		ripgreprc \
 		taskrc \
 		tmux \
 		tmux.conf \

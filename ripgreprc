@@ -1,0 +1,8 @@
+--type-add
+starlark:*.star
+
+--type-add
+star:*.star
+
+--type-add
+golang:*.go

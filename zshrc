@@ -47,6 +47,9 @@ export EDITOR=nvim
 # files, following .gitignore and other optimizations.
 export FZF_DEFAULT_COMMAND='rg --files'
 
+# Set configuration file for RipGrep.
+export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
+
 # GOPATH
 export GOPATH="$HOME/gocode"
 export PATH="$PATH:$GOPATH/bin"
