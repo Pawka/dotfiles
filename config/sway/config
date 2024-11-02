@@ -56,6 +56,16 @@ exec swayidle -w \
 for_window [class="firefox"] inhibit_idle fullscreen
 for_window [class="MPlayer"] inhibit_idle fullscreen
 
+# Set floating for window roles
+# Source: https://www.dwarmstrong.org/sway/
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="bubble"] floating enable
+for_window [window_role="task_dialog"] floating enable
+for_window [window_role="Preferences"] floating enable
+for_window [window_type="dialog"] floating enable
+for_window [window_type="menu"] floating enable
+for_window [window_role="About"] floating enable
+for_window [title="File Operation Progress"] floating enable, border pixel 1, sticky enable, resize set width 40 ppt height 30 ppt
 
 ### Input configuration
 #
@@ -276,5 +286,9 @@ bar {
 
 include /etc/sway/config.d/*
 
+# AUTOSTART
+
 # Start gammastep to adjust screen temperature according day time.
 exec /usr/bin/gammastep -l 54.699:25.306 -m wayland
+# Notifications daemon
+exec mako
