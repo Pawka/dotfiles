@@ -52,8 +52,9 @@ exec swayidle -w \
          timeout 900 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
          before-sleep 'swaylock -f -c 000000'
 
-# Disable idle when Firefox is fullscreen (e.g. when watching Youtube videos).
+# Disable idle when apps are fullscreen (e.g. when watching Youtube videos).
 for_window [class="firefox"] inhibit_idle fullscreen
+for_window [class="MPlayer"] inhibit_idle fullscreen
 
 
 ### Input configuration
