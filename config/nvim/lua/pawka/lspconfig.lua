@@ -1,10 +1,11 @@
 local nvim_lsp = require('lspconfig')
 local servers = {
   'gopls',
+  'lua_ls',
   'pyright',
   'rust_analyzer',
   'terraform_lsp',
-  'tsserver',
+  'ts_ls',
 }
 
 -- after the language server attaches to the current buffer
