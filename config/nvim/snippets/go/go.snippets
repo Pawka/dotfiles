@@ -58,3 +58,8 @@ snippet fork "for loop with key & value"
 	for _, ${1:val} := range ${2:collection} {
 		${3}
 	}
+
+snippet tempver "Temporal versioning condition"
+	if workflow.DefaultVersion == workflow.GetVersion(ctx, "${1:version_description}", 0, 1) {
+        ${2}
+	}
