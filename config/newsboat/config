@@ -1,6 +1,6 @@
-include /usr/share/doc/newsboat/contrib/colorschemes/solarized-dark
+include /snap/newsboat/current/usr/local/share/doc/newsboat/contrib/colorschemes/solarized-dark
 auto-reload yes
-browser firefox %u
+# browser firefox %u
 
 bind-key k up
 bind-key j down
