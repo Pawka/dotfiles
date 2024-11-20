@@ -58,7 +58,7 @@ for_window [class="MPlayer"] inhibit_idle fullscreen
 
 # Set floating for window roles
 # Source: https://www.dwarmstrong.org/sway/
-for_window [window_role="pop-up"] floating enable
+for_window [class="[^GridTracker]" window_role="pop-up"] floating enable
 for_window [window_role="bubble"] floating enable
 for_window [window_role="task_dialog"] floating enable
 for_window [window_role="Preferences"] floating enable
@@ -67,6 +67,10 @@ for_window [window_type="menu"] floating enable
 for_window [window_role="About"] floating enable
 for_window [title="File Operation Progress"] floating enable, border pixel 1, sticky enable, resize set width 40 ppt height 30 ppt
 for_window [app_id="^firefox$" title=".+Bitwarden.+"] floating enable
+# File archiver
+for_window [app_id="file-roller"] floating enable
+# File manager (Nautilus)
+for_window [app_id="org.gnome.Nautilus"] floating enable
 
 ### Input configuration
 #
