@@ -29,8 +29,6 @@ plugins=(
     terraform
 )
 
-PROMPT='$(kube_ps1)'$PROMPT
-
 autoload -U compinit && compinit
 
 source $ZSH/oh-my-zsh.sh
