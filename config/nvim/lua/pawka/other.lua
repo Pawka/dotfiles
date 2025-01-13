@@ -35,6 +35,17 @@ other.setup({
 			target = "%1.c",
 			context = "code"
 		},
+        -- C++
+		{
+			pattern = "(.*).cpp$",
+			target = "%1.h",
+			context = "header"
+		},
+		{
+			pattern = "(.+).h",
+			target = "%1.cpp",
+			context = "code"
+		},
         -- bash/bats
 		{
 			pattern = "(.+).sh$",
