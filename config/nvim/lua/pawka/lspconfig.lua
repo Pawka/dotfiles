@@ -98,7 +98,7 @@ cmp.setup {
             end
         end,
         ['<CR>'] = cmp.mapping.confirm {
-            behavior = cmp.ConfirmBehavior.Replace,
+            behavior = cmp.ConfirmBehavior.Insert,
             select = true,
         },
         ['<C-Space>'] = cmp.mapping.complete(),
@@ -109,11 +109,25 @@ cmp.setup {
         end
     },
     sources = {
-        { name = 'nvim_lsp' },
-        { name = 'luasnip' },
-        { name = 'buffer' },
+        {
+            name = 'luasnip',
+            -- priority = 1000,
+        },
+        {
+            name = 'nvim_lsp',
+            -- priority = 750,
+            -- keyword_length = 3,
+        },
+        {
+            name = 'buffer',
+            -- priority = 500,
+            -- keyword_length = 3,
+        },
     },
     completion = {
         completeopt = 'menu,menuone,noinsert'
     },
+    -- Disable LSP preselect so the first item would be selected in the
+    -- autocomplete.
+    preselect = cmp.PreselectMode.None,
 }

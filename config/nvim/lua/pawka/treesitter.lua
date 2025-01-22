@@ -14,6 +14,7 @@ treesitter.setup {
         "markdown",
         "query",
         "rust",
+        "starlark",
         "vim",
         "zig",
     },
