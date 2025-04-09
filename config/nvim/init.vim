@@ -44,6 +44,7 @@ endif
     Plug 'tpope/vim-rhubarb'
     " Syntax-aware text objects.
     Plug 'nvim-treesitter/nvim-treesitter-textobjects'
+    Plug 'nvim-telescope/telescope-file-browser.nvim',
 " }
 " Editing {
     Plug 'windwp/nvim-autopairs'
@@ -164,9 +165,6 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
 
     " Select last edited or pasted text.
     nnoremap <Leader>p `[v`]
-
-    " Open directory of the current file.
-    nnoremap <Leader>d :e %:h<CR>
 " }
 "
 " Telescope {
@@ -177,6 +175,8 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
     nnoremap <C-o> :Telescope oldfiles<Cr>
     " Open directory of current file.
     nnoremap <Leader>f :Telescope find_files cwd=%:h<Cr>
+    " Open directory of current file in file browser.
+    nnoremap <Leader>d :Telescope file_browser path=%:p:h select_buffer=true<CR>
     " Open parent directory of current file.
     nnoremap <expr> <Leader>r ':Telescope find_files cwd='.expand('%:h').'/../<Cr>'
     nnoremap <Leader>lr :Telescope lsp_references<Cr>
