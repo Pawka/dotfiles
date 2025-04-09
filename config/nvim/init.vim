@@ -26,7 +26,7 @@ endif
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     " TreeSitter debugger.
     Plug 'nvim-treesitter/playground'
-    Plug 'altercation/vim-colors-solarized'
+    Plug 'maxmx03/solarized.nvim'
     Plug 'bling/vim-airline'
 " }
 
