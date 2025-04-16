@@ -13,6 +13,8 @@ set softtabstop=4
 set textwidth=80
 " Do not wrap lines automatically
 set nowrap
+" Break per word but not per character.
+set linebreak
 
 " Plugins
 call plug#begin('~/.config/nvim/plugged')
@@ -145,6 +147,7 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
     autocmd BufRead,BufNewFile *.bats set filetype=sh
     autocmd Filetype gitcommit setlocal spell textwidth=72
     autocmd Filetype proto,json,terraform setlocal ts=2 sw=2 expandtab
+    autocmd Filetype text setlocal wrap
 " }
 "
 "
