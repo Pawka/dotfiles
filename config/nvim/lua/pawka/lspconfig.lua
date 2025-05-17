@@ -2,7 +2,7 @@ local nvim_lsp = require('lspconfig')
 local servers = {
   'gopls',
   'lua_ls',
-  'pyright',
+  'pylsp',
   'rust_analyzer',
   'terraform_lsp',
   'ts_ls',
