@@ -1,5 +1,6 @@
 CURRENT_DIR=$(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 LINKS = \
+		alacritty.toml \
 		config/bat \
 		config/mako \
 		config/newsboat/config \
