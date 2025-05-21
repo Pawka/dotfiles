@@ -4,34 +4,34 @@ other.setup({
     mappings = {
         -- Golang
 		{
-			pattern = "(.*).go$",
+			pattern = "([^/]+).go$",
 			target = "%1_test.go",
 			context = "test"
 		},
 		{
-			pattern = "(.+)_test.go$",
+			pattern = "([^/]+)_test.go$",
 			target = "%1.go",
 			context = "code"
 		},
         -- Golang: Protobuf
 		{
-			pattern = "(.*).pb.go$",
+			pattern = "([^/]+).pb.go$",
 			target = "%1.proto",
 			context = "code"
 		},
 		{
-			pattern = "(.*).proto$",
+			pattern = "([^/]+).proto$",
 			target = "%1.pb.go",
 			context = "header"
 		},
         -- C
 		{
-			pattern = "(.*).c$",
+			pattern = "([^/]+).c$",
 			target = "%1.h",
 			context = "header"
 		},
 		{
-			pattern = "(.+).h",
+			pattern = "([^/]+).h",
 			target = "%1.c",
 			context = "code"
 		},
@@ -48,24 +48,35 @@ other.setup({
 		},
         -- bash/bats
 		{
-			pattern = "(.+).sh$",
+			pattern = "([^/]+).sh$",
 			target = "%1.bats",
 			context = "test"
 		},
 		{
-			pattern = "(.+).bats$",
+			pattern = "([^/]+).bats$",
 			target = "%1.sh",
 			context = "code"
 		},
         -- tsx
 		{
-			pattern = "(.+).tsx$",
+			pattern = "([^/]+).tsx$",
 			target = "%1.test.tsx",
 			context = "test"
 		},
 		{
-			pattern = "(.+).test.tsx$",
+			pattern = "([^/]+).test.tsx$",
 			target = "%1.tsx",
+			context = "code"
+		},
+        -- starlark
+		{
+			pattern = "([^/]+).star$",
+			target = "test_%1.star",
+			context = "test"
+		},
+		{
+			pattern = "test_([^/]+).star$",
+			target = "%1.star",
 			context = "code"
 		},
 	}
