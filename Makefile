@@ -2,6 +2,7 @@ CURRENT_DIR=$(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 LINKS = \
 		alacritty.toml \
 		config/bat \
+		config/ctags \
 		config/mako \
 		config/newsboat/config \
 		config/newsboat/urls \
@@ -9,7 +10,6 @@ LINKS = \
 		config/rofi \
 		config/sway \
 		config/wlogout \
-		ctags \
 		editorconfig \
 		fonts \
 		gitconfig \

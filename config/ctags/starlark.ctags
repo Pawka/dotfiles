@@ -1,0 +1,2 @@
+# Treat Starlark files as Python.
+--langmap=Python:+.star

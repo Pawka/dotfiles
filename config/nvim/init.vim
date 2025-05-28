@@ -28,8 +28,9 @@ endif
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     " TreeSitter debugger.
     Plug 'nvim-treesitter/playground'
-    " Plug 'maxmx03/solarized.nvim'
+    " Plug 'altercation/vim-colors-solarized'
     " Plug 'Tsuzat/NeoSolarized.nvim'
+    Plug 'maxmx03/solarized.nvim'
     Plug 'overcache/NeoSolarized'
     Plug 'bling/vim-airline'
 " }
@@ -114,7 +115,7 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
     " Show horisontal cursor lint
     set cursorline
 
-    colorscheme NeoSolarized
+    colorscheme solarized
 
     " vim-gitgutter styling
     highlight clear SignColumn
@@ -150,6 +151,8 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
     autocmd Filetype gitcommit setlocal spell textwidth=72
     autocmd Filetype proto,json,terraform setlocal ts=2 sw=2 expandtab
     autocmd Filetype text setlocal wrap
+    " Starlark ctags configuration
+    autocmd Filetype starlark setlocal tags=./tags,tags
 " }
 "
 "
@@ -270,6 +273,16 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
     else
         let test#strategy = "vimterminal"
     endif
+" }
+"
+" Starlark ctags {
+    " Jump to definition for Starlark files only
+    autocmd Filetype starlark nnoremap <buffer> <C-]> :tag <C-r><C-w><CR>
+    autocmd Filetype starlark nnoremap <buffer> g<C-]> :tselect <C-r><C-w><CR>
+    autocmd Filetype starlark nnoremap <buffer> <Leader>ld :tag <C-r><C-w><CR>
+    autocmd Filetype starlark nnoremap <buffer> <Leader>lt :tselect <C-r><C-w><CR>
+    " Jump back from tag
+    autocmd Filetype starlark nnoremap <buffer> <C-t> :pop<CR>
 " }
 
 lua require('pawka')
