@@ -36,7 +36,7 @@ source $ZSH/oh-my-zsh.sh
 # Disable autocorrect
 unsetopt correct_all
 
-# Customize to your needs...
+# Environment variables.
 export PATH=~/bin:$PATH
 export XDG_CONFIG_HOME="$HOME/.config"
 export EDITOR=nvim
@@ -68,24 +68,12 @@ bindkey '\e[F'   end-of-line
 
 #Aliases
 alias diff="colordiff"
-alias weather="curl http://wttr.in/Vilnius"
-alias sl="ls"
 alias imv="imv-x11"  # Since current Ubuntu install does not create imv binary.
 
 # git: show list of local branches and allow to select those via fzf.
 alias gb="git branch --sort=-committerdate --format='%(HEAD)%(color:yellow)%(refname:short)|%(color:bold green)%(committerdate:relative) %(color:magenta)%(color:reset)' --color=always | column -ts'|' | head -n 20 | fzf --ansi | sed 's/^*//g' | awk '{print \$1}' | xargs -n1 git checkout"
 
-alias -s log="tail -f"
-alias -s html="gnome-open"
-# Make ripgrep search in hidden directories by default.
-alias rg="rg --hidden --glob '!.git'"
-
 zstyle :omz:plugins:ssh-agent agent-forwarding on
-
-# stty -ixon #-ixoff
-# Fix backspace key behaviour (remove ^H symbol)
-# stty erase ^H
-# stty erase '^?'
 
 # Load autojump config
 [[ -s /usr/share/autojump/autojump.sh ]] && source /usr/share/autojump/autojump.sh
