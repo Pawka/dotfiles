@@ -1,6 +1,28 @@
 [env]
 TERM = "xterm-256color"
 
+[keyboard]
+bindings = [
+{ key = "V", mods = "Control", action = "Paste" },
+{ key = "PageUp", mods = "Control|Shift", action = "IncreaseFontSize" },
+{ key = "PageDown", mods = "Control|Shift", action = "DecreaseFontSize" },
+]
+
+[selection]
+# When set to true, selected text will be copied to the primary clipboard.
+save_to_clipboard = true
+
+[[hints.enabled]]
+command = "xdg-open" # On Linux/BSD
+# command = "open" # On macOS
+# command = { program = "cmd", args = [ "/c", "start", "" ] } # On Windows
+hyperlinks = true
+post_processing = true
+persist = false
+mouse.enabled = true
+binding = { key = "O", mods = "Control|Shift" }
+regex = "(ipfs:|ipns:|magnet:|mailto:|gemini://|gopher://|https://|http://|news:|file:|git://|ssh:|ftp://)[^\u0000-\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩`\\\\]+"
+
 [font]
 size = 12
 
