@@ -33,6 +33,7 @@ endif
     Plug 'maxmx03/solarized.nvim'
     Plug 'overcache/NeoSolarized'
     Plug 'bling/vim-airline'
+    Plug 'folke/tokyonight.nvim'
 " }
 
 " Navigation {
