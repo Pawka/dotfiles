@@ -37,7 +37,7 @@ source $ZSH/oh-my-zsh.sh
 unsetopt correct_all
 
 # Environment variables.
-export PATH=~/bin:$PATH
+export PATH=~/bin:~/.bin:$PATH
 export XDG_CONFIG_HOME="$HOME/.config"
 export EDITOR=nvim
 
