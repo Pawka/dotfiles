@@ -61,10 +61,14 @@ export LC_ALL="en_US.UTF-8"
 # Bind keys for MacOS. If these bindings does not work - need to disable
 # shortucts of Mission Control.
 bindkey -e
-bindkey '\e\e[C' forward-word
-bindkey '\e\e[D' backward-word
-bindkey '\e[H'   beginning-of-line
-bindkey '\e[F'   end-of-line
+
+# Change Ctrl+U to delete from cursor to the beginning-of-line instead of
+# cleaning whole line.
+bindkey '^U' backward-kill-line
+# bindkey '\e\e[C' forward-word
+# bindkey '\e\e[D' backward-word
+# bindkey '\e[H'   beginning-of-line
+# bindkey '\e[F'   end-of-line
 
 #Aliases
 alias diff="colordiff"

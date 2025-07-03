@@ -12,6 +12,9 @@ bindings = [
 { key = "V", mods = "Control", action = "Paste" },
 { key = "PageUp", mods = "Control|Shift", action = "IncreaseFontSize" },
 { key = "PageDown", mods = "Control|Shift", action = "DecreaseFontSize" },
+# { key = "Home", chars = "\u001b[H" }, # Required for macOS.
+# { key = "End", chars = "\u001b[F" }, # Required for macOS.
+{ key = "D", mods = "Alt", chars = "\u001bd" }, # Delete next word from cursor.
 ]
 
 [selection]
@@ -19,9 +22,10 @@ bindings = [
 save_to_clipboard = true
 
 [[hints.enabled]]
-command = "xdg-open" # On Linux/BSD
+# command = "xdg-open" # On Linux/BSD
 # command = "open" # On macOS
 # command = { program = "cmd", args = [ "/c", "start", "" ] } # On Windows
+command = { program = ".bin/open.sh", args = [ ] }
 hyperlinks = true
 post_processing = true
 persist = false
