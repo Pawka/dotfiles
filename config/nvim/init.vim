@@ -171,27 +171,34 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
     nnoremap <silent> <Leader>ll :<C-u>nohlsearch<CR><C-l>
 
     " Select last edited or pasted text.
-    nnoremap <Leader>p `[v`]
+    " nnoremap <Leader>p `[v`]
 " }
 "
 " Telescope {
-    nnoremap <C-b> :Telescope buffers<Cr>
+    " File Navigation bindings.
+    nnoremap <Leader>b :Telescope buffers<Cr>
     nnoremap <Leader>/ :Telescope live_grep<Cr>
-    nnoremap <C-p> :Telescope find_files<Cr>
-    " Recently opened files.
-    nnoremap <C-o> :Telescope oldfiles<Cr>
-    " Open directory of current file.
-    nnoremap <Leader>f :Telescope find_files cwd=%:h<Cr>
-    " Open directory of current file in file browser.
+    " The "f" stands for files.
+    nnoremap <Leader>f :Telescope find_files<Cr>
+    " Recently opened files ("h" for history).
+    nnoremap <Leader>h :Telescope oldfiles<Cr>
+    " Open directory of current file in file browser ("d" for directory).
     nnoremap <Leader>d :Telescope file_browser path=%:p:h select_buffer=true<CR>
+    " Open directory of current file.
+    " nnoremap <Leader>f :Telescope find_files cwd=%:h<Cr>
     " Open parent directory of current file.
-    nnoremap <expr> <Leader>r ':Telescope find_files cwd='.expand('%:h').'/../<Cr>'
+    " nnoremap <expr> <Leader>r ':Telescope find_files cwd='.expand('%:h').'/../<Cr>'
+
+    " LSP keybindings
     nnoremap <Leader>lr :Telescope lsp_references<Cr>
     nnoremap <Leader>li :Telescope lsp_implementations<Cr>
     nnoremap <Leader>lc :Telescope lsp_incoming_calls<Cr>
     nnoremap <Leader>ls :Telescope lsp_document_symbols show_line=true ignore_symbols=field<Cr>
+
+    " VIM related and other actions.
     nnoremap <Leader>u :Telescope undo<Cr>
     nnoremap <Leader>m :Telescope marks<Cr>
+
 "}
 "
 " Ale {
