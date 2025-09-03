@@ -9,7 +9,7 @@ history = 10000
 
 [keyboard]
 bindings = [
-{ key = "V", mods = "Control", action = "Paste" },
+{ key = "V", mods = "Control|Shift", action = "Paste" },
 { key = "PageUp", mods = "Control|Shift", action = "IncreaseFontSize" },
 { key = "PageDown", mods = "Control|Shift", action = "DecreaseFontSize" },
 # { key = "Home", chars = "\u001b[H" }, # Required for macOS.
