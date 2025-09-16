@@ -9,6 +9,7 @@ LINKS = \
 		config/nvim \
 		config/rofi \
 		config/sway \
+		config/waybar \
 		config/wlogout \
 		editorconfig \
 		fonts \
