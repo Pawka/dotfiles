@@ -26,10 +26,9 @@
         // "backlight",
         // "keyboard-state",
         // "sway/language",
+        "tray",
         "battery",
-        // "battery#bat2",
-        "clock",
-        "tray"
+        "clock"
         // "custom/power"
     ],
     // Modules configuration
