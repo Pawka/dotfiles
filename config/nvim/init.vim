@@ -27,7 +27,7 @@ endif
 " GUI {
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     " TreeSitter debugger.
-    Plug 'nvim-treesitter/playground'
+    " Plug 'nvim-treesitter/playground'
     " Plug 'altercation/vim-colors-solarized'
     " Plug 'Tsuzat/NeoSolarized.nvim'
     Plug 'maxmx03/solarized.nvim'
@@ -49,7 +49,7 @@ endif
     Plug 'debugloop/telescope-undo.nvim'
     Plug 'tpope/vim-rhubarb'
     " Syntax-aware text objects.
-    Plug 'nvim-treesitter/nvim-treesitter-textobjects'
+    " Plug 'nvim-treesitter/nvim-treesitter-textobjects'
     Plug 'nvim-telescope/telescope-file-browser.nvim',
 " }
 " Editing {
