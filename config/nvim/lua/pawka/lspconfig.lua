@@ -55,6 +55,12 @@ local cmp = require('cmp')
 local lspkind = require('lspkind')
 local luasnip = require('luasnip')
 
+-- Configure LuaSnip to clean up stale snippet sessions
+luasnip.config.set_config({
+  region_check_events = 'CursorMoved,CursorHold,InsertEnter',
+  delete_check_events = 'TextChanged,InsertLeave',
+})
+
 -- honza-like snippets
 require("luasnip.loaders.from_snipmate").lazy_load()
 -- load personal snippets
@@ -79,7 +85,10 @@ cmp.setup {
             if cmp.visible() then
               cmp.select_next_item()
             elseif luasnip.expand_or_jumpable() then
-              luasnip.expand_or_jump()
+              local ok = pcall(luasnip.expand_or_jump)
+              if not ok then
+                fallback()
+              end
             else
               fallback()
             end
@@ -88,7 +97,10 @@ cmp.setup {
             if cmp.visible() then
               cmp.select_prev_item()
             elseif luasnip.jumpable(-1) then
-              luasnip.jump(-1)
+              local ok = pcall(luasnip.jump, -1)
+              if not ok then
+                fallback()
+              end
             else
               fallback()
             end
