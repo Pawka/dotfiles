@@ -25,7 +25,7 @@ if has('nvim')
 endif
 
 " GUI {
-    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate', 'branch': 'master'}
     " TreeSitter debugger.
     " Plug 'nvim-treesitter/playground'
     " Plug 'altercation/vim-colors-solarized'
