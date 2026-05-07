@@ -5,9 +5,9 @@
 #
 
 is_osx() {
-	local platform
+    local platform
     platform=$(uname)
-	[ "$platform" == "Darwin" ]
+    [ "$platform" == "Darwin" ]
 }
 
 main() {
