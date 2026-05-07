@@ -44,3 +44,5 @@ Session.vim
 Capfile
 config/deploy*
 Guardfile
+
+.claude
