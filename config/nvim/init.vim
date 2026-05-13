@@ -39,7 +39,7 @@ endif
 " Navigation {
     Plug 'christoomey/vim-tmux-navigator'
     " EasyMotion alternative.
-    Plug 'phaazon/hop.nvim'
+    Plug 'smoka7/hop.nvim'
     " Telescope requires plenary to function
     Plug 'nvim-lua/plenary.nvim'
     " The main Telescope plugin
