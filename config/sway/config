@@ -187,6 +187,7 @@ input "type:keyboard" {
     # Get tree: swaymsg -t get_tree
     assign [class="obsidian"] workspace number 9
     assign [class="discord|Slack|Signal"] workspace number 10
+    assign [app_id="element-desktop"] workspace number 10
 
     # HAM apps
     assign [app_id="wsjtx"] workspace number 3
