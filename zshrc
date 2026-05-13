@@ -100,3 +100,10 @@ man() {
 }
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Atuin is a shell history tool. Setup if it exists. See https://atuin.sh/
+if [ -d "$HOME/.atuin" ]; then
+    . "$HOME/.atuin/bin/env"
+
+    eval "$(atuin init zsh --disable-up-arrow)"
+fi
