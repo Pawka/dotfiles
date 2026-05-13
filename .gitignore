@@ -13,3 +13,6 @@ vim/view/*
 
 # Neovim
 config/nvim/plugged/*
+
+# MacOS
+config/karabiner/automatic_backups/*

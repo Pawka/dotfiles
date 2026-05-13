@@ -4,6 +4,7 @@ LINKS = \
 		config/alacritty \
 		config/bat \
 		config/ctags \
+		config/karabiner \
 		config/mako \
 		config/newsboat \
 		config/nvim \
