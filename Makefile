@@ -1,11 +1,11 @@
 CURRENT_DIR=$(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 LINKS = \
+		bin \
 		config/alacritty \
 		config/bat \
 		config/ctags \
 		config/mako \
-		config/newsboat/config \
-		config/newsboat/urls \
+		config/newsboat \
 		config/nvim \
 		config/rofi \
 		config/sway \

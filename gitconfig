@@ -41,7 +41,7 @@
     editor = nvim
     excludesfile = ~/.gitignore_global
     untrackedCache = true
-	hooksPath = /Users/pb/.config/git/hooks
+	hooksPath = /Users/pbalzaravici/.config/git/hooks
 
 [include]
     path = ~/.gitconfig.custom
