@@ -12,6 +12,7 @@ LINKS = \
 		config/sway \
 		config/waybar \
 		config/wlogout \
+		claude \
 		editorconfig \
 		fonts \
 		gitconfig \
