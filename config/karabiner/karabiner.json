@@ -1,13 +1,29 @@
 {
     "profiles": [
         {
+            "devices": [
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "product_id": 40349,
+                        "vendor_id": 36125
+                    },
+                    "ignore": true,
+                    "manipulate_caps_lock_led": false
+                },
+                {
+                    "identifiers": { "is_keyboard": true },
+                    "simple_modifications": [
+                        {
+                            "from": { "key_code": "non_us_pound" },
+                            "to": [{ "key_code": "grave_accent_and_tilde" }]
+                        }
+                    ]
+                }
+            ],
             "name": "Default profile",
             "selected": true,
             "simple_modifications": [
-                {
-                    "from": { "key_code": "non_us_pound" },
-                    "to": [{ "key_code": "grave_accent_and_tilde" }]
-                },
                 {
                     "from": { "key_code": "caps_lock" },
                     "to": [{ "key_code": "left_control" }]
