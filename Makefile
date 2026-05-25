@@ -1,6 +1,7 @@
 CURRENT_DIR=$(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
 LINKS = \
 		bin \
+		config/atuin \
 		config/alacritty \
 		config/bat \
 		config/ctags \
