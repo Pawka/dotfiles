@@ -1,9 +1,23 @@
 #!/bin/bash
 # gh-md - Generate Markdown link for a PR
+#
 # Usage:
 #   gh md                    # Use current branch's PR
 #   gh md <PR-URL>           # Use specific PR URL
 #   gh md <PR-NUMBER>        # Use PR number from current repo
+#
+# Output format:
+#   [#123 docker: Title here](https://github.com/org/repo/pull/123)
+#   Converts [tag] prefix to "tag:" for cleaner Markdown
+#
+# Install as gh extension:
+#   mkdir -p ~/.local/share/gh/extensions/gh-md
+#   cp gh-md ~/.local/share/gh/extensions/gh-md/gh-md
+#   chmod +x ~/.local/share/gh/extensions/gh-md/gh-md
+#
+# Verify installation:
+#   gh extension list
+#   gh md
 
 set -e
 
