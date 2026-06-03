@@ -1,0 +1,59 @@
+#!/bin/bash
+# gh-md - Generate Markdown link for a PR
+# Usage:
+#   gh md                    # Use current branch's PR
+#   gh md <PR-URL>           # Use specific PR URL
+#   gh md <PR-NUMBER>        # Use PR number from current repo
+
+set -e
+
+# Function to extract owner/repo/number from PR URL
+parse_pr_url() {
+  local url="$1"
+  if [[ "$url" =~ github\.com/([^/]+)/([^/]+)/pull/([0-9]+) ]]; then
+    echo "${BASH_REMATCH[1]}/${BASH_REMATCH[2]}" "${BASH_REMATCH[3]}"
+  else
+    echo "Error: Invalid PR URL format" >&2
+    exit 1
+  fi
+}
+
+# Determine which PR to use
+if [[ -z "$1" ]]; then
+  # No argument - use current branch's PR
+  PR_DATA=$(gh pr view --json number,title,url 2>/dev/null) || {
+    echo "Error: No PR found for current branch. Create one with 'gh pr create' or provide a PR URL/number." >&2
+    exit 1
+  }
+elif [[ "$1" =~ ^https?:// ]]; then
+  # Argument is a URL
+  read -r REPO PR_NUMBER < <(parse_pr_url "$1")
+  PR_DATA=$(gh pr view "$PR_NUMBER" --repo "$REPO" --json number,title,url)
+elif [[ "$1" =~ ^[0-9]+$ ]]; then
+  # Argument is a PR number
+  PR_DATA=$(gh pr view "$1" --json number,title,url)
+else
+  echo "Error: Argument must be a PR URL or PR number" >&2
+  exit 1
+fi
+
+# Extract data using jq
+PR_NUMBER=$(echo "$PR_DATA" | jq -r '.number')
+PR_TITLE=$(echo "$PR_DATA" | jq -r '.title')
+PR_URL=$(echo "$PR_DATA" | jq -r '.url')
+
+# Replace [tag] prefix with "tag:" (e.g., "[docker] title" -> "docker: title")
+PR_TITLE_CLEANED=$(echo "$PR_TITLE" | sed 's/^\[\([^]]*\)\] /\1: /')
+
+# Generate Markdown format: [#123 Title](URL)
+MARKDOWN="[#${PR_NUMBER} ${PR_TITLE_CLEANED}](${PR_URL})"
+
+# Output the markdown
+echo "$MARKDOWN"
+
+# Also copy to clipboard if pbcopy is available (macOS)
+if command -v pbcopy &> /dev/null; then
+  echo -n "$MARKDOWN" | pbcopy
+  echo "" >&2
+  echo "✓ Copied to clipboard!" >&2
+fi
