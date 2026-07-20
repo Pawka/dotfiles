@@ -25,7 +25,7 @@ if has('nvim')
 endif
 
 " GUI {
-    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate', 'branch': 'master'}
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate', 'branch': 'main'}
     " TreeSitter debugger.
     " Plug 'nvim-treesitter/playground'
     " Plug 'altercation/vim-colors-solarized'
@@ -49,7 +49,7 @@ endif
     Plug 'debugloop/telescope-undo.nvim'
     Plug 'tpope/vim-rhubarb'
     " Syntax-aware text objects.
-    Plug 'nvim-treesitter/nvim-treesitter-textobjects'
+    Plug 'nvim-treesitter/nvim-treesitter-textobjects', {'branch': 'main'}
     Plug 'nvim-telescope/telescope-file-browser.nvim',
 " }
 " Editing {
