@@ -49,7 +49,7 @@ endif
     Plug 'debugloop/telescope-undo.nvim'
     Plug 'tpope/vim-rhubarb'
     " Syntax-aware text objects.
-    " Plug 'nvim-treesitter/nvim-treesitter-textobjects'
+    Plug 'nvim-treesitter/nvim-treesitter-textobjects'
     Plug 'nvim-telescope/telescope-file-browser.nvim',
 " }
 " Editing {

@@ -10,6 +10,8 @@
 #   [#123 docker: Title here](https://github.com/org/repo/pull/123)
 #   Converts [tag] prefix to "tag:" for cleaner Markdown
 #
+# Dependencies: gh, jq
+#
 # Install as gh extension:
 #   mkdir -p ~/.local/share/gh/extensions/gh-md
 #   cp gh-md ~/.local/share/gh/extensions/gh-md/gh-md
@@ -18,6 +20,7 @@
 # Verify installation:
 #   gh extension list
 #   gh md
+#
 
 set -e
 
