@@ -1,5 +1,3 @@
-syntax on
-
 set nocompatible
 filetype off       " required" store the plugins in plugged dir
 
@@ -65,8 +63,6 @@ endif
     Plug 'rgroli/other.nvim'
     Plug 'tpope/vim-surround'
     Plug 'tpope/vim-unimpaired'
-    " Notes
-    Plug 'vimwiki/vimwiki'
     Plug 'w0rp/ale'
 " }
 
@@ -151,7 +147,7 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
     autocmd BufRead,BufNewFile *.bats set filetype=sh
     autocmd Filetype gitcommit setlocal spell textwidth=72
     autocmd Filetype proto,json,terraform setlocal ts=2 sw=2 expandtab
-    autocmd Filetype text setlocal wrap
+    autocmd Filetype text,markdown setlocal wrap
 " }
 "
 "
@@ -231,12 +227,6 @@ set wildignore=*.o,*.obj,*.png,*.jpg,*.jpeg,*.gif,*.tiff,*.bmp,*.xls,*.csv,LICEN
     nmap <silent> [w <Plug>(ale_previous)
     nmap <silent> ]w <Plug>(ale_next)
     nmap <silent> ]W <Plug>(ale_last)
-" }
-"
-" vim-wiki {
-    let g:vimwiki_list = [
-    \ {'path': '~/Documents/Apps/vimwiki/', 'syntax': 'markdown', 'ext': '.md'},
-    \ ]
 " }
 "
 " vim-go {

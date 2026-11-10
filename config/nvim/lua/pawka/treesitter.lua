@@ -56,10 +56,6 @@ ts.install {
     'zig',
 }
 
--- vimwiki is configured with markdown syntax ('syntax': 'markdown'), so
--- highlight its buffers with the markdown parser.
-vim.treesitter.language.register('markdown', 'vimwiki')
-
 -- Enable highlighting for every filetype with a parser. Missing parsers are
 -- installed automatically (the old auto_install = true).
 vim.api.nvim_create_autocmd('FileType', {
