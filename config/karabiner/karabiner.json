@@ -19,6 +19,42 @@
                             "to": [{ "key_code": "grave_accent_and_tilde" }]
                         }
                     ]
+                },
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "product_id": 9760,
+                        "vendor_id": 6645
+                    },
+                    "simple_modifications": [
+                        {
+                            "from": { "key_code": "non_us_pound" },
+                            "to": [{ "key_code": "grave_accent_and_tilde" }]
+                        }
+                    ],
+                    "swap_grave_accent_and_non_us_backslash": true
+                },
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "product_id": 50475,
+                        "vendor_id": 1133
+                    },
+                    "simple_modifications": [
+                        {
+                            "from": { "key_code": "non_us_pound" },
+                            "to": [{ "key_code": "grave_accent_and_tilde" }]
+                        }
+                    ],
+                    "swap_grave_accent_and_non_us_backslash": true
+                },
+                {
+                    "identifiers": {
+                        "is_pointing_device": true,
+                        "product_id": 9760,
+                        "vendor_id": 6645
+                    },
+                    "ignore": false
                 }
             ],
             "name": "Default profile",
@@ -27,6 +63,10 @@
                 {
                     "from": { "key_code": "caps_lock" },
                     "to": [{ "key_code": "left_control" }]
+                },
+                {
+                    "from": { "key_code": "non_us_pound" },
+                    "to": [{ "key_code": "grave_accent_and_tilde" }]
                 }
             ],
             "virtual_hid_keyboard": { "keyboard_type_v2": "iso" }
